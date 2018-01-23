@@ -1,0 +1,48 @@
+doctype html
+
+html
+
+	head
+
+		// meta
+
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+		meta(name='format-detection', content='telephone=no')
+		meta(name='description', content='') 
+		meta(name='keywords', content='') 
+		meta(name='author', content='Clockwork | Dijital Pazarlama Ajansı - clock@clockwork.com.tr')
+
+		// favicon
+
+		link(rel="apple-touch-icon", sizes="180x180", href="/favicon/apple-touch-icon.png")
+		link(rel="icon", type="image/png", sizes="32x32", href="/favicon/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="/favicon/favicon-16x16.png")
+		link(rel="manifest", href="/favicon/manifest.json")
+		meta(name="theme-color", content="#ffffff") 
+
+		// title
+
+		title DEFAULT TEMPLATE
+
+		// css 
+
+		link(rel='stylesheet', href='/css/minify/all.css')
+
+	body
+
+		include ../components/header/header-default
+		hr.uk-hr
+		include ../components/header/header-logo-center
+		hr.uk-hr
+		include ../components/header/header-parent 
+
+		main
+
+			block content
+
+		include ../components/footer/footer
+
+		// js
+
+		script(src='/js/minify/all.js')

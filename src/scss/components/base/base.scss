@@ -1,0 +1,103 @@
+/* ========================================================================
+   Component: Base
+ ========================================================================== */
+
+// List
+// ========================================================================
+
+.list-style-none {
+    list-style: none; 
+}
+
+// Form
+// ========================================================================
+
+.uk-select:not([multiple]):not([size]) {
+    background-image: url(../images/icons/bottom-arrow.svg);  
+    background-position: calc(100% - 17px) 50%;
+    padding-right: 45px;
+} 
+
+// Section
+// ========================================================================
+
+@media screen and (max-width: 959px) {
+    main {
+        margin-top: 61px;
+    }
+}
+
+.section-padding-top {
+    padding-top: 60px;
+}
+
+// Button
+// ========================================================================
+
+.button-danger {
+    font-weight: 700;
+    color: $color-1;
+    background-color: $color-3;
+    &:hover {
+        color: $color-1;
+    }
+}
+
+// Swiper Control
+// ========================================================================
+
+.swiper-button-prev, 
+.swiper-button-next {
+    background-image: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+/*
+ * rounded
+ */
+
+.swiper-button-prev, 
+.swiper-button-next {
+    &.rounded {
+        background-color: $color-1;
+        border: solid 1px #bdbdbd;
+        border-radius: 50%;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+        width: 42px;
+        height: 42px;
+    }
+    span {
+        color: #221206;
+    }
+}
+
+.swiper-container-horizontal{
+    > .swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+            margin: 0 2.5px; 
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    background-color: #d1d1d1;
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    &-active {
+        background-color: #0e8ad4;
+    }
+}
+
+.uk-nav > li > a {
+    padding: 6px 10px; 
+}
+
+@media screen and (max-width: 639px) {
+	h1 {
+        font-size: 24px;
+    }
+}

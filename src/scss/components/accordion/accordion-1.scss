@@ -1,0 +1,48 @@
+/* ========================================================================
+   Component: Accordion
+ ========================================================================== */
+
+ .uk-accordion {
+    li {
+        border-bottom: 1px solid #e8e8e8;
+        &:first-child {
+            border-top: 1px solid #e8e8e8;
+        } 
+    }
+    > :nth-child(n+2) {
+        margin-top: 0;
+    }
+}
+
+// Title
+// ========================================================================
+
+.uk-accordion-title {
+    font-family: inherit;    
+    font-size: 14px;
+    font-weight: bold;
+    color: #7f7f7f;
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+        margin-right: 25px;
+    }
+}
+
+// Content
+// ========================================================================
+
+.uk-accordion-content {
+    margin: 0 0 32px;
+}
+
+// Responsive
+// ========================================================================
+
+@media screen and (max-width: 959px) {
+    .uk-accordion-title {
+        padding: 24px 0;
+    }
+}

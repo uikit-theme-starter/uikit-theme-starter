@@ -1,0 +1,97 @@
+// 1. Your custom variables and variable overwrites.
+
+// global font & color
+
+$global-font-family: 'museo-sans', sans-serif;
+$global-font-size: 14px !default;
+$base-body-font-weight: 500;
+$global-color: #1e1e1f !default;     
+
+// title
+
+$base-heading-font-family: 'museo-sans-condensed', sans-serif; 
+
+$global-xxlarge-font-size: 44px;
+$global-xlarge-font-size: 30px;
+$global-large-font-size: 24px;  
+$base-h5-font-size: 16px;
+
+// container
+
+$container-max-width: 1170px !default;
+
+// container padding
+
+$container-padding-horizontal: 10px;
+$container-padding-horizontal-s: 10px;
+$container-padding-horizontal-m: 10px;
+
+// nav font-size & color
+
+$navbar-nav-item-font-size: $global-font-size;
+
+$navbar-nav-item-color: #000;
+$navbar-nav-item-hover-color: #000;
+$navbar-nav-item-active-color: #000; 
+
+// button style
+
+$button-font-size: $global-font-size;
+$button-line-height: 36px;
+$button-default-color: #fff;
+$button-default-hover-background: #fff;
+$button-default-hover-color: #198FF2; 
+$button-default-active-background: #fff;
+$button-default-active-color: #198FF2;
+$button-padding-horizontal: 24px;
+$global-control-height: 36px;
+
+// 2. Import default variables and available mixins.
+
+@import "./node_modules/uikit/src/scss/variables-theme.scss";
+@import "./node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+
+// accordion hook
+
+@mixin hook-accordion-title(){
+    cursor: pointer; 
+} 
+
+// nav hook
+
+@mixin hook-base-heading(){  
+    font-weight: 900;
+    color: #3a3531; 
+}
+
+@mixin hook-navbar-nav-item(){
+
+}
+
+// button hook
+
+@mixin hook-button() {
+    font-weight: 900;
+    line-height: 36px;
+    min-width: 130px;
+}
+
+@mixin hook-button-default() {
+    color: inherit;
+    border: solid 2px #3a3531;
+}
+
+@mixin hook-button-default-hover() { 
+    color: inherit;
+    background: none;
+}
+
+@mixin hook-button-default-active() { 
+    color: inherit;
+    background: none;
+}
+
+// 4. Import UIkit.
+@import "./node_modules/uikit/src/scss/uikit-theme.scss"; 
