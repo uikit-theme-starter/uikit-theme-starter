@@ -38,7 +38,7 @@ $navbar-nav-item-active-color: #000;
 
 $button-font-size: $global-font-size;
 $button-line-height: 36px;
-$button-default-color: #fff;
+$button-default-color: #000;
 $button-default-hover-background: #fff;
 $button-default-hover-color: #198FF2; 
 $button-default-active-background: #fff;
@@ -46,24 +46,37 @@ $button-default-active-color: #198FF2;
 $button-padding-horizontal: 24px;
 $global-control-height: 36px;
 
+// accordion
+
+$internal-accordion-open-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E" !default;
+$internal-accordion-close-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E" !default;
+
+// form
+
+$global-control-height: 40px;
+$form-placeholder-color: #1e1e1f;
+
 // 2. Import default variables and available mixins.
 
-@import "./node_modules/uikit/src/scss/variables-theme.scss";
+@import "./node_modules/uikit/src/scss/variables-theme.scss"; 
 @import "./node_modules/uikit/src/scss/mixins-theme.scss";
 
 // 3. Your custom mixin overwrites.
 
-// accordion hook
+// form hook
 
-@mixin hook-accordion-title(){
-    cursor: pointer; 
-} 
+@mixin hook-form-single-line() {
+    
+}
+
+@mixin hook-form() {
+    border: solid 1px #e1e1e1;
+}
 
 // nav hook
 
 @mixin hook-base-heading(){  
-    font-weight: 900;
-    color: #3a3531; 
+     
 }
 
 @mixin hook-navbar-nav-item(){
@@ -73,25 +86,40 @@ $global-control-height: 36px;
 // button hook
 
 @mixin hook-button() {
-    font-weight: 900;
-    line-height: 36px;
-    min-width: 130px;
+    
 }
 
 @mixin hook-button-default() {
-    color: inherit;
-    border: solid 2px #3a3531;
+    
 }
 
 @mixin hook-button-default-hover() { 
-    color: inherit;
-    background: none;
+    
 }
 
 @mixin hook-button-default-active() { 
-    color: inherit;
-    background: none;
+    
+} 
+
+// aacordion hook
+
+@mixin hook-accordion-title(){
+
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        width: ($accordion-title-line-height * 1em);
+        height: ($accordion-title-line-height * 1em);
+        float: right;
+        @include svg-fill($internal-accordion-close-image, "#000", $accordion-icon-color);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .uk-open > &::after { @include svg-fill($internal-accordion-open-image, "#000", $accordion-icon-color); }
+
 }
 
 // 4. Import UIkit.
-@import "./node_modules/uikit/src/scss/uikit-theme.scss"; 
+@import "./node_modules/uikit/src/scss/uikit-theme.scss";  

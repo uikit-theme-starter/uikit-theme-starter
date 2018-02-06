@@ -1,0 +1,37 @@
+// Form Default
+
+section
+
+    .uk-container
+
+        form#form-default
+            fieldset.uk-fieldset
+                legend.uk-legend.uk-margin-small-bottom Legend
+                .uk-margin-small-bottom 
+                    input.uk-input(type="text" placeholder="Input" name="input")
+                .uk-margin-small-bottom 
+                    input.uk-input(type="email" placeholder="E-mail" name="email")
+                .uk-margin-small-bottom 
+                    input.uk-input.mask-phone(type="text" placeholder="Phone" name="phone")
+                .uk-margin-small-bottom 
+                    select.uk-select(name="select" title="Lütfen ilgili alanı doldurunuz.")
+                        option(value="") Seçiniz
+                        option(value="1") 1
+                .uk-margin-small-bottom 
+                    textarea.uk-textarea(rows="5" placeholder="Texrarea" name="textarea")
+                .uk-margin-small-bottom.uk-grid-small.uk-child-width-auto.uk-grid
+                    label
+                        input.uk-radio(type="radio" name="radio" value="1")
+                        |  A
+                    label
+                        input.uk-radio(type="radio" name="radio" value="2")
+                        |  B
+                .uk-margin-small-bottom.uk-grid-small.uk-child-width-auto.uk-grid
+                    label
+                        input.uk-checkbox(type="checkbox" name="checkbox1" value="1")
+                        |  A
+                    label
+                        input.uk-checkbox(type="checkbox" name="checkbox2" value="2")
+                        |  B
+                .uk-margin-small-bottom
+                    button.uk-button.uk-button-primary Submit 

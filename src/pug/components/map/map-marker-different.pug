@@ -1,0 +1,69 @@
+// Map Different
+
+section
+
+    .uk-container
+
+        #map-different(style="height: 500px;") 
+
+        script.
+
+            var map;
+            function initMapDifferent() {
+                map = new google.maps.Map(document.getElementById('map-different'), {
+                    zoom: 16,
+                    center: new google.maps.LatLng(-33.91722, 151.23064),
+                    mapTypeId: 'roadmap'
+                });
+
+                var iconBase = '/images/icons/';
+                var icons = {
+                    delivery: {
+                        icon: iconBase + 'clockwork.svg'
+                    },
+                    charge: {
+                        icon: iconBase + 'landini-logo.svg'
+                    }
+                };
+
+                var features = [
+                    {
+                        position: new google.maps.LatLng(-33.91666, 151.23468),
+                        type: 'delivery',
+                        content: '<div id="content"><h4>Adres 1</h4><p>Aciklama 1</p></div>'
+                    }, {
+                        position: new google.maps.LatLng(-33.916988, 151.233640),
+                        type: 'delivery',
+                        content: '<div id="content"><h4>Adres 2</h4><p>Aciklama 2</p></div>'
+                    }, {
+                        position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
+                        type: 'charge',
+                        content: '<div id="content"><h4>Adres 3</h4><p>Aciklama 3</p></div>'
+                    }, {
+                        position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+                        type: 'charge',
+                        content: '<div id="content"><h4>Adres 4</h4><p>Aciklama 4</p></div>'
+                    }
+                ];
+
+                var infoWindow = new google.maps.InfoWindow(); 
+                
+                features.forEach(function(feature) {
+                    var marker = new google.maps.Marker({
+                        position: feature.position,
+                        icon: icons[feature.type].icon,
+                        map: map
+                    });
+
+                    marker.addListener('click', function() {
+                        console.log(feature.content);
+                        infoWindow.setContent(feature.content);
+                        infoWindow.open(map, marker);
+                    });
+                    
+                });
+
+            }
+
+            initMapDifferent();
+

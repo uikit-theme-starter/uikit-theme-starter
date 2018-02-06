@@ -28,7 +28,7 @@ gulp.task('html', () => {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./dist')) 
         .on('end', reload)
 })
 
@@ -72,11 +72,14 @@ gulp.task('concat', () => {
                 './node_modules/uikit/dist/js/uikit.js',
                 './node_modules/uikit/dist/js/uikit-icons.js',
                 './node_modules/swiper/dist/js/swiper.js',
+				'./node_modules/jquery-validation/dist/jquery.validate.js',
+				'./node_modules/jquery-mask-plugin/dist/jquery.mask.js',
                 './src/js/**.js'
             ]
         )
         .pipe(concat('all.js'))
         .pipe(gulp.dest('./dist/js'))
+        .on('end', reload)
     gulp.src(
             [
                 './src/css/uikit.css',
@@ -119,14 +122,14 @@ gulp.task('browser-sync', () => {
             baseDir: './dist'
         }
     })
-    gulp.watch('./src/pug/**/*.pug', ['html'])
-    gulp.watch('./src/scss/**/*.scss', ['css'])
-    gulp.watch('./src/scss/*.scss', ['css'])
+    gulp.watch('./src/pug/**/*.pug', ['html']);
+    gulp.watch('./src/scss/**/*.scss', ['css']);
+    gulp.watch('./src/scss/*.scss', ['css']);
     gulp.watch('./src/images/**/*', ['images']);
     gulp.watch('./src/fonts/**/*', ['move']);
     gulp.watch('./src/favicon/*', ['move']);
-    gulp.watch('./src/css/*', ['concat', 'minify-css']);
-    gulp.watch('./src/js/*', ['concat', 'minify-js']);
+    gulp.watch('./src/css/*', ['concat']);
+    gulp.watch('./src/js/*', ['concat']);
 })
 
 // gulp default task

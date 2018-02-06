@@ -227,9 +227,7 @@ h6, .uk-h6 {
   font-family: "museo-sans-condensed", sans-serif;
   font-weight: normal;
   color: #333;
-  text-transform: none;
-  font-weight: 900;
-  color: #3a3531; }
+  text-transform: none; }
 
 /* Add margin if adjacent element */
 * + h1, * + .uk-h1,
@@ -1361,11 +1359,7 @@ button.uk-icon:not(:disabled) {
   padding: 0 10px;
   background: #fff;
   color: #1e1e1f;
-  border: 1px solid #e5e5e5;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  -webkit-transition-property: color, background-color, border;
-  transition-property: color, background-color, border; }
+  border: solid 1px #e1e1e1; }
 
 /*
  * Single-line
@@ -1375,7 +1369,7 @@ button.uk-icon:not(:disabled) {
  */
 .uk-input,
 .uk-select:not([multiple]):not([size]) {
-  height: 36px;
+  height: 40px;
   vertical-align: middle;
   /* 1 */
   display: inline-block; }
@@ -1383,7 +1377,7 @@ button.uk-icon:not(:disabled) {
 /* 2 */
 .uk-input:not(input),
 .uk-select:not(select) {
-  line-height: 34px; }
+  line-height: 38px; }
 
 /*
  * Multi-line
@@ -1416,28 +1410,28 @@ button.uk-icon:not(:disabled) {
  * Placeholder
  */
 .uk-input:-ms-input-placeholder {
-  color: #999 !important; }
+  color: #1e1e1f !important; }
 
 .uk-input::-webkit-input-placeholder {
-  color: #999; }
+  color: #1e1e1f; }
 
 .uk-input::-ms-input-placeholder {
-  color: #999; }
+  color: #1e1e1f; }
 
 .uk-input::placeholder {
-  color: #999; }
+  color: #1e1e1f; }
 
 .uk-textarea:-ms-input-placeholder {
-  color: #999 !important; }
+  color: #1e1e1f !important; }
 
 .uk-textarea::-webkit-input-placeholder {
-  color: #999; }
+  color: #1e1e1f; }
 
 .uk-textarea::-ms-input-placeholder {
-  color: #999; }
+  color: #1e1e1f; }
 
 .uk-textarea::placeholder {
-  color: #999; }
+  color: #1e1e1f; }
 
 /* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
  ========================================================================== */
@@ -1755,7 +1749,7 @@ select.uk-form-width-xsmall {
   bottom: 0;
   left: 0;
   /* 2 */
-  width: 36px;
+  width: 40px;
   /* 3 */
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1785,7 +1779,7 @@ select.uk-form-width-xsmall {
  * Input padding
  */
 .uk-form-icon:not(.uk-form-icon-flip) + .uk-input {
-  padding-left: 36px; }
+  padding-left: 40px; }
 
 /*
  * Position modifier
@@ -1795,7 +1789,7 @@ select.uk-form-width-xsmall {
   left: auto; }
 
 .uk-form-icon-flip + .uk-input {
-  padding-right: 36px; }
+  padding-right: 40px; }
 
 /* ========================================================================
    Component: Button
@@ -1839,10 +1833,7 @@ select.uk-form-width-xsmall {
   /* 9 */
   text-align: center;
   /* 10 */
-  text-decoration: none;
-  font-weight: 900;
-  line-height: 36px;
-  min-width: 130px; }
+  text-decoration: none; }
 
 .uk-button:not(:disabled) {
   cursor: pointer; }
@@ -1871,25 +1862,19 @@ select.uk-form-width-xsmall {
  */
 .uk-button-default {
   background-color: transparent;
-  color: #fff;
-  color: inherit;
-  border: solid 2px #3a3531; }
+  color: #000; }
 
 /* Hover + Focus */
 .uk-button-default:hover,
 .uk-button-default:focus {
   background-color: #fff;
-  color: #198FF2;
-  color: inherit;
-  background: none; }
+  color: #198FF2; }
 
 /* OnClick + Active */
 .uk-button-default:active,
 .uk-button-default.uk-active {
   background-color: #fff;
-  color: #198FF2;
-  color: inherit;
-  background: none; }
+  color: #198FF2; }
 
 /*
  * Primary
@@ -3491,7 +3476,7 @@ select.uk-form-width-xsmall {
  * Input
  */
 .uk-search-default .uk-search-input {
-  height: 36px;
+  height: 40px;
   padding-left: 6px;
   padding-right: 6px;
   background: transparent;
@@ -3505,13 +3490,13 @@ select.uk-form-width-xsmall {
  * Icon
  */
 .uk-search-default .uk-search-icon {
-  width: 36px; }
+  width: 40px; }
 
 .uk-search-default .uk-search-icon:not(.uk-search-icon-flip) + .uk-search-input {
-  padding-left: 36px; }
+  padding-left: 40px; }
 
 .uk-search-default .uk-search-icon-flip + .uk-search-input {
-  padding-right: 36px; }
+  padding-right: 40px; }
 
 /* Navbar modifier
  ========================================================================== */
@@ -4755,7 +4740,17 @@ ul.uk-nav-sub {
   font-size: 1.25rem;
   line-height: 1.4;
   color: #333;
-  cursor: pointer; }
+  overflow: hidden; }
+  .uk-accordion-title::after {
+    content: "";
+    width: 1.4em;
+    height: 1.4em;
+    float: right;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%231e1e1f%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22%231e1e1f%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
+  .uk-open > .uk-accordion-title::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%231e1e1f%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E"); }
 
 /* Hover + Focus */
 .uk-accordion-title:hover,

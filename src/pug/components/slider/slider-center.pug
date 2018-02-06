@@ -1,0 +1,32 @@
+// Slider Center
+
+section
+
+    .uk-container
+
+        div(class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true")
+            
+            ul(class="uk-slider-items uk-grid uk-grid-small")
+                li.uk-width-3-4
+                    .uk-panel
+                        img(src="https://getuikit.com/docs/images/photo.jpg" alt="")
+                        .uk-position-center.uk-panel
+                            h1 1
+                li.uk-width-3-4
+                    .uk-panel
+                        img(src="https://getuikit.com/docs/images/dark.jpg" alt="")
+                        .uk-position-center.uk-panel
+                            h1 2
+                li.uk-width-3-4
+                    .uk-panel
+                        img(src="https://getuikit.com/docs/images/light.jpg" alt="")
+                        .uk-position-center.uk-panel
+                            h1 3
+                li.uk-width-3-4
+                    .uk-panel
+                        img(src="https://getuikit.com/docs/images/photo.jpg" alt="")
+                        .uk-position-center.uk-panel
+                            h1 4
+
+            a(class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous")
+            a(class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next")
