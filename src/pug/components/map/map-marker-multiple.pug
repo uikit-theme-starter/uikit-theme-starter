@@ -9,18 +9,33 @@ section
         script.
 
             var LocationData = [
-                [49.2812668, -123.1035942, "26 E Hastings St, Vancouver" ], 
-                [49.2814064, -123.1025187, "71 E Hastings St, Vancouver" ], 
-                [49.2812336, -123.1020622, "122 E Hastings St, Vancouver" ], 
-                [49.2813564, -123.1012253, "138 E Hastings St, Vancouver" ], 
-                [49.2811625, -123.0985032, "242 E Hastings St, Vancouver" ]
+                [
+                    49.2812668, -123.1035942,
+                    "<div class='content'><h4>Address 1</h4><p>Explanation 1</p></div>"
+                ], 
+                [
+                    49.2814064, -123.1025187,
+                    "<div class='content'><h4>Address 2</h4><p>Explanation 2</p></div>"
+                ], 
+                [
+                    49.2812336, -123.1020622,
+                    "<div class='content'><h4>Address 3</h4><p>Explanation 3</p></div>"
+                ], 
+                [
+                    49.2813564, -123.1012253,
+                    "<div class='content'><h4>Address 4</h4><p>Explanation 4</p></div>"
+                ], 
+                [
+                    49.2811625, -123.0985032,
+                    "<div class='content'><h4>Address 5</h4><p>Explanation 5</p></div>"
+                ]
             ];
 
             function initMapMultiple() {
                 var map = new google.maps.Map(document.getElementById('map-multiple'));
                 var bounds = new google.maps.LatLngBounds();
                 var infowindow = new google.maps.InfoWindow();
-                var image = 'http://www.gravatar.com/avatar/92aba1a21cb204bbbfbe357e161f2c56.jpg?s=48&d=mm';
+                var image = 'https://dummyimage.com/32x32/ff0000/ff0000.jpg';
                 
                 for (var i in LocationData) {
 

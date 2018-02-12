@@ -1,42 +1,39 @@
-// foter
+// Footer Default
 
-footer.main-footer
+footer.footer-default
 
-    .image(style="background-image: url(/images/footer/footer-bg.png);")
-
-    .top
+    .footer-default-top
 
         .uk-container
 
-            .uk-flex.uk-flex-between.uk-flex-middle
+            div(class="uk-grid-small uk-grid-match" uk-grid)
 
-                a(href="#" class="uk-visible@m"): img(src="/images/icons/landini-logo.svg" alt="landini")
-
-                nav.uk-flex.footer-nav 
-
-                    ul.uk-flex.uk-flex-middle.uk-margin-remove.uk-padding-remove.list-style-none
-
-                        li: a(href="http://anadolumotor.com" target="_blank") Anadolu Motor 
-                        li: a(href="contact.html") İletişim
-                        li: a(href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/13386" target="_blank") Bilgi Toplumu Hizmetleri
-
-                ul.uk-flex.uk-margin-remove.uk-padding-remove.list-style-none.social-list
-
-                    li: a(href="https://www.facebook.com/landinitraktor" uk-icon="icon: facebook")
-                    li: a(href="https://www.instagram.com/landiniturkiye" uk-icon="icon: instagram")
+                div(class="uk-width-medium@m")
+                    .uk-flex.uk-flex-column
+                        span.color-light İletişim
+                        a.uk-link-reset(href="mailto:clock@clockwork.com.tr") clock@clockwork.com.tr
+                        a.uk-link-reset(href="tel:+902122751084") 0212 275 10 84 - 85 
+                div(class="uk-width-expand@m")
+                    .uk-flex.uk-flex-column
+                        span.color-light Adres 
+                        adress 19 Mayıs Mahallesi 19 Mayıs Caddesi
+                            br
+                            | UBM Plaza No:37 K:4 34360 Fulya Şişli / İSTANBUL
+                div(class="uk-width-auto@m")
+                    .uk-flex.uk-flex-right
+                        ul.uk-flex.uk-padding-remove.list-style-none.social-list
+                            li: a(href="https://www.facebook.com/clockworkagency" target="blank" class="uk-icon-button uk-margin-small-right" uk-icon="facebook")
+                            li: a(href="https://twitter.com/clockworkagency" target="blank" class="uk-icon-button uk-margin-small-right" uk-icon="twitter")
+                            li: a(href="https://vimeo.com/clockworkagency" target="blank" class="uk-icon-button uk-margin-small-right" uk-icon="vimeo")
+                            li: a(href="https://www.linkedin.com/company/clockwork-agencys" target="blank" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin")
+                            li: a(href="https://www.instagram.com/clockworkagency/" target="blank" class="uk-icon-button uk-margin-small-right" uk-icon="instagram")
     
-    .bottom
+    .footer-default-bottom
 
         .uk-container
 
             div(class="uk-flex uk-flex-between uk-flex-middle")
 
-                a(href="http://www.anadolugrubu.com.tr") 
+                small © Clockwork 2018
 
-                    img(src="images/icons/anadolu-grubu-logo.png" alt="anadolu grubu")
-
-                    small Copyright © 2018 Anadolu Landini
-
-                small.uk-flex.uk-flex-middle Anadolu Landini, Anadolu Motor ve Argo Tractors S.p.A.’nın ortak kurulu
-
-                a(href="http://clockwork.com.tr"): img(src="images/icons/clockwork.svg" alt="Clockwork | Dijital Pazarlama Ajansı")
+                img(src="/images/icons/iab-googlepartner-logo.png" alt="iab-googlepartner-logo")

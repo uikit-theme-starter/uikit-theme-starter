@@ -16,13 +16,12 @@ section
                     mapTypeId: 'roadmap'
                 });
 
-                var iconBase = '/images/icons/';
                 var icons = {
                     delivery: {
-                        icon: iconBase + 'clockwork.svg'
+                        icon: 'https://dummyimage.com/32x32/ff0000/ff0000.jpg'
                     },
                     charge: {
-                        icon: iconBase + 'landini-logo.svg'
+                        icon: 'https://dummyimage.com/32x32/0f64f8/0f64f8.jpg'
                     }
                 };
 
@@ -30,19 +29,19 @@ section
                     {
                         position: new google.maps.LatLng(-33.91666, 151.23468),
                         type: 'delivery',
-                        content: '<div id="content"><h4>Adres 1</h4><p>Aciklama 1</p></div>'
+                        content: '<div class="content"><h4>Address 1</h4><p>Explanation 1</p></div>'
                     }, {
                         position: new google.maps.LatLng(-33.916988, 151.233640),
                         type: 'delivery',
-                        content: '<div id="content"><h4>Adres 2</h4><p>Aciklama 2</p></div>'
+                        content: '<div class="content"><h4>Address 2</h4><p>Explanation 2</p></div>'
                     }, {
                         position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
                         type: 'charge',
-                        content: '<div id="content"><h4>Adres 3</h4><p>Aciklama 3</p></div>'
+                        content: '<div class="content"><h4>Address 3</h4><p>Explanation 3</p></div>'
                     }, {
                         position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
                         type: 'charge',
-                        content: '<div id="content"><h4>Adres 4</h4><p>Aciklama 4</p></div>'
+                        content: '<div class="content"><h4>Address 4</h4><p>Explanation 4</p></div>'
                     }
                 ];
 

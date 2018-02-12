@@ -1,0 +1,26 @@
+// Header Sticky
+
+header.uk-position-relative.header-sticky
+
+    div(uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 200")
+
+        nav(class="uk-navbar-container uk-navbar-transparent uk-container" uk-navbar) 
+
+            .uk-navbar-left.uk-margin-auto-right
+                a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
+                    img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+
+            ul.uk-navbar-nav
+                li
+                    a(href="#") Nav 1
+                li
+                    a(href="#") Nav 2
+                li
+                    a(href="#") Nav 3
+                li
+                    a(href="#") Nav 4
+
+            .uk-navbar-item.uk-padding-remove-right
+                a(href="#" class="uk-button uk-button-default uk-button-small")
+                    img(src="https://dummyimage.com/20x20/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+                    | Item 1

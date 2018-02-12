@@ -23,12 +23,12 @@ const pump = require('pump');
 // pug task
 
 gulp.task('html', () => {
-    return gulp.src('./src/pug/pages/**/*.pug')
+    return gulp.src('./src/pug/pages/*.pug')
         .pipe(plumber())
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('./dist')) 
+        .pipe(gulp.dest('./dist'))
         .on('end', reload)
 })
 
@@ -59,36 +59,56 @@ gulp.task('images', () => {
 // move task
 
 gulp.task('move', () => {
-    return gulp.src('./src/favicon/*')
+    gulp.src('./src/favicon/*')
         .pipe(gulp.dest('./dist/favicon'))
+    gulp.src('./src/fonts/**/*')
+        .pipe(gulp.dest('./dist/fonts'))
 })
 
 // concat task
 
 gulp.task('concat', () => {
     gulp.src(
-            [
-                './node_modules/jquery/dist/jquery.js',
-                './node_modules/uikit/dist/js/uikit.js',
-                './node_modules/uikit/dist/js/uikit-icons.js',
-                './node_modules/swiper/dist/js/swiper.js',
-				'./node_modules/jquery-validation/dist/jquery.validate.js',
-				'./node_modules/jquery-mask-plugin/dist/jquery.mask.js',
-                './src/js/**.js'
-            ]
-        )
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('./dist/js'))
-        .on('end', reload)
+        [
+            './node_modules/jquery/dist/jquery.min.js',
+            './node_modules/jquery-validation/dist/jquery.validate.min.js',
+            './node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
+            './node_modules/uikit/dist/js/uikit.min.js',
+            './node_modules/uikit/dist/js/uikit-icons.min.js',
+            //'./node_modules/swiper/dist/js/swiper.min.js',
+            //'./node_modules/paper/dist/paper-full.min.js',
+        ]
+    )
+    .pipe(concat('plugins.js'))
+    .pipe(gulp.dest('./dist/js'))
+    .on('end', reload)
+
     gulp.src(
-            [
-                './src/css/uikit.css',
-                './node_modules/swiper/dist/css/swiper.css',
-                './src/css/main.css',
-            ]
-        )
-        .pipe(concat('all.css'))
-        .pipe(gulp.dest('./dist/css'))
+        [
+            './src/js/**.js'
+        ]
+    )
+    .pipe(concat('theme.js'))
+    .pipe(gulp.dest('./dist/js'))
+    .on('end', reload)
+
+    gulp.src(
+        [
+            //'./node_modules/swiper/dist/css/swiper.min.css',
+        ]
+    )
+    .pipe(concat('plugins.css'))
+    .pipe(gulp.dest('./dist/css'))
+
+    gulp.src(
+        [
+            './src/css/uikit.css',
+            './src/css/main.css',
+        ]
+    )
+    .pipe(concat('theme.css'))
+    .pipe(gulp.dest('./dist/css'))
+
 });
 
 // minify css task
@@ -124,7 +144,6 @@ gulp.task('browser-sync', () => {
     })
     gulp.watch('./src/pug/**/*.pug', ['html']);
     gulp.watch('./src/scss/**/*.scss', ['css']);
-    gulp.watch('./src/scss/*.scss', ['css']);
     gulp.watch('./src/images/**/*', ['images']);
     gulp.watch('./src/fonts/**/*', ['move']);
     gulp.watch('./src/favicon/*', ['move']);
@@ -134,4 +153,4 @@ gulp.task('browser-sync', () => {
 
 // gulp default task
 
-gulp.task('default', ['browser-sync', 'html', 'css', 'images', 'move', 'concat', 'minify-css', 'minify-js'])
+gulp.task('default', ['browser-sync', 'html', 'css', 'images', 'move', 'concat'])

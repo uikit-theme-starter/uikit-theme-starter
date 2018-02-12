@@ -1,6 +1,6 @@
 // Slideshow Advanced Effects
 
-section
+section.slideshow-default-advanced-effects
 
     .uk-container
 
@@ -8,11 +8,11 @@ section
             
             ul.uk-slideshow-items
 
-                - for(var i = 0; i<3; i++)
+                - for(var x = 0; x < 3; x++)
 
                     li
                         div(class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1")
-                            img(src="https://getuikit.com/docs/images/photo.jpg" alt="" uk-cover)
+                            img(src="https://dummyimage.com/1920x600/ff0000/ff0000.jpg" alt="" uk-cover)
                         div(class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000")
                         .uk-position-center.uk-position-medium.uk-text-center.uk-light
                             div(uk-slideshow-parallax="scale: 1,1,0.8")

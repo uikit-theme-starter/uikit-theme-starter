@@ -1,27 +1,20 @@
 // Slideshow Parallax
 
-section
+section.slideshow-parallax
 
     .uk-container
 
         div(class="uk-position-relative uk-visible-toggle uk-dark" uk-slideshow="animation: push")
             
             ul.uk-slideshow-items
-                li
-                    img(src="https://getuikit.com/docs/images/photo.jpg" alt="" uk-cover)
-                    .uk-position-center.uk-position-small.uk-text-center.uk-light
-                        h2(uk-slideshow-parallax="x: 100,-100") Heading
-                        p(uk-slideshow-parallax="x: 200,-200") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                li
-                    img(src="https://getuikit.com/docs/images/dark.jpg" alt="" uk-cover)
-                    .uk-position-center.uk-position-small.uk-text-center.uk-light
-                        h2(uk-slideshow-parallax="x: 100,-100") Center
-                        p(uk-slideshow-parallax="x: 200,-200") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                li
-                    img(src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover) 
-                    .uk-position-center.uk-position-small.uk-text-center.uk-light 
-                        h2(uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0") Center
-                        p(uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                - for (var x = 0; x < 5; x++)
+
+                    li
+                        img(src="https://dummyimage.com/1920x600/ff0000/ff0000.jpg" alt="" uk-cover)
+                        .uk-position-center.uk-position-small.uk-text-center.uk-light
+                            h2(uk-slideshow-parallax="x: 100,-100") Heading
+                            p(uk-slideshow-parallax="x: 200,-200") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
             .uk-light
                 a(class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous")

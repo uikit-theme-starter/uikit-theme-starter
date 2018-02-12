@@ -5,4 +5,24 @@
 // Global & Title
 // ========================================================================
 
-@import url("https://use.typekit.net/pks0mmg.css"); 
+//@import url("https://use.typekit.net/pks0mmg.css");
+
+// Global
+// ========================================================================
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/helvetica/regular/helvetica-regular.woff') format('woff2'), 
+		 url('../fonts/helvetica/regular/helvetica-regular.woff2') format('woff');
+	font-weight: 300;
+}
+
+// Title
+// ========================================================================
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/helvetica/bold/helvetica-bold.woff') format('woff2'), 
+		 url('../fonts/helvetica/bold/helvetica-bold.woff2') format('woff');
+	font-weight: 700;
+}

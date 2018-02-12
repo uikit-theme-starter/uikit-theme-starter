@@ -1,0 +1,44 @@
+// Header Sticky Cover Video
+
+section.uk-position-relative.uk-overflow-hidden.uk-height-large.cover-video
+
+    header.uk-position-top.uk-position-z-index.header-sticky.header-sticky-cover
+
+        div(uk-sticky="animation: uk-animation-slide-top; cls-active: uk-navbar-sticky; top: .cover-video")
+
+            nav(class="uk-navbar-container uk-navbar-transparent uk-container" uk-navbar) 
+
+                .uk-navbar-left.uk-margin-auto-right
+                    a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
+                        img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+
+                ul.uk-navbar-nav
+                    li
+                        a(href="#") Nav 1
+                    li
+                        a(href="#") Nav 2
+                    li
+                        a(href="#") Nav 3
+                    li
+                        a(href="#") Nav 4
+
+                .uk-navbar-item.uk-padding-remove-right
+                    a(href="#" class="uk-button uk-button-default uk-button-small")
+                        img(src="https://dummyimage.com/20x20/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+                        | Item 1
+
+    video(autoplay loop muted playsinline uk-cover class="uk-height-large")
+        source(src="https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4")
+        source(src="//www.quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg")
+
+    .uk-position-top-left.uk-width-1-1.uk-height-1-1
+
+        .uk-flex.uk-flex-middle.uk-height-1-1
+
+            .uk-container.uk-flex-1
+
+                .uk-width-xlarge.uk-light.cover-text(uk-parallax="y: 0,60;opacity: 1,0;easing: 0.8;viewport: 0.95;media: @s")
+
+                    h1 Title
+
+                    p Explanation

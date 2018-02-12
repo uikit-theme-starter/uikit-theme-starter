@@ -1,32 +1,20 @@
 // Slideshow Overlay
 
-section
+section.slideshow-overlay
 
     .uk-container
 
         div(class="uk-position-relative uk-visible-toggle uk-dark" uk-slideshow="animation: push")
             
             ul.uk-slideshow-items
-                li
-                    img(src="https://getuikit.com/docs/images/photo.jpg" alt="" uk-cover)
-                    .uk-position-center.uk-position-small.uk-text-center.uk-light
-                        h2.uk-margin-remove Center
-                        p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                li
-                    img(src="https://getuikit.com/docs/images/dark.jpg" alt="" uk-cover)
-                    .uk-position-bottom.uk-position-medium.uk-text-center.uk-light
-                        h2.uk-margin-remove Center
-                        p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                li
-                    img(src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover)
-                    .uk-overlay.uk-overlay-primary.uk-position-bottom.uk-text-center
-                        h2.uk-margin-remove Center
-                        p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                li
-                    img(src="https://getuikit.com/docs/images/light.jpg" alt="" uk-cover)
-                    .uk-overlay.uk-overlay-default.uk-position-bottom-right.uk-position-small
-                        h2.uk-margin-remove Center
-                        p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                - for (var x = 0; x < 5; x++)
+
+                    li
+                        img(src="https://dummyimage.com/1920x600/ff0000/ff0000.jpg" alt="" uk-cover)
+                        .uk-position-center.uk-position-small.uk-text-center.uk-light
+                            h2.uk-margin-remove Center
+                            p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
             .uk-light
                 a(class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous")

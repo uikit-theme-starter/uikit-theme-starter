@@ -1,19 +1,21 @@
 // Header Parent
 
-header
+header.header-default.header-parent(uk-sticky media="768" show-on-up animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container")
 
     .uk-container 
 
-        nav(class="uk-navbar-container uk-margin" uk-navbar) 
+        nav(class="uk-navbar-container uk-navbar-transparent" uk-navbar) 
 
-            .uk-navbar-left
-                a(class="uk-navbar-item uk-logo" href="#") Logo
+            .uk-navbar-left.uk-margin-auto-right
+                a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
+                    img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
 
             ul.uk-navbar-nav
                 li.uk-active
-                    a(href="#") Item 1
+                    a(href="#") Nav 1
                 li
-                    a(href="#") Parent
+                    a(href="#") Nav 2 
+                        span(uk-icon="baris")
                     .uk-navbar-dropdown
                         ul.uk-nav.uk-navbar-dropdown-nav
                             li.uk-active
@@ -21,12 +23,13 @@ header
                             li
                                 a(href="#") Item 
                 li
-                    a(href="#") Item 3
+                    a(href="#") Nav 3
                 li
-                    a(href="#") Item 4
+                    a(href="#") Nav 4
                 li
-                    a(href="#") Item 5
+                    a(href="#") Nav 5
                     
-            .uk-navbar-item
-                form(action="javascript:void(0)")
-                    input(class="uk-input uk-form-width-small" type="text" placeholder="Input")
+            .uk-navbar-item.uk-padding-remove-right
+                a(href="#" class="uk-button uk-button-default uk-button-small")
+                    img(src="https://dummyimage.com/20x20/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+                    | Item 1

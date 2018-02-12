@@ -1,10 +1,10 @@
 // Header Logo Center
 
-header
+header.header-default.header-logo-center(uk-sticky media="768" show-on-up animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container")
 
     .uk-container 
 
-        nav(class="uk-navbar-container uk-margin" uk-navbar)
+        nav(class="uk-navbar-container uk-navbar-transparent" uk-navbar) 
 
             .uk-navbar-center 
 
@@ -12,20 +12,21 @@ header
                     div
                         ul.uk-navbar-nav
                             li.uk-acive
-                                a(href="#") Item 1
+                                a(href="#") Nav 1
                             li
-                                a(href="#") Item 2
+                                a(href="#") Nav 2
                             li
-                                a(href="#") Item 3 
+                                a(href="#") Nav 3 
 
-                a(class="uk-navbar-item uk-logo" href="#") Logo
+                a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
+                    img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
 
                 .uk-navbar-center-right
                     div
                         ul.uk-navbar-nav
                             li
-                                a(href="#") Item 1
+                                a(href="#") Nav 1
                             li
-                                a(href="#") Item 2
+                                a(href="#") Nav 2
                             li
-                                a(href="#") Item 3
+                                a(href="#") Nav 3
