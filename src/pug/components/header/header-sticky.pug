@@ -10,7 +10,7 @@ header.uk-position-relative.header-sticky
                 a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
                     img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
 
-            ul.uk-navbar-nav
+            ul(class="uk-navbar-nav uk-visible@m")
                 li
                     a(href="#") Nav 1
                 li
@@ -20,7 +20,12 @@ header.uk-position-relative.header-sticky
                 li
                     a(href="#") Nav 4
 
-            .uk-navbar-item.uk-padding-remove-right
+            div(class="uk-navbar-item uk-padding-remove-right uk-visible@m")
                 a(href="#" class="uk-button uk-button-default uk-button-small")
                     img(src="https://dummyimage.com/20x20/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
                     | Item 1
+					
+			div(class="uk-navbar-item uk-hidden@m uk-light uk-padding-remove")
+                    a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle): img(src="/images/icons/menu.svg" alt="")
+
+	include header-mobile/header-mobile-modal.pug

@@ -8,7 +8,7 @@ header.header-default.header-logo-center(uk-sticky media="768" show-on-up animat
 
             .uk-navbar-center 
 
-                .uk-navbar-center-left
+                div(class="uk-navbar-center-left uk-visible@m")
                     div
                         ul.uk-navbar-nav
                             li.uk-acive
@@ -21,7 +21,7 @@ header.header-default.header-logo-center(uk-sticky media="768" show-on-up animat
                 a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
                     img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
 
-                .uk-navbar-center-right
+                div(class="uk-navbar-center-right uk-visible@m")
                     div
                         ul.uk-navbar-nav
                             li
@@ -30,3 +30,8 @@ header.header-default.header-logo-center(uk-sticky media="768" show-on-up animat
                                 a(href="#") Nav 2
                             li
                                 a(href="#") Nav 3
+								
+				div(class="uk-navbar-item uk-hidden@m uk-light uk-padding-remove")
+                    a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle): img(src="/images/icons/menu.svg" alt="")
+					
+	include header-mobile/header-mobile-modal.pug
