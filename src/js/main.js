@@ -2,7 +2,8 @@ $(function () {
 
     /*
      * 1 - Mask & Validation
-     * 2 - Swiper
+     * 2 - Swiper Default
+     * 3 - Tab Nav Mobile
      */
 
 
@@ -61,9 +62,29 @@ $(function () {
         }
     });
 
-    // 2
+    // 2 - Swiper Default
     // ========================================================================
 
-    var swiper = new Swiper('.swiper-container', {});
+    //var swiper = new Swiper('.swiper-container', {});
+
+    // 3 - Tab Nav Mobile
+    // ========================================================================
+
+    /*var total = 0;
+    var padding = 0;
+    var tabNav = $('.tab-default .uk-tab');
+
+    tabNav.find('li').each(function () { 
+        total += parseInt(
+            $(this).width()
+        );
+
+        padding += parseInt(
+            $(this).css('padding-left')  
+        );
+
+    });
+
+    tabNav.width(total + padding + 4);*/
 
 });
