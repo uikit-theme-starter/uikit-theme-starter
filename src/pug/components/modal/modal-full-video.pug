@@ -1,0 +1,12 @@
+// Modal Full
+
+section.uk-section.uk-padding-remove-vertical.modall-full-video
+
+    a(href="#modal-full" class="uk-button uk-button-default" uk-toggle) Video Full
+
+    div(id="modal-full" class="uk-modal-full" uk-modal)
+        .uk-modal-dialog
+            button(class="uk-modal-close-full uk-close-large" type="button" uk-close)
+            video(autoplay playsinline controls uk-video)
+                source(src="https://www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4")
+                source(src="//www.quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg")
