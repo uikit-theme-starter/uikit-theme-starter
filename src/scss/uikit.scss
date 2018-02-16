@@ -89,11 +89,17 @@ $form-placeholder-color: #333333;
 // section
 
 $section-muted-background: #f9f9f9;
+$section-large-padding-vertical: 50px;
 
 // card
 
 $card-small-body-padding-vertical: 0;
 $card-small-body-padding-horizontal: 12px;
+
+// off-canvas
+
+$offcanvas-bar-background: #131316;
+$offcanvas-bar-width: 100%;
 
 // 2. Import default variables and available mixins.
 
