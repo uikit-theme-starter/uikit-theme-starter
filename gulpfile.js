@@ -63,6 +63,8 @@ gulp.task('move', () => {
         .pipe(gulp.dest('./dist/favicon'))
     gulp.src('./src/fonts/**/*')
         .pipe(gulp.dest('./dist/fonts'))
+    gulp.src('./src/videos/**/*')
+        .pipe(gulp.dest('./dist/videos'))
 })
 
 // concat task
