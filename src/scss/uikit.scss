@@ -1,4 +1,5 @@
 // 1. Your custom variables and variable overwrites.
+// ========================================================================
 
 // fonts import
 
@@ -101,12 +102,24 @@ $card-small-body-padding-horizontal: 12px;
 $offcanvas-bar-background: #131316;
 $offcanvas-bar-width: 100%;
 
+// tab
+
+//$tab-border-width: 2px; 
+
+$tab-item-color: inherit;
+$tab-item-active-color: #ff0b4d;
+$tab-item-padding-vertical: 13px;
+$tab-item-padding-horizontal: 10px;
+
+
 // 2. Import default variables and available mixins.
+// ========================================================================
 
 @import "./node_modules/uikit/src/scss/variables-theme.scss"; 
 @import "./node_modules/uikit/src/scss/mixins-theme.scss";
 
 // 3. Your custom mixin overwrites.
+// ========================================================================
 
 // form hook
 
@@ -196,5 +209,26 @@ $offcanvas-bar-width: 100%;
     border-top: 0;
 }
 
+// hook modal
+
+@mixin hook-modal-close-full() {
+    background-color: transparent;
+    padding: 0 5px;
+    top: 20px;
+    right: 15px; 
+}
+
+// hook tab 
+
+@mixin hook-tab-item() {
+    font-weight: 700;
+}
+
+@mixin hook-tab-item-active() {
+    border-bottom: solid 2px #ff0b4d;
+}
+
 // 4. Import UIkit.
+// ========================================================================
+
 @import "./node_modules/uikit/src/scss/uikit-theme.scss";  
