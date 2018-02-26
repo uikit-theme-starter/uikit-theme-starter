@@ -1,0 +1,18 @@
+/* ========================================================================
+ Component: Newsletter Default
+========================================================================== */
+
+.newsletter {
+    height: 240px;
+    input,
+    button {
+        letter-spacing: 1px;
+    }
+    input {
+        width: 370px;
+        max-width: 100%;
+    }
+    button {
+        padding: 0 20px;
+    }
+}
