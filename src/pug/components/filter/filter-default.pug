@@ -1,0 +1,53 @@
+// Filter Default
+
+section.filter-default
+
+    .uk-container
+
+        .uk-section-small.filter-default-control
+            div(class="uk-grid uk-grid-medium uk-flex-middle" uk-grid)
+
+                div(class="uk-width-expand")
+                    h5.uk-margin-remove FİLTRELE
+                div(class="uk-width-medium@m")
+                    a(class="uk-button uk-button-secondary uk-link-reset uk-width-1-1 uk-flex uk-flex-between uk-flex-middle" type="button") Ürün Grupları
+                        img(src="/images/icons/chevron-down.svg" alt="")
+                    div(uk-dropdown="mode: click; pos: bottom-justify;" class="uk-margin-remove")
+                        ul.uk-nav.uk-dropdown-nav
+                            li a
+                div(class="uk-width-medium@m")
+                    a(class="uk-button uk-button-secondary uk-link-reset uk-width-1-1 uk-flex uk-flex-between uk-flex-middle" type="button") Kullanım Alanları
+                        img(src="/images/icons/chevron-down.svg" alt="")
+                    div(uk-dropdown="mode: click; pos: bottom-justify;" class="uk-margin-remove")
+                        ul.uk-nav.uk-dropdown-nav
+                            li a
+                div(class="uk-width-expand")
+
+                    .uk-flex.uk-flex-right.uk-flex-middle
+                        a(href="#" class="filter-shown filter-two")
+                            span.uk-flex-inline
+                            span.uk-flex-inline
+                        a(href="#" class="filter-shown filter-active filter-three")
+                            span.uk-flex-inline
+                            span.uk-flex-inline
+                            span.uk-flex-inline
+
+        .uk-section-small.filter-default-result
+
+            div(class="uk-grid uk-grid-medium uk-child-width-1-2@m uk-flex-middle" uk-grid)
+
+                div
+
+                    .uk-flex.filter-tag
+                        span.uk-flex.uk-flex-middle.uk-light
+                            a(class="uk-flex" href="#")
+                                img(src="/images/icons/close-circle.svg" alt="")
+                            | Finans
+                        span.uk-flex.uk-flex-middle.uk-light
+                            a(class="uk-flex" href="#")
+                                img(src="/images/icons/close-circle.svg" alt="")
+                            | Lounge
+
+                div.uk-text-right
+
+                    small(class="") 120 Adet Ürün Gösteriliyor.
