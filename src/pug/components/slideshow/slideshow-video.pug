@@ -1,0 +1,22 @@
+// Slideshow Video
+
+.section.uk-section-large.uk-padding-remove-bottom.slideshow-video
+
+    .uk-container
+
+        .uk-text-center
+            h3 TITLE
+            p.uk-margin-medium-bottom Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing.
+
+        div(class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: push")
+
+            ul.uk-slideshow-items
+                li
+                    video(class="uk-width-1-1" controls)
+                        source(src="//www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4")
+                        source(src="//www.quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg")
+                li
+                    iframe(src="//www.youtube.com/embed/YE7VzlLtp-4?showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent&amp;playsinline=1" class="uk-width-1-1 uk-height-1-1" width="560" height="315" frameborder="0" allowfullscreen)
+            
+            a(class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-previous uk-slideshow-item="previous")
+            a(class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-next uk-slideshow-item="next")
