@@ -67,7 +67,29 @@ $button-default-background: #fff;
 $button-default-hover-background: #e1e1e1;
 $button-default-active-background: #fff;
 
+$button-secondary-color: $global-color;
+$button-secondary-hover-color: #fff; 
+$button-secondary-active-color: #fff;
+
+$button-secondary-background: transparent;
+$button-secondary-hover-background: transparent;
+$button-secondary-active-background: transparent;
+
+$button-primary-color: $global-color;
+$button-primary-hover-color: #fff; 
+$button-primary-active-color: #fff;
+
+$button-primary-background: #f4f4f4;
+$button-primary-hover-background: $global-color;
+$button-primary-active-background: $global-color;
+
+$button-danger-color: $global-color;
+$button-danger-hover-color: #ff0b4d; 
+$button-danger-active-color: #ff0b4d;
+
 $button-danger-background: #ff0b4d;
+$button-danger-hover-background: $global-color;
+$button-danger-active-background: $global-color;
 
 $button-small-font-size: 14px;
 $button-small-line-height: 34px;
@@ -91,6 +113,8 @@ $accordion-content-margin-top: 0;
 
 $global-control-height: 54px;
 $form-placeholder-color: #333333;
+$form-radio-checked-background: #24c22a; 
+$form-radio-checked-focus-background: #24c22a;
 
 // section
 
@@ -116,6 +140,48 @@ $tab-item-active-color: #ff0b4d;
 $tab-item-padding-vertical: 13px;
 $tab-item-padding-horizontal: 10px;
 
+// dropdown
+
+//$dropdown-padding: 35px 0;
+
+// inverse
+
+$inverse-global-color: #fff;
+
+// width
+
+$width-medium-width: 400px;
+
+// height
+
+$height-large-height: 780px;
+$height-large-medium: 400px;
+
+// search
+
+$search-navbar-font-size: 18px;
+$search-placeholder-color: #828282;
+
+// dotnav
+
+$dotnav-item-width: 12px;
+$dotnav-item-height: 12px;
+$dotnav-item-background: rgba(255, 255, 255, 0.3);
+$dotnav-item-onclick-background: #fff;
+$dotnav-item-hover-background: #fff;
+$dotnav-item-active-background: #fff;
+$dotnav-margin-horizontal: 20px;
+
+// pagination
+
+$pagination-item-color: $global-color;
+$pagination-margin-horizontal: 35px; 
+
+// breadcrumb
+
+$breadcrumb-item-font-size: 16px;
+$breadcrumb-item-color: $global-color;
+$breadcrumb-divider-margin-horizontal: 5px;
 
 // 2. Import default variables and available mixins.
 // ========================================================================
