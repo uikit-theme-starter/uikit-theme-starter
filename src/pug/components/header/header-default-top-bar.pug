@@ -1,0 +1,52 @@
+// Header Default
+
+header.uk-background-default.header-default
+
+    .header-top-bar
+
+        .uk-container
+
+            .uk-flex.uk-flex-middle
+
+                small.uk-margin-auto-right Tuna Ofis, şimdi Hollanda Rotterdam'da!
+
+                nav
+
+                    ul.uk-flex.uk-flex-middle.uk-margin-remove.uk-padding-remove.list-style-none
+
+                        li: a(href="hakkimizda.html" class="uk-link-reset") Hakkımızda
+                        li: a(href="haberler.html" class="uk-link-reset") Haberler
+                        li: a(href="dokumanlar.html" class="uk-link-reset") Dokümanlar
+                        li: a(href="Bize Ulaşın" class="uk-link-reset") Bize Ulaşın
+
+                a(href="#" class="uk-link-reset") TR
+
+    div(uk-sticky cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-background-default")
+
+        .uk-container
+
+            nav(class="uk-navbar-container uk-navbar-transparent uk-navbar" uk-navbar) 
+
+                .uk-navbar-left.uk-margin-auto-right
+                    a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
+                        img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+
+                ul(class="uk-navbar-nav uk-visible@m")
+                    li
+                        a(href="#") Nav 1
+                    li
+                        a(href="#") Nav 2
+                    li
+                        a(href="#") Nav 3
+                    li
+                        a(href="#") Nav 4
+
+                div(class="uk-navbar-item uk-padding-remove-right uk-visible@m")
+                    a(href="#" class="uk-button uk-button-default uk-button-small")
+                        img(src="https://dummyimage.com/20x20/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+                        | Item 1
+                        
+                div(class="uk-navbar-item uk-hidden@m uk-light uk-padding-remove")
+                        a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle): img(src="/images/icons/menu.svg" alt="")
+					
+	include header-mobile/header-mobile-modal.pug
