@@ -2,58 +2,96 @@
 
 const gulp = require('gulp');
 
+// gulp plugin include
+
+const pug = require('gulp-pug');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const cleancss = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
+const plumber = require('gulp-plumber');
+
 // browsersync include
 
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload
 
-// gulp plugins include
-
-const pug = require('gulp-pug');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const plumber = require('gulp-plumber');
-const imagemin = require('gulp-imagemin');
-const cache = require('gulp-cache');
-const concat = require('gulp-concat');
-const clean = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
-const pump = require('pump');
-
-// pug task
+// html task
 
 gulp.task('html', () => {
-    return gulp.src('./src/pug/pages/*.pug')
+    gulp.src('./src/pug/pages/*.pug')
         .pipe(plumber())
         .pipe(pug({
             pretty: true
         }))
         .pipe(gulp.dest('./dist'))
         .on('end', reload)
-})
+});
 
-// scss task
+// styles task
 
-gulp.task('css', () => {
-    return gulp.src('./src/scss/*.scss')
+gulp.task('styles', () => {
+    gulp.src('./src/scss/*.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
+        .pipe(cleancss())
         .pipe(gulp.dest('./src/css'))
+    gulp.src(['./src/css/uikit.css', './src/css/main.css'])
+        .pipe(concat('theme.css'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream())
-})
+        .on('end', reload)
+    gulp.src(
+            [
+                './node_modules/swiper/dist/css/swiper.min.css',
+            ]
+        )
+        .pipe(concat('plugins.css'))
+        .pipe(gulp.dest('./dist/css'))
+});
+
+// scripts task
+
+gulp.task('scripts', () => {
+    gulp.src(
+            [
+                './node_modules/jquery/dist/jquery.min.js',
+                './node_modules/jquery-validation/dist/jquery.validate.min.js',
+                './node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
+                './node_modules/uikit/dist/js/uikit.min.js',
+                './node_modules/uikit/dist/js/uikit-icons.min.js',
+                './node_modules/swiper/dist/js/swiper.min.js',
+                //'./node_modules/paper/dist/paper-full.min.js'
+            ]
+        )
+        .pipe(concat('plugins.js'))
+        .pipe(gulp.dest('./dist/js'))
+    gulp.src('./src/js/**.js')
+        .pipe(concat('theme.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'))
+        .on('end', reload)
+});
 
 // images task
 
 gulp.task('images', () => {
     return gulp.src('./src/images/**/*')
-        .pipe(cache(imagemin({
-            optimizationLevel: 9,
-            progressive: false,
-            interlaced: false
-        })))
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 7}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
         .pipe(gulp.dest('./dist/images'))
-        .on('end', reload)
 });
 
 // move task
@@ -67,74 +105,6 @@ gulp.task('move', () => {
         .pipe(gulp.dest('./dist/videos'))
 })
 
-// concat task
-
-gulp.task('concat', () => {
-    gulp.src(
-        [
-            './node_modules/jquery/dist/jquery.min.js',
-            './node_modules/jquery-validation/dist/jquery.validate.min.js',
-            './node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
-            './node_modules/uikit/dist/js/uikit.min.js',
-            './node_modules/uikit/dist/js/uikit-icons.min.js',
-            //'./node_modules/swiper/dist/js/swiper.min.js',
-            //'./node_modules/paper/dist/paper-full.min.js',
-        ]
-    )
-    .pipe(concat('plugins.js'))
-    .pipe(gulp.dest('./dist/js'))
-    .on('end', reload)
-
-    gulp.src(
-        [
-            './src/js/**.js'
-        ]
-    )
-    .pipe(concat('theme.js'))
-    .pipe(gulp.dest('./dist/js'))
-    .on('end', reload)
-
-    gulp.src(
-        [
-            //'./node_modules/swiper/dist/css/swiper.min.css',
-        ]
-    )
-    .pipe(concat('plugins.css'))
-    .pipe(gulp.dest('./dist/css'))
-
-    gulp.src(
-        [
-            './src/css/uikit.css',
-            './src/css/main.css',
-        ]
-    )
-    .pipe(concat('theme.css'))
-    .pipe(gulp.dest('./dist/css'))
-
-});
-
-// minify css task
-
-gulp.task('minify-css', () => {
-    return gulp.src('./dist/css/*.css')
-        .pipe(clean({
-            compatibility: 'ie8'
-        }))
-        .pipe(gulp.dest('./dist/css/minify'));
-});
-
-// minify js task
-
-gulp.task('minify-js', function (cb) {
-    pump([
-            gulp.src('./dist/js/*.js'),
-            uglify(),
-            gulp.dest('./dist/js/minify')
-        ],
-        cb
-    );
-});
-
 // browsersync task
 
 gulp.task('browser-sync', () => {
@@ -144,15 +114,9 @@ gulp.task('browser-sync', () => {
             baseDir: './dist'
         }
     })
-    gulp.watch('./src/pug/**/*.pug', ['html']);
-    gulp.watch('./src/scss/**/*.scss', ['css']);
-    gulp.watch('./src/images/**/*', ['images']);
-    gulp.watch('./src/fonts/**/*', ['move']);
-    gulp.watch('./src/favicon/*', ['move']);
-    gulp.watch('./src/css/*', ['concat']);
-    gulp.watch('./src/js/*', ['concat']);
-})
+    gulp.watch('src/pug/**/*.pug', ['html']);
+    gulp.watch('src/scss/**/*.scss', ['styles']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
+});
 
-// gulp default task
-
-gulp.task('default', ['browser-sync', 'html', 'css', 'images', 'move', 'concat'])
+gulp.task('default', ['html', 'styles', 'scripts', 'move', 'images', 'browser-sync']);
