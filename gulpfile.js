@@ -33,17 +33,15 @@ gulp.task('html', () => {
 // styles task
 
 gulp.task('styles', () => {
-    gulp.src('./src/scss/*.scss')
+    gulp.src(['./src/scss/uikit.scss', './src/scss/main.scss'])
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(cleancss())
-        .pipe(gulp.dest('./src/css'))
-    gulp.src(['./src/css/uikit.css', './src/css/main.css'])
         .pipe(concat('theme.css'))
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream())
-        .on('end', reload)
+         
     gulp.src(
             [
                 './node_modules/swiper/dist/css/swiper.min.css',
@@ -51,7 +49,7 @@ gulp.task('styles', () => {
         )
         .pipe(concat('plugins.css'))
         .pipe(gulp.dest('./dist/css'))
-});
+}); 
 
 // scripts task
 
