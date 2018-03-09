@@ -13,7 +13,7 @@ $(function () {
     $('.mask-phone').mask('(000) 000-0000');
 
     $.validator.addMethod("lettersonly", function (value, element) {
-        return this.optional(element) || /^[a-zA-ZçÇğĞiİöÖşŞüÜ\s]*$/.test(value);
+        return this.optional(element) || /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]*$/.test(value);
     });
 
     var message = "Lütfen ilgili alanı doldurunuz."
