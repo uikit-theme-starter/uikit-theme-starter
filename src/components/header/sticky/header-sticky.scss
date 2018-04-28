@@ -1,0 +1,29 @@
+/* ========================================================================
+ Component: Header Sticky
+========================================================================== */
+
+.header-sticky {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+    &:not(.header-sticky-cover) {
+        background-color: #272b35;
+    }
+    .uk-button {
+        padding-right: 19px;
+        img {
+            margin-right: 7px; 
+        }
+    } 
+}
+
+.uk-sticky-fixed {
+    background-color: #272b35;
+}
+
+// Responsive
+// ========================================================================
+
+@media screen and (max-width: 1199px) {}
+
+@media screen and (max-width: 959px) {}
+
+@media screen and (max-width: 639px) {}

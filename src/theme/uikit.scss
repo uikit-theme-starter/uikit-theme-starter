@@ -1,0 +1,386 @@
+// 1. Your custom variables and variable overwrites.
+// ========================================================================
+
+// fonts import
+
+@import url("https://use.typekit.net/hfs7jvp.css");
+
+// small
+
+$base-small-font-size: 100%;
+
+// global font & color
+
+$global-font-family: 'europa'; 
+$global-font-size: 16px;
+$base-body-font-weight: 400;
+$global-color: #252525;     
+
+// title
+
+$base-heading-font-family: 'futura-pt';
+
+$base-h1-font-size: 60px;
+$base-h2-font-size: 48px;
+$base-h3-font-size: 28px;  
+$base-h4-font-size: 24px;
+$base-h5-font-size: 18px;
+$base-h6-font-size: 16px;
+
+$base-heading-font-weight: 400;
+
+$base-heading-color: $global-color;
+
+// background
+
+$background-secondary-background: $global-color;
+
+// container
+
+$container-max-width: 1170px;
+
+$container-padding-horizontal: 10px;
+$container-padding-horizontal-s: 10px;
+$container-padding-horizontal-m: 10px;
+
+// navbar
+
+$navbar-nav-item-font-family: 'europa';
+$navbar-nav-item-font-size: 18px;
+
+$navbar-nav-item-color: $global-color;
+$navbar-nav-item-hover-color: $global-color;
+$navbar-nav-item-active-color: $global-color;
+
+$navbar-nav-item-padding-horizontal: 30px;
+
+$navbar-dropdown-padding: 35px;
+$navbar-dropdown-nav-item-color: $global-color;  
+
+// button style
+
+$button-font-size: $global-font-size;
+$button-line-height: 42px;
+$button-padding-horizontal: 62px;
+
+$button-default-color: #fff;
+$button-default-hover-color: $global-color; 
+$button-default-active-color: $global-color;
+
+$button-default-background: transparent;
+$button-default-hover-background: transparent;
+$button-default-active-background: transparent;
+
+$button-secondary-color: $global-color;
+$button-secondary-hover-color: #fff; 
+$button-secondary-active-color: #fff;
+
+$button-secondary-background: transparent;
+$button-secondary-hover-background: transparent;
+$button-secondary-active-background: transparent;
+
+$button-primary-color: $global-color;
+$button-primary-hover-color: #fff; 
+$button-primary-active-color: #fff;
+
+$button-primary-background: #f4f4f4;
+$button-primary-hover-background: $global-color;
+$button-primary-active-background: $global-color;
+
+//$button-small-font-size: 14px;
+$button-small-line-height: 42px;
+$button-small-padding-horizontal: 15px;
+
+//$icon-button-background: #242529;
+//$icon-button-color: #646975;
+
+// border radius
+
+$border-rounded-border-radius: 4px;
+
+// accordion
+
+$internal-accordion-open-image: "data:image/svg+xml;charset=UTF-8,%3csvg width='16px' height='2px' viewBox='0 0 16 2' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eRectangle 12%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='6-hakkımızda' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-1509.000000, -2227.000000)'%3e%3cg id='Group-4-Copy-2' transform='translate(1509.000000, 2227.000000)' fill='%23333333'%3e%3crect id='Rectangle-12' transform='translate(8.000000, 1.000000) rotate(90.000000) translate(-8.000000, -1.000000) ' x='7' y='-7' width='2' height='16'%3e%3c/rect%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
+$internal-accordion-close-image: "data:image/svg+xml;charset=UTF-8,%3csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eCombined Shape%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='6-hakkımızda' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-1509.000000, -2090.000000)'%3e%3cg id='Group-4-Copy' transform='translate(1509.000000, 2090.000000)' fill='%23333333'%3e%3cpath d='M9,7 L16,7 L16,9 L9,9 L9,16 L7,16 L7,9 L0,9 L0,7 L7,7 L7,0 L9,0 L9,7 Z' id='Combined-Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
+$accordion-item-margin-top: 0;
+$accordion-content-margin-top: 0;
+
+// form
+
+$global-control-height: 44px;
+$form-placeholder-color: $global-color;
+$form-radio-checked-background: #24c22a; 
+$form-radio-checked-focus-background: #24c22a; 
+$internal-form-select-image: "data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3e%3cpolygon points='5 7 15 7 10 12' /%3e%3c/svg%3e";
+$form-select-padding-right: 15px;
+
+// section
+
+//$section-muted-background: #f9f9f9;
+//$section-large-padding-vertical: 50px;
+
+// card
+
+$card-small-body-padding-vertical: 25px;
+$card-small-body-padding-horizontal: 0;
+
+// off-canvas
+
+$offcanvas-bar-color-mode: $global-color;
+$offcanvas-bar-background: #fff;
+$offcanvas-bar-padding-vertical: 20px;
+$offcanvas-bar-padding-horizontal: 25px;
+$offcanvas-bar-padding-vertical-m: 20px; 
+$offcanvas-bar-padding-horizontal-m: 25px;
+$offcanvas-bar-width: 410px;
+$offcanvas-bar-width-m: 410px;
+
+
+// tab
+
+//$tab-border-width: 2px; 
+
+//$tab-item-color: inherit;
+//$tab-item-active-color: #ff0b4d;
+//$tab-item-padding-vertical: 13px;
+//$tab-item-padding-horizontal: 10px;
+
+// dropdown
+
+//$dropdown-padding: 35px 0; 
+
+// inverse
+
+$inverse-global-color: #fff;
+
+// width
+
+$width-xxlarge-width: 770px;
+$width-large-width: 470px;
+$width-medium-width: 400px;
+$width-small-width: 200px;
+
+// height
+
+$height-large-height: 780px;
+$height-large-medium: 400px;
+
+// search
+
+$search-navbar-font-size: 18px;
+$search-placeholder-color: #828282;
+
+// dotnav
+
+$dotnav-item-width: 12px;
+$dotnav-item-height: 12px;
+$dotnav-item-background: rgba(255, 255, 255, 0.3);
+$dotnav-item-onclick-background: #fff;
+$dotnav-item-hover-background: #fff;
+$dotnav-item-active-background: #fff;
+$dotnav-margin-horizontal: 20px;
+
+// pagination
+
+$pagination-item-color: $global-color;
+$pagination-margin-horizontal: 35px; 
+
+// breadcrumb
+
+$breadcrumb-item-font-size: 16px;
+$breadcrumb-item-color: $global-color;
+$breadcrumb-divider-margin-horizontal: 5px;
+
+// hr
+
+$base-hr-border: #dfdfdf;
+
+// 2. Import default variables and available mixins.
+// ========================================================================
+
+@import "./node_modules/uikit/src/scss/variables-theme.scss"; 
+@import "./node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+// ========================================================================
+
+// form hook
+
+@mixin hook-form-single-line() {
+}
+
+@mixin hook-form() {
+    border: solid 1px #252525;
+}
+
+@mixin hook-form-focus() {
+    border-color: #252525;
+}
+
+// nav hook
+
+@mixin hook-base-heading() {  
+}
+
+@mixin hook-navbar-nav-item() {
+}
+
+@mixin hook-navbar-dropdown() {
+}
+
+@mixin hook-navbar-dropdown-nav-item() {
+    font-size: 18px;
+    line-height: 36px;
+    padding: 0 15px;
+}
+
+@mixin hook-navbar-dropbar() {
+    border-top: solid 1px rgba(206, 206, 206, 0.5);
+}
+
+// button hook
+
+@mixin hook-button() {
+    border: solid 1px transparent;
+}
+
+@mixin hook-button-default() {
+    border-color: #fff;
+}
+
+@mixin hook-button-default-hover() { 
+}
+
+@mixin hook-button-default-active() { 
+}
+
+@mixin hook-button-secondary() {
+    border-color: #252525;
+}
+
+// accordion hook
+
+@mixin hook-accordion-title(){
+
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+        content: "";
+        width: ($accordion-title-line-height * 1em);
+        height: ($accordion-title-line-height * 1em);
+        float: right;
+        @include svg-fill($internal-accordion-close-image, "#000", $accordion-icon-color);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .uk-open > &::after { @include svg-fill($internal-accordion-open-image, "#000", $accordion-icon-color); }
+
+}
+
+@mixin hook-accordion-content() {
+    padding: 15px 10px;
+}
+
+// card hook
+
+@mixin hook-card() {
+}
+
+@mixin hook-card-hover() {
+}
+
+@mixin hook-card-default() {
+    border: solid 1px transparent;
+    transition: 0.2s ease-in;
+}
+
+@mixin hook-card-default-hover() {
+    border-color: #dbdbdb;
+}
+
+@mixin hook-card-default-footer() {
+}
+
+// hook modal
+
+@mixin hook-modal-close-full() {
+    background-color: transparent;
+    padding: 0 5px;
+    top: 20px;
+    right: 15px;
+}
+
+// hook tab 
+
+@mixin hook-tab-item() {
+}
+
+@mixin hook-tab-item-active() {
+}
+
+// hook link
+
+@mixin hook-link-text() {
+    font-size: 14px;
+    //text-decoration: underline;
+    //text-underline-position: under;
+    border-bottom: solid 1px #252525;
+    padding-bottom: 2px; 
+}
+
+@mixin hook-link-text-hover() {
+    font-size: 14px;
+    text-decoration: none;
+    color: #252525;
+    border-bottom: solid 1px #252525;
+    padding-bottom: 2px; 
+    //text-underline-position: under; 
+}
+
+// hook marker
+
+@mixin hook-marker() {
+    .uk-light & {
+        background-color: #fff;
+        color: #252525;
+    }
+}
+
+@mixin hook-marker-hover() {
+    .uk-light & {
+        color: #252525;
+    }
+}
+
+// dotnav hook
+
+@mixin hook-dotnav-item() {
+    border: none;
+}
+
+// pagination hook
+
+@mixin hook-pagination-item() {
+    font-family: 'futura-pt';
+    &:not(.uk-flex) {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &.uk-flex {
+        font-size: 11px;
+        font-weight: bold;
+    }
+}
+
+@mixin hook-pagination-item-active() {
+    font-size: 28px;
+}
+
+// 4. Import UIkit.
+// ========================================================================
+
+@import "./node_modules/uikit/src/scss/uikit-theme.scss";  

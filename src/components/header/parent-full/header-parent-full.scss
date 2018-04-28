@@ -1,0 +1,24 @@
+/* ========================================================================
+ Component: Header Parent Full
+========================================================================== */
+
+.header-parent-full {
+    .uk-navbar-dropdown {
+        span {
+            font-size: 18px;
+            padding-bottom: 7px;
+        }
+        span:not(.uk-position-bottom-center) {
+            font-size: 12px;
+            line-height: 36px;
+            padding: 0 15px;
+        }
+    }
+}
+
+.uk-navbar-dropbar {
+    transition: all 0.7s ease-in;
+    .drop-open & {
+        box-shadow: 0px calc(90vh + 116px) 0px calc(100vh - 0px) rgba(0, 0, 0, 0.3);
+    }
+}

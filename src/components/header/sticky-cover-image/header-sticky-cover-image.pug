@@ -1,0 +1,41 @@
+// Header Sticky Cover Image
+
+section.uk-position-relative.uk-overflow-hidden.cover-image
+
+    header.uk-position-top.uk-position-z-index.header-sticky.header-sticky-cover
+
+        div(uk-sticky="animation: uk-animation-slide-top; cls-active: uk-navbar-sticky; top: .cover-image")
+
+            nav(class="uk-navbar-container uk-navbar-transparent uk-container uk-navbar" uk-navbar) 
+
+                .uk-navbar-left.uk-margin-auto-right
+                    a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
+                        img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+
+                ul(class="uk-navbar-nav uk-visible@m")
+                    li.uk-active
+                        a(href="hakkimizda.html") Nav 1
+                    li
+                        a(href="hizmetlerimiz.html") Nav 2
+                    li
+                        a(href="islerimiz.html") Nav 3
+                    li
+                        a(href="markalarimiz.html") Nav 4
+
+                div(class="uk-navbar-item uk-padding-remove-right uk-visible@m")
+                    a(href="#" class="uk-button uk-button-default uk-button-small")
+                        img(src="https://dummyimage.com/20x20/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+                        | Item 1
+
+                div(class="uk-navbar-item uk-hidden@m uk-light uk-padding-remove")
+                    a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle): img(src="/images/icons/menu.svg" alt="")
+
+    .uk-height-large(style="background-image: url(https://dummyimage.com/1920x450/ff0000/ff0000.jpg&text=Demo+Image)")
+
+    .uk-position-center.uk-light.uk-text-center.cover-text
+
+        h2 16 Senelik Deneyim
+
+        p İlk Günkü Heyecan
+
+    include header-mobile/header-mobile-modal.pug

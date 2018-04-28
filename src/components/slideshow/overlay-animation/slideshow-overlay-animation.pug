@@ -1,0 +1,51 @@
+// Slideshow Overlay Animation
+
+section.slideshow-overlay-animation
+
+    div(class="uk-position-relative uk-visible-toggle" uk-slideshow="max-height: 700; animation: push; velocity: 1.4; ratio: 1:1.5; autoplay: true")
+        
+        ul.uk-slideshow-items
+
+            li
+                img(src="/images/slideshow/slideshow-1.jpg" alt="" uk-cover)
+                .uk-overlay.uk-overlay-primary.uk-position-top.uk-text-center.uk-transition-slide-top.uk-light
+                    h2.uk-margin-remove Top
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            li
+                img(src="/images/slideshow/slideshow-1.jpg" alt="" uk-cover)
+                .uk-overlay.uk-overlay-primary.uk-position-right.uk-text-center.uk-transition-slide-right.uk-light
+                    h2.uk-margin-remove Right
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            li
+                img(src="/images/slideshow/slideshow-1.jpg" alt="" uk-cover)
+                .uk-overlay.uk-overlay-default.uk-position-bottom.uk-text-center.uk-transition-slide-bottom
+                    h2.uk-margin-remove Bottom
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            li
+                img(src="/images/slideshow/slideshow-1.jpg" alt="" uk-cover)
+                .uk-overlay.uk-overlay-default.uk-position-left.uk-text-center.uk-transition-slide-left
+                    h2.uk-margin-remove Left
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            li
+                img(src="/images/slideshow/slideshow-1.jpg" alt="" uk-cover)
+                .uk-overlay.uk-overlay-primary.uk-position-right.uk-text-center.uk-transition-slide-right.uk-light
+                    h2.uk-margin-remove Right
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .uk-overlay.uk-overlay-primary.uk-position-left.uk-text-center.uk-transition-slide-left.uk-light
+                    h2.uk-margin-remove Left
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            li
+                img(src="/images/slideshow/slideshow-1.jpg" alt="" uk-cover)
+                .uk-overlay.uk-overlay-default.uk-position-top.uk-text-center.uk-transition-slide-top
+                    h2.uk-margin-remove Top
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .uk-overlay.uk-overlay-default.uk-position-bottom.uk-text-center.uk-transition-slide-bottom
+                    h2.uk-margin-remove Bottom
+                    p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+        .uk-light
+            a(class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous")
+            a(class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next")
+
+        .uk-position-bottom-center.uk-position-large
+            ul.uk-slideshow-nav.uk-dotnav.uk-flex-center

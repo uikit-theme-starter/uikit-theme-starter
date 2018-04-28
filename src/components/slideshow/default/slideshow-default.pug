@@ -1,0 +1,19 @@
+// Slideshow Default
+
+section.slideshow-default
+
+    div(class="uk-position-relative uk-visible-toggle uk-slideshow" uk-slideshow="max-height: 700; animation: push; velocity: 1.4; ratio: 1:1.5; autoplay: true")
+
+        ul.uk-slideshow-items
+
+            - for (var x = 0; x < 3; x++)
+
+                li
+                    img(src="/images/slideshow/slideshow-1.jpg" alt="" uk-cover)
+
+        .uk-light
+            a(class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous")
+            a(class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next")
+
+        .uk-position-bottom-center.uk-position-large
+            ul.uk-slideshow-nav.uk-dotnav.uk-flex-center
