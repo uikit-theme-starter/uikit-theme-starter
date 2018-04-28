@@ -1,23 +1,6 @@
 /* ========================================================================
    Component: Fonts
  ========================================================================== */
-
 // Global
 // ========================================================================
-
-@font-face {
-	font-family: 'Helvetica';
-	src: url('../fonts/helvetica/regular/helvetica-regular.woff') format('woff2'), 
-		 url('../fonts/helvetica/regular/helvetica-regular.woff2') format('woff');
-	font-weight: 300;
-}
-
-// Title
-// ========================================================================
-
-@font-face {
-	font-family: 'Helvetica';
-	src: url('../fonts/helvetica/bold/helvetica-bold.woff') format('woff2'), 
-		 url('../fonts/helvetica/bold/helvetica-bold.woff2') format('woff');
-	font-weight: 700;
-}
+@import url("https://use.typekit.net/hfs7jvp.css");
