@@ -74,36 +74,18 @@ gulp.task('scripts', () => {
         .on('end', reload)
 });
 
-// images task
-
-gulp.task('images', () => {
-    return gulp.src('./src/images/**/*')
-        .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.jpegtran({progressive: true}),
-            imagemin.optipng({optimizationLevel: 7}),
-            imagemin.svgo({
-                plugins: [
-                    {removeViewBox: true},
-                    {cleanupIDs: false}
-                ]
-            })
-        ]))
-        .pipe(gulp.dest('./dist/images'))
-});
-
 // move task
 
 gulp.task('move', () => {
-    gulp.src('./src/favicon/*')
+    gulp.src('./src/theme/favicon/*')
         .pipe(gulp.dest('./dist/favicon'))
-    gulp.src('./src/fonts/**/*')
+    gulp.src('./src/theme/fonts/**/*')
         .pipe(gulp.dest('./dist/fonts'))
-    gulp.src('./src/videos/**/*')
+    gulp.src('./src/theme/videos/**/*')
         .pipe(gulp.dest('./dist/videos'))
-    gulp.src('./src/images/icons/set/**')
+    gulp.src('./src/theme/images/icons/set/**')
         .pipe(gulp.dest('./node_modules/uikit/src/images/icons/'))
-    gulp.src('./src/images/icons/set/**')
+    gulp.src('./src/theme/images/**')
         .pipe(gulp.dest('./dist/images'))
 })
 
@@ -121,4 +103,4 @@ gulp.task('browser-sync', () => {
     gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
-gulp.task('default', ['html', 'styles', 'scripts', 'move', 'browser-sync']);
+gulp.task('default', ['html', 'styles', 'scripts', 'move', 'browser-sync']); 
