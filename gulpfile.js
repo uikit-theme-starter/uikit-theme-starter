@@ -5,13 +5,13 @@ const gulp = require('gulp');
 // gulp plugin include
 
 const pug = require('gulp-pug');
+const pump = require('pump');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const imagemin = require('gulp-imagemin');
-const plumber = require('gulp-plumber');
+const dircompare = require('dir-compare');
 
 // browsersync include
 
@@ -20,41 +20,42 @@ const reload = browserSync.reload
 
 // html task
 
-gulp.task('html', () => {
-    gulp.src('./src/theme/pages/*.pug')
-        .pipe(plumber())
-        .pipe(pug({
+gulp.task('html', (pumpCb) => {
+    pump([
+        gulp.src('./src/theme/pages/*.pug'),
+        pug({
             pretty: true
-        }))
-        .pipe(gulp.dest('./dist'))
-        .on('end', reload)
+        }),
+        gulp.dest('./dist')
+    ], pumpCb, reload);
 });
 
 // styles task
 
-gulp.task('styles', () => {
-    gulp.src(['./src/theme/uikit.scss', './src/theme/theme.scss'])
-        .pipe(plumber())
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(cleancss())
-        .pipe(concat('theme.css'))
-        .pipe(gulp.dest('./dist/css'))
-        .pipe(browserSync.stream())
-         
-    gulp.src(
-            [
-                './node_modules/swiper/dist/css/swiper.min.css',
-            ]
-        )
-        .pipe(concat('plugins.css'))
-        .pipe(gulp.dest('./dist/css'))
-}); 
+gulp.task('styles', (pumpCb) => {
+
+    pump([
+        gulp.src(['./src/theme/uikit.scss', './src/theme/theme.scss']),
+        sass(),
+        autoprefixer(),
+        cleancss(),
+        concat('theme.css'),
+        gulp.dest('./dist/css'),
+        browserSync.stream()
+    ], pumpCb);
+
+    pump([
+        gulp.src(['./node_modules/swiper/dist/css/swiper.min.css']),
+        concat('plugins.css'),
+        gulp.dest('./dist/css')
+    ], pumpCb, reload);
+});
 
 // scripts task
 
-gulp.task('scripts', () => {
-    gulp.src(
+gulp.task('scripts', (pumpCb) => {
+    pump([
+        gulp.src(
             [
                 './node_modules/jquery/dist/jquery.min.js',
                 './node_modules/jquery-validation/dist/jquery.validate.min.js',
@@ -64,30 +65,63 @@ gulp.task('scripts', () => {
                 './node_modules/swiper/dist/js/swiper.min.js',
                 //'./node_modules/paper/dist/paper-full.min.js'
             ]
-        )
-        .pipe(concat('plugins.js'))
-        .pipe(gulp.dest('./dist/js'))
-    gulp.src('./src/theme/theme.js')
-        .pipe(concat('theme.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
-        .on('end', reload)
+        ),
+        concat('plugins.js'),
+        gulp.dest('./dist/js')
+    ], pumpCb);
+
+    return pump([
+        gulp.src('./src/theme/theme.js'),
+        concat('theme.js'),
+        uglify(),
+        gulp.dest('./dist/js')
+    ], pumpCb, reload);
 });
 
-// move task
+// move tasks
 
-gulp.task('move', () => {
-    gulp.src('./src/theme/favicon/*')
-        .pipe(gulp.dest('./dist/favicon'))
-    gulp.src('./src/theme/fonts/**/*')
-        .pipe(gulp.dest('./dist/fonts'))
-    gulp.src('./src/theme/videos/**/*')
-        .pipe(gulp.dest('./dist/videos'))
-    gulp.src('./src/theme/images/icons/set/**')
-        .pipe(gulp.dest('./node_modules/uikit/src/images/icons/'))
-    gulp.src('./src/theme/images/**')
-        .pipe(gulp.dest('./dist/images'))
-})
+gulp.task('moveFavicon', (pumpCb) => {
+    return pump([
+        gulp.src('./src/theme/favicon/*', {read: false}),
+        gulp.dest('./dist/favicon')
+    ], pumpCb)
+});
+
+gulp.task('moveFonts', (pumpCb) => {
+    return pump([
+        gulp.src('./src/theme/fonts/**/*', {read: false}),
+        gulp.dest('./dist/fonts')
+    ], pumpCb)
+});
+
+gulp.task('moveVideos', (pumpCb) => {
+    return pump([
+        gulp.src('./src/theme/videos/**/*', {read: false}),
+        gulp.dest('./dist/videos')
+    ], pumpCb)
+});
+
+gulp.task('moveIcons', (pumpCb) => {
+    let srcPath = './src/theme/images/icons/set/';
+    let destPath = './node_modules/uikit/src/images/icons/';
+
+    let res = dircompare.compareSync(srcPath, destPath, {compareSize: true});
+
+    if (res.left) {
+        console.log('Yeni ikon eklendi. node_modules/uikit dizininde "npm install" ve "npm run compile" komutlarını çalıştırın');
+        return pump([
+            gulp.src(srcPath + '**', {read: false}),
+            gulp.dest(destPath)
+        ], pumpCb)
+    }
+});
+
+gulp.task('moveImages', (pumpCb) => {
+    return pump([
+        gulp.src('./src/theme/images/**', {read: false}),
+        gulp.dest('./dist/images')
+    ], pumpCb);
+});
 
 // browsersync task
 
@@ -97,10 +131,25 @@ gulp.task('browser-sync', () => {
         server: {
             baseDir: './dist'
         }
-    })
+    });
     gulp.watch('src/pug/**/*.pug', ['html']);
     gulp.watch('src/scss/**/*.scss', ['styles']);
     gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch('src/theme/favicon/*', ['moveFavicon']);
+    gulp.watch('src/theme/fonts/**/*', ['moveFonts']);
+    gulp.watch('src/theme/videos/**/*', ['moveVideos']);
+    gulp.watch('src/theme/images/icons/set/**', ['moveIcons']);
+    gulp.watch('src/theme/images/**', ['moveImages']);
 });
 
-gulp.task('default', ['html', 'styles', 'scripts', 'move', 'browser-sync']); 
+gulp.task('default', [
+    'html',
+    'styles',
+    'scripts',
+    'moveFavicon',
+    'moveFonts',
+    'moveVideos',
+    'moveIcons',
+    'moveImages',
+    'browser-sync'
+]);
