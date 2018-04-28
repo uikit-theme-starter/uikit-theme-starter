@@ -1,0 +1,20 @@
+//
+// Component: Iconnav
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$iconnav-margin-horizontal: $global-small-margin;
+$iconnav-margin-vertical: $iconnav-margin-horizontal;
+$iconnav-item-color: $global-muted-color;
+$iconnav-item-hover-color: $global-color;
+$iconnav-item-active-color: $global-color;
+
+// Inverse
+// ========================================================================
+
+$inverse-iconnav-item-color: $inverse-global-muted-color;
+$inverse-iconnav-item-hover-color: $inverse-global-color;
+$inverse-iconnav-item-active-color: $inverse-global-color;

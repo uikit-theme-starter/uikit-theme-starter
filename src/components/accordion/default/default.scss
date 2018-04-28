@@ -1,34 +1,38 @@
 /* ========================================================================
    Component: Accordion Default
  ========================================================================== */
+// Variable
+// ========================================================================
+@import "variable";
 
 .accordion-default {
-    background-color: #f9f9f9;
+  background-color: $accordion-background-color;
 }
 
 .uk-accordion {
-    li {
-        border-bottom: 1px solid #e3e9f0;
-        &:first-child {
-            border-top: 1px solid #e3e9f0;
-        } 
+  li {
+    border-bottom: $accordion-item-border-width solid $accordion-item-border-color;
+    &:first-child {
+      border-top: $accordion-item-border-width solid $accordion-item-border-color;
     }
-    
+  }
+
 }
 
 // Title
 // ========================================================================
 
-
 // Content
 // ========================================================================
-
 
 // Responsive
 // ========================================================================
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1199px) {
+}
 
-@media screen and (max-width: 959px) {}
+@media screen and (max-width: 959px) {
+}
 
-@media screen and (max-width: 639px) {}
+@media screen and (max-width: 639px) {
+}

@@ -1,3 +1,8 @@
+var mapContainer = document.getElementById('map-default');
+if (mapContainer) {
+    initMap(mapContainer);
+}
+
 $(function () {
 
     /*
@@ -18,14 +23,14 @@ $(function () {
 
     var message = "Lütfen ilgili alanı doldurunuz."
 
-    $('#form-default').validate({ 
+    $('#form-default').validate({
         rules: {
             input: {
                 required: true,
-                lettersonly: true 
+                lettersonly: true
             },
             select: {
-                required: true, 
+                required: true,
             },
             textarea: {
                 required: true,
@@ -35,17 +40,17 @@ $(function () {
                 email: true
             },
             phone: {
-                required: true, 
-                minlength: 14 
+                required: true,
+                minlength: 14
             },
             radio: {
-                required: true, 
+                required: true,
             },
             checkbox1: {
-                required: true, 
+                required: true,
             },
             checkbox2: {
-                required: true, 
+                required: true,
             }
         },
         messages: {
@@ -55,9 +60,9 @@ $(function () {
             phone: message,
             textarea: message,
             checkbox1: message,
-            checkbox2: message 
+            checkbox2: message
         },
-        submitHandler: function (form) { 
+        submitHandler: function (form) {
             form.submit();
         }
     });

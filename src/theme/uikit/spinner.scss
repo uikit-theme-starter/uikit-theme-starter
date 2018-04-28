@@ -1,0 +1,13 @@
+//
+// Component: Spinner
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$spinner-size: 30px;
+$spinner-stroke-width: 1;
+$spinner-radius: floor(($spinner-size - $spinner-stroke-width) / 2);
+$spinner-circumference: round(2 * 3.141 * $spinner-radius);
+$spinner-duration: 1.4s;

@@ -1,0 +1,88 @@
+//
+// Component: Form
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+$form-height: $global-control-height;
+$form-border-width: $global-border-width;
+$form-line-height: $form-height - (2* $form-border-width);
+$form-padding-horizontal: 10px;
+$form-padding-vertical: 4px;
+$form-background: $global-background;
+$form-color: $global-color;
+$form-focus-background: $global-background;
+$form-focus-color: $global-color;
+$form-disabled-background: $global-muted-background;
+$form-disabled-color: $global-muted-color;
+$form-placeholder-color: #9b9b9b;
+$form-small-height: $global-control-small-height;
+$form-small-padding-horizontal: 8px;
+$form-small-line-height: $form-small-height - (2* $form-border-width);
+$form-small-font-size: $global-small-font-size;
+$form-large-height: $global-control-large-height;
+$form-large-padding-horizontal: 12px;
+$form-large-line-height: $form-large-height - (2* $form-border-width);
+$form-large-font-size: $global-medium-font-size;
+$form-danger-color: $global-danger-background;
+$form-success-color: $global-success-background;
+$form-width-xsmall: 50px;
+$form-width-small: 130px;
+$form-width-medium: 200px;
+$form-width-large: 500px;
+$form-select-padding-right: 20px;
+$form-select-icon-color: $global-color;
+$form-select-disabled-icon-color: $global-muted-color;
+$form-radio-size: 16px;
+$form-radio-margin-top: -4px;
+$form-radio-background: transparent;
+$form-radio-checked-background: $global-primary-background;
+$form-radio-checked-icon-color: $global-inverse-color;
+$form-radio-checked-focus-background: darken($global-primary-background, 10%);
+$form-radio-disabled-background: $global-muted-background;
+$form-radio-disabled-icon-color: $global-muted-color;
+$form-legend-font-size: $global-large-font-size;
+$form-legend-line-height: 1.4;
+$form-stacked-margin-bottom: 5px;
+$form-horizontal-label-width: 200px;
+$form-horizontal-label-margin-top: 7px;
+$form-horizontal-controls-margin-left: 215px;
+$form-horizontal-controls-text-padding-top: 7px;
+$form-icon-width: $form-height;
+$form-icon-font-size: $global-font-size;
+$form-icon-color: $global-muted-color;
+$form-icon-hover-color: $global-color;
+$form-border: $global-border;
+$form-focus-border: $global-primary-background;
+$form-disabled-border: $global-border;
+$form-danger-border: $global-danger-background;
+$form-success-border: $global-success-background;
+$form-blank-focus-border: $global-border;
+$form-blank-focus-border-style: dashed;
+$form-radio-border-width: $global-border-width;
+$form-radio-border: darken($global-border, 10%);
+$form-radio-focus-border: $global-primary-background;
+$form-radio-checked-border: transparent;
+$form-radio-disabled-border: $global-border;
+$form-label-color: $global-emphasis-color;
+$form-label-font-size: $global-small-font-size;
+
+$internal-form-select-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A";
+$internal-form-radio-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22#000%22%20cx%3D%228%22%20cy%3D%228%22%20r%3D%222%22%20%2F%3E%0A%3C%2Fsvg%3E";
+$internal-form-checkbox-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2211%22%20viewBox%3D%220%200%2014%2011%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22#000%22%20points%3D%2212%201%205%207.5%202%205%201%205.5%205%2010%2013%201.5%22%20%2F%3E%0A%3C%2Fsvg%3E%0A";
+$internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20x%3D%223%22%20y%3D%228%22%20width%3D%2210%22%20height%3D%221%22%20%2F%3E%0A%3C%2Fsvg%3E";
+
+// Inverse
+// ========================================================================
+$inverse-form-background: $inverse-global-muted-background;
+$inverse-form-color: $inverse-global-color;
+$inverse-form-focus-background: $inverse-global-muted-background;
+$inverse-form-focus-color: $inverse-global-color;
+$inverse-form-placeholder-color: $inverse-global-muted-color;
+$inverse-form-select-icon-color: $inverse-global-color;
+$inverse-form-radio-background: darken($inverse-global-muted-background, 5%);
+$inverse-form-radio-checked-background: $inverse-global-primary-background;
+$inverse-form-radio-checked-icon-color: $inverse-global-inverse-color;
+$inverse-form-radio-checked-focus-background: darken($inverse-global-primary-background, 10%);
+$inverse-form-label-color: $inverse-global-emphasis-color;

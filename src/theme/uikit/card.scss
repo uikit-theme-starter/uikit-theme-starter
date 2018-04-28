@@ -1,0 +1,84 @@
+//
+// Component: Card
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+// Body
+// ========================================================================
+$card-body-padding-horizontal: 15px;
+$card-body-padding-vertical: 15px;
+$card-body-padding-horizontal-l: 15px;
+$card-body-padding-vertical-l: 20px;
+// Header
+// ========================================================================
+$card-header-padding-horizontal: $global-gutter;
+$card-header-padding-vertical: round($global-gutter / 2);
+$card-header-padding-horizontal-l: $global-medium-gutter;
+$card-header-padding-vertical-l: round($global-medium-gutter / 2);
+// Footer
+// ========================================================================
+$card-footer-padding-horizontal: 20px;
+$card-footer-padding-vertical: 20px;
+$card-footer-padding-horizontal-l: 25px;
+$card-footer-padding-vertical-l: 20px;
+// Title
+// ========================================================================
+$card-title-font-size: $global-large-font-size;
+$card-title-line-height: 1.4;
+// Badge
+// ========================================================================
+$card-badge-top: $global-gutter;
+$card-badge-right: $card-badge-top;
+// Hover
+// ========================================================================
+$card-hover-background: $global-background;
+$card-hover-box-shadow: $global-large-box-shadow;
+// Default
+// ========================================================================
+$card-default-background: $global-background;
+$card-default-color: $global-color;
+$card-default-title-color: $global-emphasis-color;
+$card-default-hover-background: $card-default-background;
+$card-default-box-shadow: $global-medium-box-shadow;
+$card-default-hover-box-shadow: $global-large-box-shadow;
+$card-default-header-border-width: $global-border-width;
+$card-default-header-border: $global-border;
+$card-default-footer-border-width: $global-border-width;
+$card-default-footer-border: $global-border;
+// Primary
+// ========================================================================
+$card-primary-background: $global-primary-background;
+$card-primary-color: $global-inverse-color;
+$card-primary-title-color: $card-primary-color;
+$card-primary-hover-background: $card-primary-background;
+$card-primary-color-mode: light;
+$card-primary-box-shadow: $global-medium-box-shadow;
+$card-primary-hover-box-shadow: $global-large-box-shadow;
+// Secondary
+// ========================================================================
+$card-secondary-background: $global-secondary-background;
+$card-secondary-color: $global-inverse-color;
+$card-secondary-title-color: $card-secondary-color;
+$card-secondary-hover-background: $card-secondary-background;
+$card-secondary-color-mode: light;
+$card-secondary-box-shadow: $global-medium-box-shadow;
+$card-secondary-hover-box-shadow: $global-large-box-shadow;
+// Small
+// ========================================================================
+$card-small-body-padding-horizontal: $global-margin;
+$card-small-body-padding-vertical: $global-margin;
+$card-small-header-padding-horizontal: $global-margin;
+$card-small-header-padding-vertical: round($global-margin / 1.5);
+$card-small-footer-padding-horizontal: $global-margin;
+$card-small-footer-padding-vertical: round($global-margin / 1.5);
+// Large
+// ========================================================================
+$card-large-body-padding-horizontal-l: $global-large-gutter;
+$card-large-body-padding-vertical-l: $global-large-gutter;
+$card-large-header-padding-horizontal-l: $global-large-gutter;
+$card-large-header-padding-vertical-l: round($global-large-gutter / 2);
+$card-large-footer-padding-horizontal-l: $global-large-gutter;
+$card-large-footer-padding-vertical-l: round($global-large-gutter / 2);

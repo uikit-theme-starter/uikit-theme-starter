@@ -1,0 +1,33 @@
+//
+// Component: Dotnav
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$dotnav-margin-horizontal: 5px;
+$dotnav-margin-vertical: $dotnav-margin-horizontal;
+$dotnav-item-width: 8px;
+$dotnav-item-height: $dotnav-item-width;
+$dotnav-item-border-radius: 50%;
+$dotnav-item-background: rgba(#FFF, .5);
+$dotnav-item-hover-background: rgba($global-color, 1);
+$dotnav-item-onclick-background: rgba($global-color, 0.5);
+$dotnav-item-active-background: rgba($global-color, 1);
+$dotnav-item-border-width: 0px;
+$dotnav-item-border: transparent;
+$dotnav-item-hover-border: transparent;
+$dotnav-item-onclick-border: transparent;
+$dotnav-item-active-border: transparent;
+
+// Inverse
+// ========================================================================
+
+$inverse-dotnav-item-background: rgba(#FFF, .5);
+$inverse-dotnav-item-hover-background: rgba($inverse-global-color, 0.9);
+$inverse-dotnav-item-onclick-background: rgba($inverse-global-color, 0.5);
+$inverse-dotnav-item-active-background: rgba($inverse-global-color, 0.9);
+
+
+

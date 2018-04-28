@@ -1,0 +1,22 @@
+//
+// Component: Slidenav
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$slidenav-padding-vertical: 5px;
+$slidenav-padding-horizontal: 10px;
+$slidenav-color: rgba($global-color, 0.5);
+$slidenav-hover-color: rgba($global-color, 0.9);
+$slidenav-active-color: rgba($global-color, 0.5);
+$slidenav-large-padding-vertical: 10px;
+$slidenav-large-padding-horizontal: $slidenav-large-padding-vertical;
+
+// Inverse
+// ========================================================================
+
+$inverse-slidenav-color: rgba($inverse-global-color, 0.7);
+$inverse-slidenav-hover-color: rgba($inverse-global-color, 0.95);
+$inverse-slidenav-active-color: rgba($inverse-global-color, 0.7);

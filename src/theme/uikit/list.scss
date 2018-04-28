@@ -1,0 +1,39 @@
+//
+// Component: List
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+$list-margin-top: $global-small-margin;
+$list-nested-padding-left: $global-gutter;
+
+$list-divider-margin-top: $global-small-margin;
+$list-divider-border-width: $global-border-width;
+$list-divider-border: $global-border;
+
+$list-striped-padding-vertical: $global-small-margin;
+$list-striped-padding-horizontal: $global-small-margin;
+$list-striped-background: $global-muted-background;
+$list-striped-border-width: $global-border-width;
+$list-striped-border: $global-border;
+
+$list-bullet-width: ($global-line-height * 1em);
+$list-bullet-height: $list-bullet-width;
+$list-bullet-margin-right: $global-small-margin;
+$list-bullet-icon-color: $global-color;
+
+$list-large-margin-top: $global-margin;
+$list-large-divider-margin-top: $global-margin;
+$list-large-striped-padding-vertical: $global-margin;
+$list-large-striped-padding-horizontal: $global-small-margin;
+
+$internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%226%22%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Ccircle%20fill%3D%22#000%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%223%22%20%2F%3E%0A%3C%2Fsvg%3E";
+
+// Inverse
+// ========================================================================
+
+$inverse-list-divider-border: $inverse-global-border;
+$inverse-list-striped-background: $inverse-global-muted-background;
+$inverse-list-bullet-icon-color: $inverse-global-color;
