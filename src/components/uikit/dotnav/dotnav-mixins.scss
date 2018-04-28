@@ -5,6 +5,10 @@
 
 // @mixin hook-dotnav(){}
 
+@mixin hook-dotnav-item() {
+    border: none;
+}
+
 // Miscellaneous
 // ========================================================================
 

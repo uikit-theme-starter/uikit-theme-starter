@@ -1,7 +1,10 @@
 // Base
+
 @import "global";
 @import "base/base";
+
 // Elements
+
 @import "link/link";
 @import "heading/heading";
 @import "divider/divider";
@@ -12,13 +15,17 @@
 @import "form-range/form-range";
 @import "form/form";
 @import "button/button";
+
 // Layout
+
 @import "section/section";
 @import "container/container";
 @import "grid/grid";
 @import "tile/tile";
 @import "card/card";
+
 // Common
+
 @import "close/close";
 @import "spinner/spinner";
 @import "marker/marker";
@@ -30,7 +37,9 @@
 @import "article/article";
 @import "comment/comment";
 @import "search/search";
+
 // Navs
+
 @import "nav/nav";
 @import "navbar/navbar";
 @import "subnav/subnav";
@@ -40,7 +49,9 @@
 @import "slidenav/slidenav";
 @import "dotnav/dotnav";
 @import "thumbnav/thumbnav";
+
 // JavaScript
+
 @import "accordion/accordion";
 @import "drop/drop";
 @import "dropdown/dropdown";
@@ -48,7 +59,9 @@
 @import "lightbox/lightbox";
 @import "sticky/sticky";
 @import "offcanvas/offcanvas";
+
 // Additional
+
 @import "iconnav/iconnav";
 @import "notification/notification";
 @import "tooltip/tooltip";
@@ -56,7 +69,9 @@
 @import "progress/progress";
 @import "sortable/sortable";
 @import "countdown/countdown";
+
 // Utilities
+
 @import "animation/animation";
 @import "width/width";
 @import "text/text";

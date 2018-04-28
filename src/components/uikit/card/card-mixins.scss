@@ -41,6 +41,15 @@
 // Style modifiers
 // ========================================================================
 
+@mixin hook-card-default() {
+    border: solid 1px transparent;
+    transition: 0.2s ease-in;
+}
+
+@mixin hook-card-default-hover() {
+    border-color: #dbdbdb;
+}
+
 // @mixin hook-card-default-title(){}
 
 //

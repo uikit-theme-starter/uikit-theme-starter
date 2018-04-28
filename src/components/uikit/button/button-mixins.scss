@@ -3,6 +3,18 @@
 //
 // ========================================================================
 
+@mixin hook-button() {
+    border: solid 1px transparent;
+}
+
+@mixin hook-button-default() {
+    border-color: #fff;
+}
+
+// @mixin hook-button-default-hover(){}
+
+// @mixin hook-button-default-active(){}
+
 // @mixin hook-button-hover(){}
 
 // @mixin hook-button-focus(){}
@@ -23,6 +35,10 @@
 //
 // Secondary
 //
+
+@mixin hook-button-secondary() {
+    border-color: #252525;
+}
 
 // @mixin hook-button-secondary-hover(){}
 

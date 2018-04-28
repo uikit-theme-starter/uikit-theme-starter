@@ -28,8 +28,8 @@
 		"paper": "^0.11.5",
 		"pump": "^2.0.0",
 		"swiper": "^4.2.2",
-      "uikit": "^3.0.0-beta.42",
-      "dir-compare": "^1.4.0"
+		"uikit": "^3.0.0-beta.42",
+		"dir-compare": "^1.4.0"
 	},
 	"dependencies": {
 		"gulp-rename": "^1.2.2"

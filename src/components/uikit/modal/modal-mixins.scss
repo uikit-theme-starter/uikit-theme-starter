@@ -40,6 +40,13 @@
 
 // @mixin hook-modal-close-outside-hover(){}
 
+@mixin hook-modal-close-full() {
+    background-color: transparent;
+    padding: 0 5px;
+    top: 20px;
+    right: 15px;
+}
+
 // @mixin hook-modal-close-full-hover(){}
 
 // Miscellaneous

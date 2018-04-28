@@ -6,15 +6,15 @@
 // Variables
 // ========================================================================
 
-$accordion-item-margin-top: $global-margin;
+$accordion-item-margin-top: 0;
 $accordion-title-font-size: $global-medium-font-size;
 $accordion-title-line-height: 1.4;
 $accordion-title-color: $global-emphasis-color;
 $accordion-title-hover-color: $global-color;
-$accordion-content-margin-top: $global-margin;
+$accordion-content-margin-top: 0;
 $accordion-icon-color: $global-color;
-$internal-accordion-open-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E";
-$internal-accordion-close-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22#000%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E";
+$internal-accordion-open-image: "data:image/svg+xml;charset=UTF-8,%3csvg width='16px' height='2px' viewBox='0 0 16 2' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eRectangle 12%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='6-hakkımızda' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-1509.000000, -2227.000000)'%3e%3cg id='Group-4-Copy-2' transform='translate(1509.000000, 2227.000000)' fill='%23333333'%3e%3crect id='Rectangle-12' transform='translate(8.000000, 1.000000) rotate(90.000000) translate(-8.000000, -1.000000) ' x='7' y='-7' width='2' height='16'%3e%3c/rect%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
+$internal-accordion-close-image: "data:image/svg+xml;charset=UTF-8,%3csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eCombined Shape%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='6-hakkımızda' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-1509.000000, -2090.000000)'%3e%3cg id='Group-4-Copy' transform='translate(1509.000000, 2090.000000)' fill='%23333333'%3e%3cpath d='M9,7 L16,7 L16,9 L9,9 L9,16 L7,16 L7,9 L0,9 L0,7 L7,7 L7,0 L9,0 L9,7 Z' id='Combined-Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
 
 $inverse-accordion-title-color: $inverse-global-emphasis-color;
 $inverse-accordion-title-hover-color: $inverse-global-inverse-color;

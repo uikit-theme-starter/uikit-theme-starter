@@ -3,7 +3,18 @@
 //
 // ========================================================================
 
-// @mixin hook-marker-hover(){}
+@mixin hook-marker() {
+    .uk-light & {
+        background-color: #fff;
+        color: #252525;
+    }
+}
+
+@mixin hook-marker-hover() {
+    .uk-light & {
+        color: #252525;
+    }
+}
 
 // Miscellaneous
 // ========================================================================

@@ -68,8 +68,8 @@ $card-secondary-box-shadow: $global-medium-box-shadow;
 $card-secondary-hover-box-shadow: $global-large-box-shadow;
 // Small
 // ========================================================================
-$card-small-body-padding-horizontal: $global-margin;
-$card-small-body-padding-vertical: $global-margin;
+$card-small-body-padding-horizontal: 0;
+$card-small-body-padding-vertical: 25px;
 $card-small-header-padding-horizontal: $global-margin;
 $card-small-header-padding-vertical: round($global-margin / 1.5);
 $card-small-footer-padding-horizontal: $global-margin;

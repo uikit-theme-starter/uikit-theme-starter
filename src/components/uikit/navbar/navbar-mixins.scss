@@ -37,7 +37,11 @@
 
 //@mixin hook-navbar-dropdown-nav() {}
 
-//@mixin hook-navbar-dropdown-nav-item() {}
+@mixin hook-navbar-dropdown-nav-item() {
+    font-size: 18px;
+    line-height: 36px;
+    padding: 0 15px;
+}
 
 //@mixin hook-navbar-dropdown-nav-item-hover() {}
 
@@ -47,7 +51,9 @@
 
 //@mixin hook-navbar-dropdown-nav-divider() {}
 
-//@mixin hook-navbar-dropbar() {}
+@mixin hook-navbar-dropbar() {
+	border-top: solid 1px rgba(206, 206, 206, 0.5);
+}
 
 //@mixin hook-navbar-dropbar-slide() {}
 

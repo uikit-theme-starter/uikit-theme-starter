@@ -35,7 +35,7 @@ gulp.task('html', (pumpCb) => {
 gulp.task('styles', (pumpCb) => {
 
     pump([
-        gulp.src(['./src/theme/uikit.scss', './src/theme/theme.scss']),
+        gulp.src(['./src/theme/uikit.scss', './src/theme/theme.scss']), 
         sass(),
         autoprefixer(),
         cleancss(),
@@ -132,9 +132,9 @@ gulp.task('browser-sync', () => {
             baseDir: './dist'
         }
     });
-    gulp.watch('src/pug/**/*.pug', ['html']);
-    gulp.watch('src/scss/**/*.scss', ['styles']);
-    gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch('src/**/*.pug', ['html']);
+    gulp.watch('src/**/*.scss', ['styles']);
+    gulp.watch('src/theme/js/**/*.js', ['scripts']);
     gulp.watch('src/theme/favicon/*', ['moveFavicon']);
     gulp.watch('src/theme/fonts/**/*', ['moveFonts']);
     gulp.watch('src/theme/videos/**/*', ['moveVideos']);

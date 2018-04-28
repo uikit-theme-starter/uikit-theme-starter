@@ -1,5 +1,7 @@
 @import "base/base-mixins";
+
 // Elements
+
 @import "link/link-mixins";
 @import "heading/heading-mixins";
 @import "divider/divider-mixins.scss";
@@ -10,13 +12,17 @@
 @import "form-range/form-range-mixins.scss";
 @import "form/form-mixins.scss";
 @import "button/button-mixins.scss";
+
 // Layout
+
 @import "section/section-mixins.scss";
 @import "container/container-mixins.scss";
 @import "grid/grid-mixins.scss";
 @import "tile/tile-mixins.scss";
 @import "card/card-mixins.scss";
+
 // Common
+
 @import "close/close-mixins.scss";
 @import "spinner/spinner-mixins.scss";
 @import "marker/marker-mixins.scss";
@@ -28,7 +34,9 @@
 @import "article/article-mixins.scss";
 @import "comment/comment-mixins.scss";
 @import "search/search-mixins.scss";
+
 // Navs
+
 @import "nav/nav-mixins.scss";
 @import "navbar/navbar-mixins";
 @import "subnav/subnav-mixins.scss";
@@ -38,7 +46,9 @@
 @import "slidenav/slidenav-mixins.scss";
 @import "dotnav/dotnav-mixins.scss";
 @import "thumbnav/thumbnav-mixins.scss";
+
 // JavaScript
+
 @import "accordion/accordion-mixins";
 @import "drop/drop-mixins.scss";
 @import "dropdown/dropdown-mixins.scss";
@@ -46,7 +56,9 @@
 @import "lightbox/lightbox-mixins.scss";
 @import "sticky/sticky-mixins.scss";
 @import "offcanvas/offcanvas-mixins.scss";
+
 // Additional
+
 @import "iconnav/iconnav-mixins.scss";
 @import "notification/notification-mixins.scss";
 @import "tooltip/tooltip-mixins.scss";
@@ -54,7 +66,9 @@
 @import "progress/progress-mixins.scss";
 @import "sortable/sortable-mixins.scss";
 @import "countdown/countdown-mixins.scss";
+
 // Utilities
+
 @import "animation/animation-mixins.scss";
 @import "width/width-mixins.scss";
 @import "text/text-mixins.scss";

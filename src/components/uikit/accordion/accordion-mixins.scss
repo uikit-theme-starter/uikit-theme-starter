@@ -11,12 +11,35 @@
 // Title
 // ========================================================================
 
+@mixin hook-accordion-title(){
+
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+        content: "";
+        width: ($accordion-title-line-height * 1em);
+        height: ($accordion-title-line-height * 1em);
+        float: right;
+        @include svg-fill($internal-accordion-close-image, "#000", $accordion-icon-color);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .uk-open > &::after { @include svg-fill($internal-accordion-open-image, "#000", $accordion-icon-color); }
+
+}
+
 // @mixin hook-accordion-title-hover(){}
 
 // Content
 // ========================================================================
 
-// @mixin hook-accordion-content(){}
+@mixin hook-accordion-content() {
+    padding: 15px 10px;
+}
 
 // Miscellaneous
 // ========================================================================

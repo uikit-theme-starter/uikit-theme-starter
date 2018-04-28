@@ -13,9 +13,19 @@
 // Text
 // ========================================================================
 
-// @mixin hook-link-text(){}
+@mixin hook-link-text() {
+    font-size: 14px;
+    border-bottom: solid 1px #252525;
+    padding-bottom: 2px; 
+}
 
-// @mixin hook-link-text-hover(){}
+@mixin hook-link-text-hover() {
+    font-size: 14px;
+    text-decoration: none;
+    color: #252525;
+    border-bottom: solid 1px #252525;
+    padding-bottom: 2px; 
+}
 
 // Heading
 // ========================================================================
