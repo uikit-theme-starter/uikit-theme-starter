@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const watchify = require('watchify');
 
 const pug = require('gulp-pug');
+const pump = require('pump');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
@@ -45,18 +46,18 @@ gulp.task('stylesPlugin', () => {
         .on('end', reload);
 });
 
-gulp.task('styles', (pumpCb) => {
+gulp.task('styles', () => {
     gulp.src(['./src/theme/theme.scss'])
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(cleancss())
         //.pipe(concat('theme.css'))
         .pipe(gulp.dest('./dist/css'))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream())
+        .on('end',reload);
 });
 
 // scripts task
-
 
 function compileJs(watch) {
     let bundler = watchify(browserify('./src/theme/theme.js', {debug: true}).transform(babel));
@@ -137,8 +138,8 @@ gulp.task('moveIcons', () => {
     let res = dircompare.compareSync(srcPath, destPath, {compareSize: true});
 
     if (res.left) {
-        console.log('Yeni ikon eklendi. node_modules/uikit dizininde "npm install" ve "npm run compile" komutlarını çalıştırın');
-        gulp.src(srcPath + '**/*', {read: false}).pipe(gulp.dest(destPath));
+        console.log('Yeni ikon eklendi. node_modules\\uikit dizininde "npm install" ve "npm run compile" komutlarını çalıştırın');
+        gulp.src(srcPath + '**/*').pipe(gulp.dest(destPath));
     }
 });
 
