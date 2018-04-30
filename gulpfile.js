@@ -16,12 +16,12 @@ const dircompare = require('dir-compare');
 // browsersync include
 
 const browserSync = require('browser-sync').create();
-const reload = browserSync.reload
+const reload = browserSync.reload;
 
 // html task
 
 gulp.task('html', (pumpCb) => {
-    pump([
+    return pump([
         gulp.src('./src/theme/pages/*.pug'),
         pug({
             pretty: true
@@ -32,10 +32,17 @@ gulp.task('html', (pumpCb) => {
 
 // styles task
 
-gulp.task('styles', (pumpCb) => {
+gulp.task('stylesPlugin', (pumpCb) => {
+    return pump([
+        gulp.src(['./node_modules/swiper/dist/css/swiper.min.css']),
+        concat('plugins.css'),
+        gulp.dest('./dist/css')
+    ], pumpCb, reload);
+});
 
-    pump([
-        gulp.src(['./src/theme/uikit.scss', './src/theme/theme.scss']), 
+gulp.task('styles', (pumpCb) => {
+    return pump([
+        gulp.src(['./src/theme/theme.scss']),
         sass(),
         autoprefixer(),
         cleancss(),
@@ -43,18 +50,21 @@ gulp.task('styles', (pumpCb) => {
         gulp.dest('./dist/css'),
         browserSync.stream()
     ], pumpCb);
-
-    pump([
-        gulp.src(['./node_modules/swiper/dist/css/swiper.min.css']),
-        concat('plugins.css'),
-        gulp.dest('./dist/css')
-    ], pumpCb, reload);
 });
 
 // scripts task
 
 gulp.task('scripts', (pumpCb) => {
-    pump([
+    return pump([
+        gulp.src('./src/components/**/*', './src/theme/theme.js'),
+        concat('theme.js'),
+        uglify(),
+        gulp.dest('./dist/js')
+    ], pumpCb, reload);
+});
+
+gulp.task('scriptsPlugin', (pumpCb) => {
+    return pump([
         gulp.src(
             [
                 './node_modules/jquery/dist/jquery.min.js',
@@ -69,15 +79,7 @@ gulp.task('scripts', (pumpCb) => {
         concat('plugins.js'),
         gulp.dest('./dist/js')
     ], pumpCb);
-
-    return pump([
-        gulp.src('./src/theme/theme.js'),
-        concat('theme.js'),
-        uglify(),
-        gulp.dest('./dist/js')
-    ], pumpCb, reload);
 });
-
 // move tasks
 
 gulp.task('moveFavicon', (pumpCb) => {
@@ -138,14 +140,16 @@ gulp.task('browser-sync', () => {
     gulp.watch('src/theme/favicon/*', ['moveFavicon']);
     gulp.watch('src/theme/fonts/**/*', ['moveFonts']);
     gulp.watch('src/theme/videos/**/*', ['moveVideos']);
-    gulp.watch('src/theme/images/icons/set/**', ['moveIcons']);
-    gulp.watch('src/theme/images/**', ['moveImages']);
+    gulp.watch('src/theme/images/icons/set/**/*', ['moveIcons']);
+    gulp.watch('src/theme/images/**/*', ['moveImages']);
 });
 
 gulp.task('default', [
     'html',
     'styles',
+    'stylesPlugin',
     'scripts',
+    'scriptsPlugin',
     'moveFavicon',
     'moveFonts',
     'moveVideos',
