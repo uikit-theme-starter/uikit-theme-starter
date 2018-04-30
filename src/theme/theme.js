@@ -1,3 +1,5 @@
+import '../../src/theme/test.js';
+
 var mapContainer = document.getElementById('map-default');
 if (mapContainer) {
     initMap(mapContainer);
