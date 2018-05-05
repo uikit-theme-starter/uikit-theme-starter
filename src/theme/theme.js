@@ -1,8 +1,8 @@
-import '../../src/theme/test.js';
+import * as map from '../../src/components/map/default/default';
 
-var mapContainer = document.getElementById('map-default');
+let mapContainer = document.getElementById('map-default');
 if (mapContainer) {
-    initMap(mapContainer);
+    map.initMap(mapContainer);
 }
 
 $(function () {
