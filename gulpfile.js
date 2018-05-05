@@ -11,7 +11,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const watchify = require('watchify');
 
 const pug = require('gulp-pug');
-const pump = require('pump');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');

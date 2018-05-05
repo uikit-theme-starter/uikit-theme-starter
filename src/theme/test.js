@@ -1,1 +1,1 @@
-alert('BARIŞ');
+console.log('test');

@@ -8,7 +8,7 @@ header.uk-position-relative.header-sticky
 
             .uk-navbar-left.uk-margin-auto-right
                 a(class="uk-navbar-item uk-logo uk-padding-remove-left" href="/")
-                    img(src="https://dummyimage.com/200x80/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+                    img(src="/images/icons/icn-tuna-ofis-logo-dark.svg" alt="")
 
             ul(class="uk-navbar-nav uk-visible@m")
                 li
@@ -21,11 +21,11 @@ header.uk-position-relative.header-sticky
                     a(href="#") Nav 4
 
             div(class="uk-navbar-item uk-padding-remove-right uk-visible@m")
-                a(href="#" class="uk-button uk-button-default uk-button-small")
-                    img(src="https://dummyimage.com/20x20/ff0000/fcfcfc.jpg&text=Demo+Image" alt="")
+                a(href="#" class="uk-button uk-button-primary uk-button-small")
+                    span(uk-icon="icon: mail;" class="uk-margin-small-right")
                     | Item 1
 
             div(class="uk-navbar-item uk-hidden@m uk-light uk-padding-remove")
-                a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle): img(src="/images/icons/menu.svg" alt="")
-
+                a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle)
+                    span(uk-icon="icon: icn-menu-dark;")
     include ../header-mobile/header-mobile
