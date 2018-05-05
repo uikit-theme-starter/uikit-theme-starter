@@ -11,6 +11,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const watchify = require('watchify');
 
 const pug = require('gulp-pug');
+const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
@@ -23,10 +24,30 @@ const dircompare = require('dir-compare');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
+// browsersync task
+
+gulp.task('browser-sync', () => {
+    browserSync.init({
+        notify: false,
+        server: {
+            baseDir: './dist'
+        }
+    });
+    gulp.watch('./src/**/*.pug', ['html']);
+    gulp.watch('./src/**/*.scss', ['styles']);
+    gulp.watch('./src/**/*.js', ['scripts']);
+    gulp.watch('./src/theme/favicon/*', ['moveFavicon']);
+    gulp.watch('./src/theme/fonts/**/*', ['moveFonts']);
+    gulp.watch('./src/theme/videos/**/*', ['moveVideos']);
+    gulp.watch('./src/theme/images/icons/set/**/*', ['moveIcons']);
+    gulp.watch('./src/theme/images/**/*', ['moveImages']);
+});
+
 // html task
 
 gulp.task('html', () => {
     gulp.src('./src/theme/pages/*.pug')
+        .pipe(plumber())
         .pipe(
             pug({
                 pretty: true
@@ -39,63 +60,42 @@ gulp.task('html', () => {
 // styles task
 
 gulp.task('stylesPlugin', () => {
-    gulp.src(['./node_modules/swiper/dist/css/swiper.min.css'])
+    return gulp.src(['./node_modules/swiper/dist/css/swiper.min.css'])
         .pipe(concat('plugins.css'))
         .pipe(gulp.dest('./dist/css'))
         .on('end', reload);
 });
 
 gulp.task('styles', () => {
-    gulp.src(['./src/theme/theme.scss'])
+    return gulp.src(['./src/theme/theme.scss'])
+        .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer())
+        .pipe(sourcemaps.init())
         .pipe(cleancss())
+        .pipe(sourcemaps.write())
         //.pipe(concat('theme.css'))
         .pipe(gulp.dest('./dist/css'))
-        .pipe(browserSync.stream())
-        .on('end',reload);
+        .on('end', reload);
 });
 
 // scripts task
 
-function compileJs(watch) {
+gulp.task('scripts', () => {
     let bundler = watchify(browserify('./src/theme/theme.js', {debug: true}).transform(babel));
 
-    function rebundle() {
-        bundler.bundle()
-            .on('error', function (err) {
-                console.error(err);
-                this.emit('end');
-            })
-            .pipe(source('theme.js'))
-            .pipe(buffer())
-            .pipe(sourcemaps.init({loadMaps: true}))
-            .pipe(uglify())
-            .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./dist/js/'))
-            .on('end', reload);
-    }
-
-    if (watch) {
-        bundler.on('update', function () {
-            console.log('-> bundling...');
-            rebundle();
-        });
-    } else {
-        rebundle();
-    }
-}
-
-function watchJs() {
-    return compileJs(true);
-}
-
-gulp.task('scripts', () => {
-    return compileJs();
-});
-
-gulp.task('watchScripts', () => {
-    return watchJs();
+    bundler.bundle()
+        .on('error', function (err) {
+            console.error(err);
+            this.emit('end');
+        })
+        .pipe(source('theme.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('./dist/js/'))
+        .on('end', reload);
 });
 
 gulp.task('scriptsPlugin', () => {
@@ -147,31 +147,11 @@ gulp.task('moveImages', () => {
         .pipe(gulp.dest('./dist/images'));
 });
 
-// browsersync task
-
-gulp.task('browser-sync', () => {
-    browserSync.init({
-        notify: false,
-        server: {
-            baseDir: './dist'
-        }
-    });
-    gulp.watch('src/**/*.pug', ['html']);
-    gulp.watch('src/**/*.scss', ['styles']);
-    gulp.watch('src/**/*.js', ['scripts']);
-    gulp.watch('src/theme/favicon/*', ['moveFavicon']);
-    gulp.watch('src/theme/fonts/**/*', ['moveFonts']);
-    gulp.watch('src/theme/videos/**/*', ['moveVideos']);
-    gulp.watch('src/theme/images/icons/set/**/*', ['moveIcons']);
-    gulp.watch('src/theme/images/**/*', ['moveImages']);
-});
-
 gulp.task('default', [
     'html',
     'styles',
     'stylesPlugin',
     'scripts',
-    'watchScripts',
     'scriptsPlugin',
     'moveFavicon',
     'moveFonts',
