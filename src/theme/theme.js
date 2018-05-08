@@ -1,7 +1,6 @@
 import * as map from '../../src/components/map/default/default';
 
 let mapContainer = document.getElementById('map-default');
-
 if (mapContainer) {
     map.initMap(mapContainer);
 }
@@ -17,13 +16,13 @@ $(function () {
     // 1
     // ========================================================================
 
-    $('.mask-phone').mask('(000) 000-0000');
+    $('[type="tel"]').mask('(000) 000-0000');
 
     $.validator.addMethod("lettersonly", function (value, element) {
         return this.optional(element) || /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]*$/.test(value);
     });
 
-    var message = "Lütfen ilgili alanı doldurunuz."
+    let message = "Lütfen ilgili alanı doldurunuz.";
 
     $('#form-default').validate({
         rules: {
