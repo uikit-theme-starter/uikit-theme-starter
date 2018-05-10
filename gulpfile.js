@@ -70,10 +70,10 @@ gulp.task('styles', () => {
     return gulp.src(['./src/theme/theme.scss'])
         .pipe(plumber())
         .pipe(sass())
-        .pipe(autoprefixer())
         .pipe(sourcemaps.init())
+        .pipe(autoprefixer())
         .pipe(cleancss())
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         //.pipe(concat('theme.css'))
         .pipe(gulp.dest('./dist/css'))
         .on('end', reload);
