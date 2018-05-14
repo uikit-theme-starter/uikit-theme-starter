@@ -5,6 +5,10 @@ if (mapContainer) {
     map.initMap(mapContainer);
 }
 
+import * as video from '../../src/components/video/default/default';
+
+video.init();
+
 $(function () {
 
     /*
