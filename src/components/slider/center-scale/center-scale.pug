@@ -1,20 +1,22 @@
 // Slider Center Scale
 
-section.uk-section.uk-section-large.slider-center-scale
+section.uk-section.uk-section-large.slider-center-scale.uk-background-muted
 
     .uk-text-center.uk-margin-medium-bottom
-        h2.uk-margin-remove BUGÜNÜN OFİSLERİ
-        p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing. Lorem 
-            br 
-            | ipsum dolor sit amet, consectetur adipiscing.
+        h2.uk-margin-remove Slider Center Scale
+        p.uk-margin-small: span.uk-icon(uk-icon="icon: icn-karo")
 
-    div(class="uk-position-relative uk-visible-toggle" uk-slider="center: true; autoplay: true; autoplay-interval: 4000")
-        
-        ul(class="uk-slider-items uk-grid-medium")
+    .uk-container.uk-container-small.uk-position-relative
+        .swiper-center-scale.swiper-container
+            .swiper-wrapper(uk-lightbox)
+                - x = 0
+                while x < 10
+                    - x++
+                    .swiper-slide
+                        .uk-position-relative(data-swiper-parallax="0" data-swiper-parallax-opacity="0.5" data-swiper-parallax-scale="0.9")
+                            img.uk-width-1-1(src="https://dummyimage.com/270x390/b3b3b3/474747")
 
-            - for (var x = 0; x < 10; x++)
-
-                li
-                    div
-                        img(src="https://dummyimage.com/1000x500/ff0000/ff0000.jpg" alt="")
-                        p.uk-margin-small-top.uk-margin-remove-bottom Lorem ipsum dolor sit amet
+            .uk-position-cover.uk-flex.uk-flex-center.uk-flex-middle
+                .uk-position-relative.uk-width-1-1(class="uk-width-1-3@s")
+                    .uk-position-center-left-out.uk-position-z-index(uk-slidenav-previous)
+                    .uk-position-center-right-out.uk-position-z-index(uk-slidenav-next)
