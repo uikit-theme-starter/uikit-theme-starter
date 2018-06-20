@@ -1,0 +1,29 @@
+// Slideshow Content Overlays
+
+.uk-position-relative.uk-visible-toggle(uk-slideshow="animation: push")
+
+    ul.uk-slideshow-items
+        li
+            img(src="../images/uikit.jpg" alt="" uk-cover)
+            .uk-position-center.uk-position-small.uk-text-center.uk-light
+                h2.uk-margin-remove Center
+                p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        li
+            img(src="../images/uikit.jpg" alt="" uk-cover)
+            .uk-position-bottom.uk-position-medium.uk-text-center.uk-light
+                h3.uk-margin-remove Bottom
+                p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        li
+            img(src="../images/uikit.jpg" alt="" uk-cover)
+            .uk-overlay.uk-overlay-primary.uk-position-bottom.uk-text-center
+                h3.uk-margin-remove Overlay Bottom
+                p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        li
+            img(src="../images/uikit.jpg" alt="" uk-cover)
+            .uk-overlay.uk-overlay-default.uk-position-bottom-right.uk-position-small
+                h3.uk-margin-remove Overlay Bottom Right
+                p.uk-margin-remove Lorem ipsum dolor sit amet.
+
+    .uk-light
+        a.uk-position-center-left.uk-position-small.uk-hidden-hover(href="#" uk-slidenav-previous uk-slider-item="previous")
+        a.uk-position-center-right.uk-position-small.uk-hidden-hover(href="#" uk-slidenav-next uk-slider-item="next")
