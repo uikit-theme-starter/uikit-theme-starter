@@ -6,11 +6,19 @@ if (mapContainer) {
     map.initMap(mapContainer);
 }
 
+<<<<<<< HEAD:src/js/theme.js
 //import * as video from '../components/video/default/default';
 
 //video.init();
 
 //$(function () {
+=======
+import * as video from '../../src/components/video/default/default';
+
+video.init();
+
+$(function () {
+>>>>>>> 0d540306c6534192c4f4d60cc2d4b15898a10104:src/theme/theme.js
 
     /*
      * 1 - Mask & Validation
@@ -21,7 +29,11 @@ if (mapContainer) {
     // 1
     // ========================================================================
 
+<<<<<<< HEAD:src/js/theme.js
     //$('[type="tel"]').mask('(000) 000-0000');
+=======
+    $('[type="tel"]').mask('(000) 000-0000');
+>>>>>>> 0d540306c6534192c4f4d60cc2d4b15898a10104:src/theme/theme.js
 
     /*$.validator.addMethod("lettersonly", function (value, element) {
         return this.optional(element) || /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]*$/.test(value);

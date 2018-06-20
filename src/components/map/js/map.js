@@ -1,23 +1,24 @@
-export function initMap(mapContainer) {
-
-    let uluru = {lat: -25.363, lng: 131.044};
+export function initMap(mapContainer, options = {
+    coordinate: [-25.363, 131.044],
+    zoom: 4,
+    contentString: '<div class="content"><h4>Address</h4><p>Explanation</p></div>',
+    marker: 'https://dummyimage.com/32x32/ff0000/ff0000.jpg',
+    title: 'Uluru (Ayers Rock)'
+}) {
     let map = new google.maps.Map(mapContainer, {
-        zoom: 4,
-        center: uluru
+        zoom: options.zoom,
+        center: {lat: options.coordinate[0], lng: options.coordinate[1]}
     });
-
-    let contentString = '<div class="content"><h4>Address</h4><p>Explanation</p></div>';
 
     let infowindow = new google.maps.InfoWindow({
-        content: contentString
+        content: options.contentString
     });
 
-    let image = 'https://dummyimage.com/32x32/ff0000/ff0000.jpg';
     let marker = new google.maps.Marker({
-        position: uluru,
+        position: {lat: options.coordinate[0], lng: options.coordinate[1]},
         map: map,
-        title: 'Uluru (Ayers Rock)',
-        icon: image
+        title: options.title,
+        icon: options.marker
     });
     marker.addListener('click', function () {
         infowindow.open(map, marker);

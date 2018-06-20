@@ -1,0 +1,25 @@
+// 1. Import default font
+// ========================================================================
+
+@import "../components/fonts/fonts";
+
+// 1. Your custom variables and variable overwrites.
+// ========================================================================
+
+@import "../components/uikit/_import";
+
+// 2. Import default variables and available mixins.
+// ========================================================================
+//noinspection CssUnknownTarget
+@import "./node_modules/uikit/src/scss/variables-theme";
+//noinspection CssUnknownTarget
+@import "./node_modules/uikit/src/scss/mixins-theme";
+
+
+@import "../components/uikit/_import-mixins";
+
+// 4. Import UIkit.
+// ========================================================================
+
+//noinspection CssUnknownTarget
+@import "./node_modules/uikit/src/scss/uikit-theme";
