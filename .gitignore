@@ -1,9 +1,12 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Example user template template
-### Example user template
-
 # IntelliJ project files
 .idea
 *.iml
+
+# Frontend files
 node_modules/
 /dist/
+
+#EE4 files
+/system/user/templates/default_site
+/system/user/cache/
+/images/

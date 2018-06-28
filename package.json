@@ -3,7 +3,9 @@
     "dev": "webpack-dev-server",
     "prod": "yarn clean && cross-env NODE_ENV=production webpack",
     "clean": "rimraf ./dist/*",
-    "icon": "cd node_modules/uikit && yarn && yarn compile-less && yarn compile-js && cd ../.."
+    "icon": "cross-env ICON=true webpack && cd node_modules/uikit && yarn && yarn compile-less && yarn compile-js && cd ../.. && yarn clean",
+    "prod/ee4": "rimraf ./system/user/templates/default_site/* && cross-env NODE_ENV=production cross-env MODE='ee4' webpack --watch",
+    "dev/ee4": "cross-env MODE='ee4dev' webpack-dev-server"
   },
   "dependencies": {},
   "devDependencies": {
@@ -30,6 +32,7 @@
     "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4",
-    "write-file-webpack-plugin": "^4.3.2"
+    "write-file-webpack-plugin": "^4.3.2",
+    "validator": "^10.4.0"
   }
 }
