@@ -33,8 +33,8 @@ if (process.env.ICON) {
 
     let distFolder = 'dist';
     let contentBase = './src/pages/';
-    let index = 'index.html';
-    let publicPath = isProd ? "/" : "";
+    let index = 'pages/index.html';
+    let publicPath = isProd ? "" : "/";
 
     const cssDev = ['style-loader', 'css-loader', 'less-loader'];
     const cssProd = extractTextWebpackPlugin.extract({
@@ -51,8 +51,11 @@ if (process.env.ICON) {
     pugs.forEach((val) => {
         let pugfile = path.parse(val);
         let pugfileDirArray = pugfile.dir.split('/');
+        let dir = pugfileDirArray[pugfileDirArray.length - 1];
+        let dirstring = dir === 'pages' ? '' : `${dir}/`;
+        let filename = `${dirstring}${pugfile.name}.html`;
         plugins.push(new htmlWebpackPlugin({
-            filename: `${pugfileDirArray[pugfileDirArray.length - 1]}/${pugfile.name}.html`,
+            filename: filename,
             hash: true,
             template: val,
             cache: false
@@ -108,10 +111,10 @@ if (process.env.ICON) {
                 },
                 {
                     test: /\.js$/,
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['es2015']
-                    },
+                    use: [
+                        {loader: 'string-replace-loader', options: {search: '\\n', replace: ''}},
+                        {loader: 'babel-loader', options: {presets: ['es2015']}},
+                    ],
                     exclude: /node_modules/
                 },
                 {
@@ -130,6 +133,16 @@ if (process.env.ICON) {
                             outputPath: 'images/'
                         }
                     }]
+                },
+                {
+                    test: /\.(mp4)$/i,
+                    use: [{
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]?[hash]',
+                            outputPath: 'videos/'
+                        }
+                    }]
                 }
             ]
         },
@@ -142,6 +155,7 @@ if (process.env.ICON) {
             contentBase: contentBase,
             watchContentBase: true,
             index: index,
+            compress: true
         },
         plugins: plugins,
         watchOptions: {
