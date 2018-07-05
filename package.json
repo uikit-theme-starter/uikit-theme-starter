@@ -3,7 +3,7 @@
     "dev": "webpack-dev-server --config webpack.dev.js",
     "prod": "yarn clean && webpack --config webpack.prod.js --optimize-minimize",
     "clean": "rimraf ./dist/*",
-    "icon": "webpack --config webpack.icon.js && cd node_modules/uikit && yarn && yarn compile-less && yarn compile-js && cd ../.. && yarn clean",
+    "icon": "webpack --config webpack.icon.js && cd node_modules/uikit && yarn && yarn compile && cd ../.. && yarn clean",
     "prod/ee4": "rimraf ./system/user/templates/default_site/* && webpack --config webpack.prod.ee4.js --optimize-minimize",
     "dev/ee4": "webpack-dev-server --config webpack.dev.ee4.js"
   },
