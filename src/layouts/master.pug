@@ -1,36 +1,39 @@
 doctype html
 
-html(lang="tr")
+html(lang="tr" dir="ltr")
 
     head
 
+        // title
+
+        title UIkit Theme Starter
+
         // meta
 
-        meta(charset='utf-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
-        meta(name='format-detection' content='telephone=no')
-        meta(name='description' content='Clockwork')
-        meta(name='keywords' content='Clockwork')
-        meta(name='author' content='Clockwork | Dijital Pazarlama Ajansı - clock@clockwork.com.tr')
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(property="twitter:card" content="summary_large_image")
+        meta(property="twitter:site" content="@uikithemestarter")
+        meta(name="twitter:image" content="https://uikitthemestarter.com/images/uikit-theme-starter-meta.png")
+        meta(property="og:locale" content="en_GB")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content="UIkit Theme Starter")
+        meta(property="og:description" content="UIkit, a lightweight and modular front-end framework for developing fast and powerful web interfaces.")
+        meta(property="og:url" content="https://uikithemestarter.com/")
+        meta(property="og:site_name" content="UIkit Theme Starter")
+        meta(property="og:image" content="https://uikithemestarter.com.tr/images/uikit-theme-starter-meta.png")
 
         // favicon
 
-        link(rel="apple-touch-icon" sizes="180x180", href="/favicon/apple-touch-icon.png")
-        link(rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png")
-        link(rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png")
-        link(rel="manifest" href="/favicon/manifest.json")
-        meta(name="theme-color" content="#ffffff")
-
-        // title
-
-        title Clockwork | Dijital Pazarlama Ajansı
+        link(rel="shortcut icon" href="images/favicon.png")
+        link(rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png")        
 
     body
 
-        //include ../../components/header/default/default
+        //include ../components/header/templates/usage
 
         main
 
             block content
 
-        //include ../../components/footer/default/default
+        //include ../components/footer/templates/usage
