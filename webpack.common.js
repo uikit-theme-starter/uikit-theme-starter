@@ -44,7 +44,20 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: [
-                    {loader: 'html-loader'},
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            attrs: [
+                                'img:src',
+                                'img:data-src',
+                                'img:data-srcset',
+                                'a:href',
+                                'video:src',
+                                'source:src'
+                            ],
+                            interpolate: true
+                        }
+                    },
                     {loader: "pug-html-loader", options: {pretty: true, exports: false}}
                 ]
             },
@@ -67,17 +80,17 @@ module.exports = {
                         outputPath: 'videos/'
                     }
                 }]
+            },
+            {
+                test: /\.(pdf|doc?x|xls)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'docs/'
+                    }
+                }]
             }
         ]
     },
-    /*plugins: [
-        new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({
-            title: 'Production'
-        })
-    ],
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    },*/
 };
