@@ -32,7 +32,7 @@
     "rimraf": "^2.6.2",
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.21.0",
-    "uikit": "^3.0.0-rc.8",
+    "uikit": "^3.0.0-rc.9",
     "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4",
