@@ -18,7 +18,7 @@ module.exports = merge.smart(common, {
         rules: [
             {
                 test: /\.less$/,
-                use: ['style-loader', 'css-loader', 'less-loader']
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
             }
         ]
     },

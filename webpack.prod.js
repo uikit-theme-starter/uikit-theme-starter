@@ -19,6 +19,7 @@ module.exports = merge.smart(common, {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'postcss-loader',
                     'less-loader'
                 ]
             }
