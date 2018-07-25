@@ -7,7 +7,7 @@ module.exports = [{
     plugins: [
         new copyWebpackPlugin([
             {
-                from: './src/images/iconset/*.svg',
+                from: './src/images/icon-set/*.svg',
                 to: '../node_modules/uikit/src/images/icons/[name].[ext]',
                 toType: 'template'
             }

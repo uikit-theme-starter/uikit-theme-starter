@@ -51,7 +51,6 @@ module.exports = {
                                 'img:src',
                                 'img:data-src',
                                 'img:data-srcset',
-                                'a:href',
                                 'video:src',
                                 'source:src'
                             ],
