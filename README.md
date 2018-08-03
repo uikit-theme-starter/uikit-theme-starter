@@ -26,6 +26,12 @@ yarn prod
 Projeyi dist klasörüne derlenmiş şekilde çıktılar
 
 ```sh
+yarn dev/ee4
+yarn prod/ee4
+```
+Yazılan kodların expression engine 3 ve üzeri için çalışmasını sağlar
+
+```sh
 yarn icon
 ```
 

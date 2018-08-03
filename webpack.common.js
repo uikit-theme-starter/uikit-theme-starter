@@ -21,7 +21,14 @@ pugs.forEach((val) => {
         filename: filename,
         hash: true,
         template: val,
-        cache: false
+        cache: false,
+        minify: {
+            removeAttributeQuotes: false,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true
+        }
     }));
 });
 
