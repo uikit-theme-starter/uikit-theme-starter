@@ -1,1 +1,12 @@
-/node_modules
+# IntelliJ project files
+.idea
+*.iml
+
+# Frontend files
+node_modules/
+/dist/
+
+#EE4 files
+/system/user/templates/default_site
+/system/user/cache/
+/images/

@@ -1,0 +1,21 @@
+// Search Drop
+
+nav.uk-navbar.uk-navbar-container.uk-margin(uk-navbar)
+
+    .uk-navbar-left
+
+        a.uk-navbar-item.uk-logo(href="#") Logo
+
+        ul.uk-navbar-nav
+            li.uk-active
+                a(href="#") Active
+            li
+                a(href="#") Item
+
+    .uk-navbar-right
+
+        div
+            a.uk-navbar-toggle(uk-search-icon href="#")
+            div.uk-drop(uk-drop="mode: click; pos: left-center; offset: 0")
+                form.uk-search.uk-search-navbar.uk-width-1-1
+                    input.uk-search-input(type="search" placeholder="Search..." autofocus)
