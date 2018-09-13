@@ -1,13 +1,14 @@
 {
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-	  "prod": "yarn clean && webpack --config webpack.prod.js",
+    "prod": "yarn clean && webpack --config webpack.prod.js",
     "clean": "rimraf ./dist/*",
     "icon": "webpack --config webpack.icon.js && cd node_modules/uikit && yarn && yarn compile && cd ../.. && yarn clean",
-	  "prod/ee4": "rimraf ./system/user/templates/default_site/* && webpack --config webpack.prod.ee4.js",
+    "prod/ee4": "rimraf ./system/user/templates/default_site/* && webpack --config webpack.prod.ee4.js",
     "dev/ee4": "webpack-dev-server --config webpack.dev.ee4.js"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
@@ -18,11 +19,12 @@
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
-    "glob": "^7.1.2",
+    "glob": "^7.1.3",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "less": "^3.8.0",
+    "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.2",
     "path": "^0.12.7",
     "postcss-loader": "^2.1.6",
     "pug": "^2.0.3",
@@ -31,12 +33,12 @@
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.21.0",
     "text-mask-addons": "^3.8.0",
-    "uikit": "^3.0.0-rc.10",
-    "validator": "^10.5.0",
-    "webpack": "^4.16.4",
+    "validator": "^10.7.1",
+    "uikit": "^3.0.0-rc.16"
+    "webpack": "^4.18.1",
     "webpack-cli": "^2.1.4",
-    "webpack-dev-server": "^3.1.5",
+    "webpack-dev-server": "^3.1.8",
     "webpack-merge": "^4.1.4",
-    "write-file-webpack-plugin": "^4.3.2"
+    "write-file-webpack-plugin": "^4.4.0"
   }
 }
