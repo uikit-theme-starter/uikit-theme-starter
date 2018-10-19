@@ -1,0 +1,64 @@
+// Header Mobile Modal
+
+#header-mobile-modal.uk-modal.uk-modal-full(uk-modal)
+    .uk-modal-dialog(uk-height-viewport)
+        button.uk-modal-close-full(uk-close)
+        .uk-modal-body
+            ul.uk-nav.uk-nav-default.uk-text-bold
+                li.uk-active: a(href="/") ANASAYFA
+                li: a(href="konaklama.html") KONAKLAMA
+                li: a(href="yiyecek-icecek.html") YİYECEK & İÇECEK
+                li: a(href="karina-spa.html") KARİNA SPA
+                li: a(href="aktiviteler.html") AKTİVİTELER
+                li: a(href="cocuk-kulubu.html") ÇOCUK KULÜBÜ
+                li: a(href="balayi.html") BALAYI
+                li: a(href="aqua.html") AQUA PARK & HAVUZLAR & PLAJ
+                li: a(href="casino.html") CASINO
+                li: a(href="toplanti.html") TOPLANTI
+                li: a(href="etkinlikler.html") ETKİNLİKLER
+                li: a(href="galeri.html") GALERİ
+                li.uk-active: a(href="iletisim.html") İletişim
+                li.uk-active: a(href="kesfet.html") Keşfet
+            .uk-grid.uk-grid-small(uk-grid)
+                div
+                    a.uk-button.uk-button-secondary(href="+903926303000") +90 392 630 30 00
+
+// Reservation Mobile Modal
+
+#reservation-mobile-modal.uk-modal.uk-modal-full.reservation-form(uk-modal)
+    .uk-modal-dialog.uk-background-cover(data-src="@/images/section/reservation.png" uk-img uk-height-viewport)
+        button.uk-modal-close-full(uk-close)
+        .uk-modal-body
+            form.uk-grid.uk-grid-small(uk-grid)
+                .uk-width-1-1.uk-position-relative
+                    .uk-inline.uk-width-1-1
+                        span.uk-form-icon.uk-form-icon-flip.uk-text-primary(uk-icon="icon: icn-calendar")
+                        input.uk-input.datepicker.uk-text-secondary(type="text" value="GİRİŞ TARİHİ")
+                .uk-width-1-1.uk-position-relative
+                    .uk-inline.uk-width-1-1
+                        span.uk-form-icon.uk-form-icon-flip.uk-text-primary(uk-icon="icon: icn-calendar")
+                        input.uk-input.datepicker.uk-text-secondary(type="text" value="ÇIKIŞ TARİHİ")
+                .uk-width-1-1
+                    .uk-position-relative
+                        .uk-position-cover.uk-text-secondary.uk-flex.uk-flex-middle
+                            span.uk-display-block YETİŞKİN
+                        select.uk-select.uk-text-primary
+                            option(value="") 0
+                            option(value="") 1
+                            option(value="") 2
+                .uk-width-1-1
+                    .uk-position-relative
+                        .uk-position-cover.uk-text-secondary.uk-flex.uk-flex-middle
+                            span.uk-display-block ÇOCUK
+                        select.uk-select.uk-text-primary
+                            option(value="") 0
+                            option(value="") 1
+                            option(value="") 2
+                .uk-width-1-1
+                    .uk-position-relative
+                        select.uk-select.uk-text-secondary
+                            option(value="") ODA SAYISI
+                            option(value="") 1
+                            option(value="") 2
+                .uk-width-1-1.uk-position-relative
+                    button.uk-button.uk-button-danger.uk-width-1-1(type="submit") ARA

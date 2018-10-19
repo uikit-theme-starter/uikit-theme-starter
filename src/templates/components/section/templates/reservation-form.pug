@@ -1,0 +1,36 @@
+// Reservation Form
+
+section.uk-section.uk-padding-remove-vertical.uk-position-bottom.reservation-form(class="uk-visible@l")
+    .uk-container
+        form.uk-grid.uk-grid-collapse(uk-grid)
+            .uk-width-expand.uk-position-relative
+                .uk-inline.uk-width-1-1
+                    span.uk-form-icon.uk-form-icon-flip.uk-text-primary(uk-icon="icon: icn-calendar")
+                    input.uk-input.datepicker.uk-text-secondary(type="text" value="GİRİŞ TARİHİ")
+            .uk-width-expand.uk-position-relative
+                .uk-inline.uk-width-1-1
+                    span.uk-form-icon.uk-form-icon-flip.uk-text-primary(uk-icon="icon: icn-calendar")
+                    input.uk-input.datepicker.uk-text-secondary(type="text" value="ÇIKIŞ TARİHİ")
+            .uk-width-1-6.uk-position-relative
+                .uk-position-cover.uk-text-secondary.uk-flex.uk-flex-middle
+                    span.uk-display-block YETİŞKİN
+                select.uk-select.uk-text-primary
+                    option(value="") 0
+                    option(value="") 1
+                    option(value="") 2
+            .uk-width-1-6.uk-position-relative
+                .uk-position-cover.uk-text-secondary.uk-flex.uk-flex-middle
+                    span.uk-display-block ÇOCUK
+                select.uk-select.uk-text-primary
+                    option(value="") 0
+                    option(value="") 1
+                    option(value="") 2
+            .uk-width-1-6
+                select.uk-select.uk-text-secondary
+                    option(value="") ODA SAYISI
+                    option(value="") 1
+                    option(value="") 2
+            .uk-width-auto
+                button.uk-button.uk-button-danger(type="submit") ARA
+
+            

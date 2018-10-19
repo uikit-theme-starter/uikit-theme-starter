@@ -1,0 +1,97 @@
+/* ========================================================================
+ Component: Footer Default
+========================================================================== */
+
+ .footer-default {
+    background-color: #2e2e2e;
+}
+
+// Top
+// ========================================================================
+
+.footer-default-top {
+    padding: 44px 63px;
+    .phone {
+        color: #e2e2e2;
+        margin-top: 15px;
+    }
+}
+
+.social-list {
+    color: #e2e2e2;
+    margin-top: 53px;
+    a + a {
+        margin-left: 30px;
+    }
+}
+
+.newsletter {
+    .uk-input {
+        padding-right: 90px;
+    }
+    .uk-button {
+        padding: 0 3px;
+        width: 77px;
+        min-width: 1px;
+    }
+}
+
+// Bottom
+// ========================================================================
+
+.footer-default-bottom {
+    background-color: #262626;
+    padding: 22px 0;
+    .nav {
+        a {
+            font-size: 11px;
+            letter-spacing: 0.4px;
+            line-height: 1;
+          
+            + a {
+                border-left: 1px solid @global-emphasis-color;
+                margin-left: 28px;
+                padding-left: 28px;
+            }
+        }
+    }
+    small {
+        margin-right: 40px;
+    } 
+}
+
+
+// Responsive
+// ========================================================================
+
+@media (max-width: 959px) {
+    .footer-default-top {
+        padding: 30px 20px;
+    }
+    .footer-default-bottom {
+        padding: 30px 20px 60px;
+        .nav {
+            a {
+                display: block;
+                + a {
+                    margin-top: 13px;
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+        small {
+            margin-bottom: 15px;
+            display: block;
+        }
+    }
+    .social-list {
+        p {
+            font-family: 'Tinos', serif;
+            font-size: 18px;
+        }
+        > div {
+            justify-content: center;
+        }
+    }
+}

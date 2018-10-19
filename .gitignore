@@ -1,12 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+
 # IntelliJ project files
 .idea
-*.iml
+out
+gen
 
-# Frontend files
-node_modules/
-/dist/
-
-#EE4 files
-/system/user/templates/default_site
-/system/user/cache/
-/images/
+# Front-end Files
+node_modules

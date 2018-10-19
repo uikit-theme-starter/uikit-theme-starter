@@ -1,0 +1,115 @@
+// Header Default
+
+header.header-default.header-parent-full.uk-background-default(uk-sticky show-on-up animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-background-default")
+
+    .header-top-bar
+        .uk-container
+            .uk-grid.uk-grid-small.uk-flex-middle(uk-grid)
+
+                .uk-width-1-4.header-top-bar-left
+                    .uk-flex.uk-flex-middle
+                        nav.uk-navbar
+                            ul.uk-navbar-nav
+                                li
+                                    a.uk-padding-remove-left(href="#") TR
+                                        span.uk-margin-small-left(uk-icon="icon: icn-chevron-down;")
+                                    .uk-dropdown(uk-dropdown="mode: click")
+                                        a(href="#") EN
+
+                                li(class="uk-visible@l"): a(href="iletisim.html") İletişim
+                                li(class="uk-visible@l"): a(href="kesfet.html") Keşfet
+
+                .uk-width-expand.header-top-logo.uk-text-center
+                    a(href="/")
+                        img(src="@/images/icons/logo.png" alt="" width="196")
+
+                .uk-width-1-4.header-top-bar-right
+                    .uk-flex.uk-flex-middle(class="uk-visible@l")
+                        a.uk-button.uk-button-default.uk-margin-right.uk-padding-remove-left(href="#modal-call" uk-toggle)
+                            span(uk-icon="icon: icn-phone")
+                            | SİZİ ARAYALIM
+                        a.uk-button.uk-button-danger(href="#") REZERVASYON
+                    .uk-text-right(class="uk-hidden@l")
+                        a(href="#header-mobile-modal" uk-toggle uk-icon="icon: icn-menu;")
+
+    .header-nav-bar(class="uk-visible@l")
+        .uk-container
+
+            nav.uk-navbar.uk-navbar-container.uk-navbar-transparent(uk-navbar="dropbar: true")
+                ul.uk-navbar-nav.uk-width-1-1.uk-flex-between(class="uk-visible@m")
+                    li: a.uk-padding-remove-left(href="/" uk-icon="icon: icn-home;")
+                    li
+                        a(href="konaklama.html") KONAKLAMA
+                        .uk-navbar-dropdown.uk-margin-remove.uk-padding-remove-horizontal(uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify; delay-hide: 300")
+                            .uk-grid.uk-grid-medium.uk-child-width-1-4(uk-grid)
+                                div
+                                    .uk-text-center.uk-text-secondary
+                                        a.uk-link-reset(href="#")
+                                            .uk-inline-clip.uk-transition-toggle.uk-margin-small(tabindex="0")
+                                                img.uk-transition-scale-up.uk-transition-opaque(data-src="@/images/header/menu-1.jpg" alt="" uk-img)
+                                            span DELUXE SEA VIEW
+                                div
+                                    .uk-text-center.uk-text-secondary
+                                        a.uk-link-reset(href="#")
+                                            .uk-inline-clip.uk-transition-toggle.uk-margin-small(tabindex="0")
+                                                img.uk-transition-scale-up.uk-transition-opaque(data-src="@/images/header/menu-2.jpg" alt="" uk-img)
+                                            span DELUXE SEA VIEW
+                                div
+                                    .uk-text-center.uk-text-secondary
+                                        a.uk-link-reset(href="#")
+                                            .uk-inline-clip.uk-transition-toggle.uk-margin-small(tabindex="0")
+                                                img.uk-transition-scale-up.uk-transition-opaque(data-src="@/images/header/menu-3.jpg" alt="" uk-img)
+                                            span SUITES
+                                div
+                                    .uk-text-center.uk-text-secondary
+                                        a.uk-link-reset(href="#")
+                                            .uk-inline-clip.uk-transition-toggle.uk-margin-small(tabindex="0")
+                                                img.uk-transition-scale-up.uk-transition-opaque(data-src="@/images/header/menu-4.jpg" alt="" uk-img)
+                                            span HOLIDAY VILLAGE
+                    li
+                        a(href="yiyecek-icecek.html") YİYECEK & İÇECEK
+                        .uk-navbar-dropdown.uk-margin-remove.uk-padding-remove-horizontal(uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify; delay-hide: 300")
+                            .uk-grid.uk-navbar-dropdown-grid(uk-grid)
+                                .uk-width-auto
+                                    .uk-grid.uk-child-width-auto
+                                        div
+                                            span.uk-nav-header.uk-text-small.uk-display-block RESTORANLAR
+                                            ul.uk-nav.uk-navbar-dropdown-nav
+                                                li: a(href="#") FLORA RESTAURANT
+                                                li: a(href="#") ALABORA RESTAURANT
+                                                li: a(href="#") FORA SAHİL SNACK RESTAURANT
+                                        div
+                                            .uk-inline-clip.uk-transition-toggle.uk-margin-small(tabindex="0")
+                                                img.uk-transition-scale-up.uk-transition-opaque(data-src="@/images/header/menu-5.jpg" alt="" uk-img)
+                                .uk-width-expand
+                                    .uk-grid
+                                        .uk-width-auto
+                                            span.uk-nav-header.uk-text-small.uk-display-block NOAH CAFE & BARLAR
+                                            ul.uk-nav.uk-navbar-dropdown-nav.uk-column-1-2
+                                                li: a(href="#") BARLAR & CAFE
+                                                li: a(href="#") ENGLISH PUB
+                                                li: a(href="#") ADA BAR
+                                                li: a(href="#") VİTAMİN BAR
+                                                li: a(href="#") POOL BAR
+                                                li: a(href="#") DISCO
+                                                li: a(href="#") AQUA BAR
+                                                li: a(href="#") SUN & SUN BAR
+                                                li: a(href="#") MOON ARENA BAR
+                                                li: a(href="#") HOLIDAY VILLAGE BAR
+                                        .uk-width-expand
+                                            .uk-inline-clip.uk-transition-toggle.uk-margin-small(tabindex="0")
+                                                img.uk-transition-scale-up.uk-transition-opaque(data-src="@/images/header/menu-5.jpg" alt="" uk-img)
+                    li: a(href="balayi.html") BALAYI
+                    li: a(href="karina-spa.html") KARINA SPA
+                    li: a(href="aqua.html") AQUA PARK & HAVUZLAR & PLAJ
+                    li: a(href="cocuk-kulubu.html") ÇOCUK KULÜBÜ
+                    li: a(href="aktiviteler.html") AKTİVİTELER
+                    li: a(href="casino.html") CASINO
+                    li: a(href="toplanti.html") TOPLANTI
+                    li: a(href="etkinlikler.html") ETKİNLİKLER
+                    li: a.uk-padding-remove-right(href="galeri.html") GALERİ
+
+.reservation-button-mobile(class="uk-hidden@l")
+    a.uk-button.uk-button-danger.uk-width-1-1(href="#reservation-mobile-modal" uk-toggle) REZERVASYON
+
+    include mobile

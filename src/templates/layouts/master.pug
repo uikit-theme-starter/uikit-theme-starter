@@ -1,0 +1,50 @@
+doctype html
+
+html(lang="tr" dir="ltr")
+
+    head
+
+        // title
+
+        title NUH'UN GEMİSİ DELUXE HOTEL & SPA
+
+        // meta
+
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(property="twitter:card" content="summary_large_image")
+        meta(property="twitter:site" content="@uikithemestarter")
+        meta(name="twitter:image" content="https://uikitthemestarter.com/images/uikit-theme-starter-meta.png")
+        meta(property="og:locale" content="en_GB")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content="UIkit Theme Starter")
+        meta(property="og:description" content="UIkit, a lightweight and modular front-end framework for developing fast and powerful web interfaces.")
+        meta(property="og:url" content="https://uikithemestarter.com/")
+        meta(property="og:site_name" content="UIkit Theme Starter")
+        meta(property="og:image" content="https://uikithemestarter.com.tr/images/uikit-theme-starter-meta.png")
+
+        // favicon
+
+        link(rel="shortcut icon" href="${require('@/images/icons/favicon.png')}")
+        link(rel="apple-touch-icon-precomposed" href="@/images/icons/apple-touch-icon.png")
+
+        // font
+
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin-ext" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Tinos&amp;subset=latin-ext" rel="stylesheet")
+
+    body
+
+        include ../components/mixins/templates/usage
+
+        include ../components/header/templates/top-bar
+
+        main
+
+            block content
+
+        include ../components/footer/templates/usage
+
+        include ../components/modal/templates/close
+
+        script(src='https://www.google.com/recaptcha/api.js')

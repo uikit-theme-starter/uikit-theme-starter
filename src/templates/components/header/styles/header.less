@@ -1,0 +1,115 @@
+/* ========================================================================
+ Component: Header
+========================================================================== */
+
+.header-default {
+    .uk-button-default {
+        border: none;
+        span {
+            margin-right: 7px;
+        }
+    }
+}
+
+.header-top-bar {
+    padding: 15px 0;
+    .uk-dropdown {
+        box-shadow: 0 0 6px 0 rgba(189, 189, 189, 0.5);
+        padding: 0;
+        min-width: 40px;
+        &::before {
+            content: '';
+            border: 5px solid transparent;
+            border-bottom-color: #fff;
+            position: absolute;
+            top: -10px;
+            left: calc(50% - 5px);
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4))
+        }
+        a {
+            text-decoration: none;
+            padding: 10px 13px;
+            display: inline-block; 
+        }
+    }
+}
+
+.header-top-bar-left {
+    .uk-navbar-nav > li > a, .uk-dropdown a {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #414141;
+        &:hover,
+        &:active,
+        &:focus {
+            color: #a97457;
+        }
+    }
+    .uk-icon {
+        color: #8d8d8d;
+    }
+}
+
+.header-nav-bar {
+    background-color: #414141;
+}
+
+#header-mobile-modal {
+    .uk-modal-body {
+        padding: 35px;
+    }
+    .uk-nav {
+        margin-bottom: 20px;
+        > li {
+            > a {
+                padding: 8px 0;
+            }
+            &.uk-active {
+                > a {
+                    color: #995c47;
+                }
+            }
+        }
+    }
+}
+
+.reservation-button-mobile {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+
+#reservation-mobile-modal {
+    .uk-modal-close-full {
+        background-color: transparent;
+    }
+    &.reservation-form {
+        margin-bottom: 0;
+    }
+    .uk-modal-body {
+        padding: 60px 20px 20px;
+    }
+}
+
+
+// Responsive
+// ========================================================================
+
+@media (max-width: 1199px) {
+    .header-default {
+        &.uk-sticky-fixed {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+    .header-top-bar {
+        padding: 10px 0;
+    }
+    .header-top-logo {
+        img {
+            width: 117px;
+        }
+    }
+}

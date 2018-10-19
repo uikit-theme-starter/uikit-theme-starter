@@ -1,0 +1,64 @@
+extends ../layouts/master
+
+block content
+
+    +parallax-medium(
+        '@/images/parallax/yiyecek-icecek.jpg',
+        '@/images/parallax/yiyecek-icecek-m.jpg',
+        'YİYECEK & İÇECEK',
+        'Dünya mutfaklarından en seçkin lezzetleri özgürce tadabileceğiniz açık büfe veya a la carte restoranlar her gün bir şölen tadında.'
+    )
+
+    +content-text-left('FLORA RESTAURANT')
+        p Flora Restaurant, Türk Mutfağı´ndan lezzet dolu geniş bir yelpaze ve uluslararası tatların çekiciliğini bir araya getirerek özel yemek deneyiminizi başlangıçtan tatlılara kadar heyecan verici bir yolculuk haline getirerek canlı şovlarla hazırlanan yemekleri ile sizleri unutulmaz tatlarla buluşturuyor. Zengin açık büfe kahvaltı, öğle yemeği ve akşam yemeklerinin keyifle tadını çıkarabilirsiniz.
+
+    +slideshow-pull('#', '#', 'FORA SAHİL', 'ALABORA')(class="uk-padding-remove-top")
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-yiyecek-icecek.jpg")
+                img(data-src="@/images/slideshow/slideshow-yiyecek-icecek.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-yiyecek-icecek.jpg")
+                img(data-src="@/images/slideshow/slideshow-yiyecek-icecek.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+
+    +reservation(
+        'FLORA RESTAURANT',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+        'REZERVASYON'
+    )
+
+    +slider-content-transitions('uk-child-width-auto uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l')
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove FLORA RESTAURANT
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-yiyecek-icecek-1.jpg" alt="" uk-img)
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove ALABORA RESTAURANT
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-yiyecek-icecek-2.jpg" alt="" uk-img)
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove FORA SAHİL SNACK RESTAURANT
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-yiyecek-icecek-3.jpg" alt="" uk-img)
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove PASTANE
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-yiyecek-icecek-4.jpg" alt="" uk-img)
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove BARLAR & CAFE
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-yiyecek-icecek-5.jpg" alt="" uk-img)
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove FLORA RESTAURANT
+                img.uk-transition-scale-up.uk-transition-opaque(data-src="@/images/slider/slider-yiyecek-icecek-1.jpg" alt="" uk-img)

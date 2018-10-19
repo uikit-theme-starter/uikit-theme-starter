@@ -1,0 +1,83 @@
+//
+// Component: List
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@list-margin-top:                               @global-small-margin;
+
+@list-nested-padding-left:                      @global-gutter;
+
+@list-divider-margin-top:                       5px;
+@list-divider-border-width:                     @global-border-width;
+@list-divider-border:                           #f3f3f3;
+
+@list-striped-padding-vertical:                 @global-small-margin;
+@list-striped-padding-horizontal:               @global-small-margin;
+@list-striped-background:                       @global-muted-background;
+
+@list-bullet-width:                             (@global-line-height * 1em);
+@list-bullet-height:                            @list-bullet-width;
+@list-bullet-margin-right:                      @global-small-margin;
+@list-bullet-icon-color:                        #a97457;
+
+@list-large-margin-top:                         @global-margin;
+@list-large-divider-margin-top:                 @global-margin;
+@list-large-striped-padding-vertical:           @global-margin;
+@list-large-striped-padding-horizontal:         @global-small-margin;
+
+@internal-list-bullet-image:                    "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%224%22%20height%3D%224%22%20viewBox%3D%220%200%204%204%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23a97457%22%20x%3D%220%22%20y%3D%220%22%20width%3D%224%22%20height%3D%224%22%3E%3C%2Frect%3E%0A%3C%2Fsvg%3E";
+
+//
+// New
+//
+
+@list-striped-border-width:                     @global-border-width;
+@list-striped-border:                           @global-border;
+
+
+// Style modifiers
+// ========================================================================
+
+.hook-list-divider() {}
+
+.hook-list-striped() {
+
+    &:nth-of-type(odd) {
+        border-top: @list-striped-border-width solid @list-striped-border;
+        border-bottom: @list-striped-border-width solid @list-striped-border;
+    }
+
+}
+
+.hook-list-bullet() {
+    top: auto;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-list-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-list-divider-border:                     @inverse-global-border;
+@inverse-list-striped-background:                 @inverse-global-muted-background;
+@inverse-list-bullet-icon-color:                  @inverse-global-color;
+
+.hook-inverse-list-divider() {}
+.hook-inverse-list-striped() {
+
+    &:nth-of-type(odd) {
+        border-top-color: @inverse-global-border;
+        border-bottom-color: @inverse-global-border;
+    }
+
+}
+.hook-inverse-list-bullet() {}

@@ -1,0 +1,36 @@
+// Parallax
+
+mixin parallax-large(image, title)
+    section.uk-section.uk-section-large.uk-position-relative.uk-light.uk-flex.uk-flex-center.uk-flex-bottom.uk-background-cover.parallax-large(uk-parallax="bgy: 200; media: @m" data-src=image uk-img uk-height-viewport="offset-top: true")&attributes(attributes)
+        .uk-position-relative.uk-position-z-index.uk-text-center
+            h1.uk-h2.uk-margin-small= title
+            span(uk-icon="icon: icn-wave;")
+        .uk-position-bottom-right.uk-position-z-index.writing-text
+            a.uk-flex.uk-flex-middle.uk-link-reset(href="#parallax-scroll" uk-scroll)
+                span.text(data-hover="Aşağı Kaydır") Aşağı Kaydır
+                span.uk-margin-small-top(uk-icon="icon: icn-chevron-down")
+        .uk-position-bottom.background-secondary-gradient
+
+mixin parallax-medium(image, image2, title, explanation)
+    section.uk-section.uk-height-medium.uk-position-relative.uk-light.uk-flex.uk-flex-center.uk-flex-middle.uk-background-cover.uk-cover-container.parallax-medium(class="uk-background-image@s" uk-parallax="bgy: 100; media: @m" data-src=image uk-img)&attributes(attributes)
+        img(class="uk-hidden@s" data-src=image2 alt uk-img uk-cover)
+        .uk-container.uk-container-small.uk-text-center.uk-position-relative
+            h1.uk-h2.uk-margin-remove= title
+            p.uk-h6.uk-margin-remove= explanation
+
+mixin parallax-card(image, alt, title, explanation)
+    section.uk-section.uk-section-muted.parallax-card(uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-left-medium; delay: 300;")
+        .uk-container.uk-margin-xlarge-bottom
+            .uk-grid.uk-grid-collapse.uk-flex-center(uk-grid)
+                div(class="uk-width-5-6@m")
+                    .uk-grid.uk-grid-collapse.uk-grid-match(class="uk-child-width-1-2@s" uk-grid)
+                        div(uk-scrollspy-class)
+                            div
+                                img(data-src=image uk-img alt=alt)
+                        div(uk-scrollspy-class)
+                            .uk-padding.uk-background-default.uk-box-shadow-large.uk-flex(uk-parallax="y: 20, 88; x: -43, -43; viewport: 0.7; media: @s")&attributes(attributes)
+                                .uk-width-1-1.content
+                                    h4.uk-margin-small.uk-text-primary=title
+                                    p.uk-h5.uk-margin-remove=explanation
+                                    img.uk-margin-medium-top(data-src="@/images/icons/logo-simple.svg" uk-img alt="")
+                                    block

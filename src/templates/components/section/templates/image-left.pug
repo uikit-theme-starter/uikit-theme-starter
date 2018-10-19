@@ -1,0 +1,20 @@
+// Section Content Image Left
+
+mixin section-content-image-left(image, title, pdf, button)
+    section.uk-section.section-content-image-left(uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-left-medium; delay: 300;")
+        .uk-grid.uk-flex-middle(class="uk-child-width-1-2@m" uk-grid)
+            div
+                .image(uk-scrollspy-class)
+                    img(src=image uk-img alt="")
+
+            div
+                .uk-grid.uk-grid-collapse.uk-flex-center(uk-grid)
+                    div(class="uk-width-medium@m")
+                        .uk-container.uk-text-center(uk-scrollspy-class)
+                            .title
+                                h2.uk-h4= title
+                            block
+                            h5.uk-margin-small-bottom= pdf
+                            a.uk-button.uk-button-default(href="#")
+                                span.uk-margin-small-right(uk-icon="icon: icn-download")
+                                =button

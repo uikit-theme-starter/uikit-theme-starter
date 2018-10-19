@@ -1,0 +1,49 @@
+extends ../layouts/master
+
+block content
+
+    +parallax-medium(
+        '@/images/parallax/cocuk-kulubu.jpg',
+        '@/images/parallax/cocuk-kulubu-m.jpg',
+        'ÇOCUK KULÜBÜ',
+        'Siz havuzun, plajın keyfini çıkarırken çocuklarınızı güven içinde eğlenebilecekleri alanlara rahatlıkla emanet edebilirsiniz. Her detayın düşünüldüğü Karakaçan Kid’s Club, kapalı ve açık oyun alanları, çocuk havuzu, uzman eğitmenler eşliğinde yapılan aktiviteleri ve özel sürprizleri ile çocukları mutlu etmek için ideal.'
+    )
+
+    +content-text-left('KARAKAÇAN')
+        p Noah's Ark Deluxe Hotel & Spa sizlere ve çocuklarınıza ayrı ayrı tatil yapma ve eğlence imkanı sunmaktadır. Çocuk Kulubü'nde çocuklarınız bizim için özeldir. Küçük misafirlerimize sunduğumuz ayrıcalıklı hizmetlerimiz saymakla bitmez. Onlara özel mekanda Yaratıcı oyunlar, oyuncaklar şevkat ve ilgi ile birleşince ayrılamayacakları bir mekan haline gelir.
+
+    +slideshow-pull()(class="uk-padding-remove-top")
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-cocuk-kulubu.jpg")
+                img(data-src="@/images/slideshow/slideshow-cocuk-kulubu.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-cocuk-kulubu.jpg")
+                img(data-src="@/images/slideshow/slideshow-cocuk-kulubu.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+
+    +reservation(
+        'GÜNÜN HER ANI DOPDOLU',
+        'Nuh’un Gemisi’nde eğlencenin binbir rengi var.',
+        'REZERVASYON'
+    )
+
+    +parallax-card(
+        '@/images/parallax/cocuk-kulubu-card.jpg',
+        'programlar',
+        'Programlar'
+    )(class="uk-text-left parallax-card-custom")
+        ul.uk-list.uk-list-divider.uk-list-bullet
+            li Yüz Boyama
+            li Resim Dersi
+            li Çizgi Film Saati
+            li Uyku Saati
+            li Hazine Avı (Korsanlar)
+            li Mini Spor Aktiviteleri
+            li Mini Disko
+            li Mini Süpershow
+        a.uk-button.uk-padding-remove-left(href="#") REZERVASYON
+            span.uk-margin-small-left(uk-icon="icon: icn-arrow-right;")

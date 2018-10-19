@@ -1,0 +1,42 @@
+extends ../layouts/master
+
+block content
+
+    section.uk-section.human-resources
+        .uk-container
+            .uk-grid.uk-flex-center(uk-grid)
+                div(class="uk-width-2-3@m")
+                    .uk-text-center
+                        h1.uk-h2.uk-margin-small İNSAN KAYNAKLARI
+                        span.uk-text-primary(uk-icon="icon: icn-wave;")
+                        p.uk-text-small Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis Aristidem non mortuum diligit? Si verbum sequimur, primum longius verbum praepositum quam bonum. At multis se probavit.
+                        .uk-margin-medium
+                            a.uk-button.uk-button-primary.uk-active(href="tel:+903926303000") +90 392 630 30 00
+                            a.uk-button.uk-button-default(href="mailto:info@noahsark.com.tr") info@noahsark.com.tr
+
+                    .uk-border-rounded.uk-box-shadow-medium.uk-margin-large.form
+                        form#human-resources-form
+                            fieldset.uk-fieldset
+                                legend.uk-legend.uk-text-bold.uk-margin-small İş Başvuru Formu
+                                .uk-margin-small
+                                    input.uk-input(type="text" placeholder="AD SOYAD" validation="required")
+                                .uk-margin-small
+                                    input.uk-input(type="text" placeholder="E-POSTA" validation="required|email")
+                                .uk-margin-small
+                                    input.uk-input(type="text" placeholder="TELEFON" validation="required" mask="tel")
+                                .uk-margin-small
+                                    textarea.uk-textarea(rows="5" placeholder="MESAJ" validation="required")
+                                .uk-margin-small
+                                    .uk-margin-small
+                                        span Cv - özgeçmiş yükleyin
+                                    div(uk-form-custom)
+                                        input(type="file" validation="required")
+                                        button.uk-button.uk-button-small(type="button" tabindex="-1") Yükle
+                                .uk-margin
+                                    .uk-grid.uk-grid-small.uk-flex-between.uk-flex-bottom(uk-grid)
+                                        div
+                                            .g-recaptcha(data-sitekey="6LdBHW0UAAAAAB0o6ZLaeLOZW71wpMJM4q1Rfmad")
+                                        div
+                                            button.uk-button.uk-button-secondary.uk-active(type="submit") BAŞVUR
+
+                                

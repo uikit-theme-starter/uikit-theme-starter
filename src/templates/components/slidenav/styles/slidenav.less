@@ -1,0 +1,128 @@
+//
+// Component: Slidenav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@slidenav-padding-vertical:                     5px;
+@slidenav-padding-horizontal:                   10px;
+
+@slidenav-color:                                fade(@global-color, 50%);
+@slidenav-hover-color:                          fade(@global-color, 90%);
+@slidenav-active-color:                         fade(@global-color, 50%);
+
+@slidenav-large-padding-vertical:               10px;
+@slidenav-large-padding-horizontal:             @slidenav-large-padding-vertical;
+
+
+// Component
+// ========================================================================
+
+.hook-slidenav() { transition: color 0.1s ease-in-out; }
+
+.hook-slidenav-hover() {}
+
+.hook-slidenav-active() {}
+
+
+// Icon modifier
+// ========================================================================
+
+.hook-slidenav-previous() {}
+
+.hook-slidenav-next() {}
+
+
+// Size modifier
+// ========================================================================
+
+.hook-slidenav-large() {}
+
+
+// Container
+// ========================================================================
+
+.hook-slidenav-container() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-icon-misc() {}
+
+
+// Inverse
+// ========================================================================
+
+@inverse-slidenav-color:                       fade(@inverse-global-color, 70%);
+@inverse-slidenav-hover-color:                 fade(@inverse-global-color, 95%);
+@inverse-slidenav-active-color:                fade(@inverse-global-color, 70%);
+
+.hook-inverse-slidenav() {}
+.hook-inverse-slidenav-hover() {}
+.hook-inverse-slidenav-active() {}
+
+
+// Style
+// ========================================================================
+
+.uk-slidenav {
+    &.primary {
+        color: #a97457;
+        box-sizing: border-box;
+        padding: 5px 15px;
+        width: 60px;
+        height: 76px;
+        &:hover {
+            color: #fff;
+            background-color: #a97457;
+        }
+    }
+}
+
+.zoom-button {
+    color: #a97457;
+    a, span {
+        width: 44px;
+        height: 44px;
+    }
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.uk-slider-items,
+.uk-slideshow-items {
+    &:hover {
+        .zoom-button {
+            opacity: 1;
+        }
+    }
+} 
+
+.slideshow-advanced-effects {
+    .uk-slidenav {
+        background-color: rgba(61, 61, 61, 0.2);
+        width: 44px;
+        height: 44px;
+        &:hover {
+            color: #fff;
+            background-color: rgba(61, 61, 61, 0.8);
+        }
+    }
+}
+
+
+// Responsive
+// ========================================================================
+
+@media (max-width: 639px) {
+    .uk-slidenav {
+        &.primary {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

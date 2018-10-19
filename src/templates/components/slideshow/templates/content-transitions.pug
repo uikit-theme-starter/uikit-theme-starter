@@ -1,0 +1,23 @@
+// Slideshow Content Transitions
+
+.uk-position-relative.uk-visible-toggle.uk-light(uk-slideshow="animation: fade")
+
+    ul.uk-slideshow-items
+        li
+            img(src="@/images/uikit.jpg" alt="" uk-cover)
+            .uk-overlay.uk-overlay-primary.uk-position-bottom.uk-text-center.uk-transition-slide-bottom
+                h3.uk-margin-remove Bottom
+                p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        li
+            img(src="@/images/uikit.jpg" alt="" uk-cover)
+            .uk-overlay.uk-overlay-primary.uk-position-bottom.uk-text-center.uk-transition-slide-bottom
+                h3.uk-margin-remove Bottom
+                p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        li
+            img(src="@/images/uikit.jpg" alt="" uk-cover)
+            .uk-overlay.uk-overlay-primary.uk-position-right.uk-text-center.uk-transition-slide-right.uk-width-medium
+                h3.uk-margin-remove Left
+                p.uk-margin-remove Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+    a.uk-position-center-left.uk-position-small.uk-hidden-hover(href="#" uk-slidenav-previous uk-slider-item="previous")
+    a.uk-position-center-right.uk-position-small.uk-hidden-hover(href="#" uk-slidenav-next uk-slider-item="next")

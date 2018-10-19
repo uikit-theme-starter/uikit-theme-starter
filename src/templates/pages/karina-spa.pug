@@ -1,0 +1,60 @@
+extends ../layouts/master
+
+block content
+
+    +parallax-medium(
+        '@/images/parallax/karina-spa.jpg',
+        '@/images/parallax/karina-spa-m.jpg',
+        'KARINA & SPA',
+        'Eşsiz konforu ve sükunetiyle, konuklarına adeta cennetteymiş hissi veriyor.08.00 – 20.00 saatleri arasında hizmet veren Karina Spa & Wellness, günlük yaşamın stres ve yorgunluğunu silip yerine dinginliği ve güzelliği getiriyor.'
+    )
+
+    +content-text-left('HAMAM')
+        p Klasik Türk Hamamı mimarisinden esinlenerek tasarlanan hamamımız, sizlere efsanevi yolculukta temizliğin ve dinlemenin keyfini yaşatacaktır.
+        p Uzman terapistlerimiz tarafından uygulanan Türk hamamı bakımları ve kese uygulamaları ile cildiniz nefes alırken, Kendinizi yenilenmiş ve hafiflemiş hissedeceksiniz.
+
+    +slideshow-pull('#', '#', 'FİTNESS MERKEZİ & KAPALI YÜZME HAVUZU', 'SAUNA & BUHAR ODASI')(class="uk-padding-remove-top")
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-karina-spa.jpg")
+                img(data-src="@/images/slideshow/slideshow-karina-spa.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-karina-spa.jpg")
+                img(data-src="@/images/slideshow/slideshow-karina-spa.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+
+    +reservation(
+        'KENDİNİZLE BAŞ BAŞA...',
+        'Jakuzi, sauna, buhar odası veya geleneksel Türk hamamında kese köpük yaptırarak akışı yavaşlatın, zamanı unutun…',
+        'REZERVASYON'
+    )
+
+    +slider-content-transitions('uk-child-width-auto uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l')
+        li
+             a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove FİTNESS MERKEZİ & KAPALI YÜZME HAVUZU
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-karina-1.jpg" alt="" uk-img)
+        li
+             a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove HAMAM
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-karina-2.jpg" alt="" uk-img)
+        li
+             a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove SAUNA & BUHAR ODASI
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-karina-3.jpg" alt="" uk-img)
+        li
+             a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove MASAJ ÇEŞİTLERİ
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-karina-4.jpg" alt="" uk-img)
+        li
+             a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove VÜCUT & CİLT BAKIMI & ZAYIFLAMA
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-karina-5.jpg" alt="" uk-img)

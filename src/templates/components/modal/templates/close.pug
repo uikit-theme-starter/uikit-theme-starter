@@ -1,0 +1,26 @@
+// Modal Close
+
+#modal-call.uk-modal(uk-modal)
+    .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+        button.uk-modal-close-default.uk-text-secondary(type="button" uk-icon="icon: icn-close;")
+        form
+            fieldset.uk-fieldset
+                .uk-text-center.uk-text-secondary
+                    img(data-src="@/images/icons/logo-simple-primary.svg" alt="" uk-img)
+                    h5.uk-text-primary.uk-margin-top.uk-margin-remove-bottom Sizi Arayalım
+                    a.uk-link-reset.uk-text-large(href="tel:+903926303000") +90 392 630 30 00
+                    p.uk-margin-small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do
+                .uk-margin-small
+                    input.uk-input(type="text" placeholder="AD SOYAD")
+                .uk-margin-small
+                    input.uk-input(type="text" placeholder="TELEFON")
+                .uk-margin-small
+                    input.uk-input(type="text" placeholder="E-POSTA")
+                .uk-margin-small.uk-grid-small.uk-child-width-auto.uk-grid
+                    label
+                        input.uk-checkbox.uk-margin-small-right(type="checkbox" checked)
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .uk-margin-small
+                    .g-recaptcha(data-sitekey="6LdBHW0UAAAAAB0o6ZLaeLOZW71wpMJM4q1Rfmad")
+                .uk-margin-top.uk-text-right
+                    button.uk-button.uk-button-secondary.uk-active(type="submit") GÖNDER

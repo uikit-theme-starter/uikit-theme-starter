@@ -1,0 +1,13 @@
+// Slider Content Transitions
+
+mixin slider-content-transitions(slides)
+    section.uk-section.uk-padding-remove-vertical.slider-content-transitions(uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-medium; delay: 300;")
+        .uk-position-relative.uk-visible-toggle(uk-slider="finite: true" uk-scrollspy-class)
+
+            ul.uk-slider-items.uk-grid.uk-grid-collapse.uk-light(class=slides)
+                block
+                
+            .uk-position-center-left.uk-position-small.uk-hidden-hover(class="uk-visible@m")
+                a.uk-background-default.uk-border-circle.uk-slidenav.uk-flex.uk-flex-center.uk-flex-middle(href="#" uk-icon="icon: icn-arrow-left; ratio: 1.5" uk-slider-item="previous")
+            .uk-position-center-right.uk-position-small.uk-hidden-hover(class="uk-visible@m")
+                a.uk-background-default.uk-border-circle.uk-slidenav.uk-flex.uk-flex-center.uk-flex-middle(href="#" uk-icon="icon: icn-arrow-right; ratio: 1.5" uk-slider-item="next")

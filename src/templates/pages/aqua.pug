@@ -1,0 +1,48 @@
+extends ../layouts/master
+
+block content
+
+    +parallax-medium(
+        '@/images/parallax/aqua.jpg',
+        '@/images/parallax/aqua-m.jpg',
+        'AQUA PARK & HAVUZLAR & PLAJ',
+        'Aquapark’ta sadece çocuklar mı eğlenir? Nuh’un Gemisi’nde değil! Yaşınız kaç olursa olsun yepyeni aquapark’ta eğlencenin sınırlarını zorlayın, çocuklarla bir olup yazın en renkli aktivitelerinden birini doyasıya yaşayın.'
+    )
+
+    +content-text-left('AQUA PARK')
+        p Noah's Ark Deluxe Hotel & Spa sizlere ve çocuklarınıza ayrı ayrı tatil yapma ve eğlence imkanı sunmaktadır. Çocuk Kulubü'nde çocuklarınız bizim için özeldir. Küçük misafirlerimize sunduğumuz ayrıcalıklı hizmetlerimiz saymakla bitmez. Onlara özel mekanda Yaratıcı oyunlar, oyuncaklar şevkat ve ilgi ile birleşince ayrılamayacakları bir mekan haline gelir.
+
+    +slideshow-pull()(class="uk-padding-remove-top")
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-aqua.jpg")
+                img(data-src="@/images/slideshow/slideshow-aqua.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+        li
+            a.uk-position-cover(href="@/images/slideshow/slideshow-aqua.jpg")
+                img(data-src="@/images/slideshow/slideshow-aqua.jpg" alt="" uk-cover uk-img)
+                .uk-position-top-left.uk-position-medium.uk-light
+                    h5.uk-margin-remove DELUXE SEA VIEW
+
+    +reservation(
+        'GÜNÜN HER ANI DOPDOLU',
+        'Nuh’un Gemisi’nde eğlencenin binbir rengi var.',
+        'REZERVASYON'
+    )
+
+    +slider-content-transitions('uk-child-width-1-3@m')
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove AQUA PARK
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-aqua-1.jpg" alt="" uk-img)
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove HAVUZLAR
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-aqua-2.jpg" alt="" uk-img)
+        li
+            a.uk-display-block.uk-inline-clip.uk-transition-toggle(href="#" tabindex="0")
+                .uk-panel.uk-position-bottom-center.uk-position-z-index.uk-text-center.uk-padding-small
+                    h5.uk-margin-remove PLAJ
+                img.uk-transition-scale-up.uk-transition-opaque.uk-width-1-1(data-src="@/images/slider/slider-aqua-3.jpg" alt="" uk-img)

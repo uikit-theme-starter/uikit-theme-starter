@@ -1,101 +1,90 @@
-import UIkit from 'uikit';
-//import * as map from '../components/map/default/default';
+import 'uikit';
+import Swiper from 'swiper';
+
+
+require('@/js/picker.js');
+require('@/js/picker.date');
+
+//import validation from '@/templates/components/form/scripts/validation';
+//import '@/templates/components/form/scripts/mask';
+import * as map from '@/templates/components/map/js/map';
 
 let mapContainer = document.getElementById('map-default');
 if (mapContainer) {
     map.initMap(mapContainer);
 }
 
-//import * as video from '../components/video/default/default';
+var datepicker = document.querySelector('.datepicker');
 
-//video.init();
+if (datepicker) {
+    var lang = $('html').attr('lang');
 
-//$(function () {
+    var pickerOptionsTr = {
+        monthsFull: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+        weekdaysShort: ["Pa", "Pt", "Sl", "ça", "Pe", "Cu", "Ct"],
+        monthsShort: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
+        weekdaysFull: ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'],
+        showMonthsShort: true,
+        firstDay: 1,
+        format: 'dd-mm-yyyy',
+        today: 'Bugün',
+        clear: 'Temizle',
+        close: 'Kapat',
+        labelMonthNext: 'Sonraki Ay',
+        labelMonthPrev: 'Önceki Ay',
+        labelMonthSelect: 'Ayı Seç',
+        labelYearSelect: 'Yılı Seç'
+    };
 
-    /*
-     * 1 - Mask & Validation
-     * 2 - Swiper Default
-     * 3 - Tab Nav Mobile
-     */
+    var pickerOptionsEn = {
+        monthsFull: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        weekdaysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        showMonthsShort: true,
+        firstDay: 1,
+        format: 'dd-mm-yyyy',
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Close',
+        labelMonthNext: 'Next month',
+        labelMonthPrev: 'Previous month',
+        labelMonthSelect: 'Select a month',
+        labelYearSelect: 'Select a year',
+    };
 
-    // 1
-    // ========================================================================
+    switch (lang) {
+        case 'tr':
+            $('.datepicker').pickadate(pickerOptionsTr);
+            break;
+        case 'en':
+            $('.datepicker').pickadate(pickerOptionsEn);
+            break;
+    }
+}
 
-    //$('[type="tel"]').mask('(000) 000-0000');
+var swiperContainer = document.querySelector('.swiper-container');
 
-    /*$.validator.addMethod("lettersonly", function (value, element) {
-        return this.optional(element) || /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]*$/.test(value);
+if (swiperContainer) {
+    var galleryTop = new Swiper('.swiper-activity-gallery', {
+        spaceBetween: 0,
+        loop: true,
+        parallax: true,
+        slidesPerView: 1,
+        //centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
     });
 
-    let message = "Lütfen ilgili alanı doldurunuz.";
-
-    $('#form-default').validate({
-        rules: {
-            input: {
-                required: true,
-                lettersonly: true
-            },
-            select: {
-                required: true,
-            },
-            textarea: {
-                required: true,
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            phone: {
-                required: true,
-                minlength: 14
-            },
-            radio: {
-                required: true,
-            },
-            checkbox1: {
-                required: true,
-            },
-            checkbox2: {
-                required: true,
-            }
-        },
-        messages: {
-            input: message,
-            radio: message,
-            email: message,
-            phone: message,
-            textarea: message,
-            checkbox1: message,
-            checkbox2: message
-        },
-        submitHandler: function (form) {
-            form.submit();
-        }
-    });*/
-
-    // 2 - Swiper Default
-    // ========================================================================
-
-    //var swiper = new Swiper('.swiper-container', {});
-
-    // 3 - Tab Nav Mobile
-    // ========================================================================
-
-    /*var total = 0;
-    var padding = 0;
-    var tabNav = $('.tab-default .uk-tab');
-
-    tabNav.find('li').each(function () { 
-        total += parseInt(
-            $(this).width()
-        );
-
-        padding += parseInt(
-            $(this).css('padding-left')  
-        );
-
+    var galleryThumbs = new Swiper('.swiper-activity-content', {
+        loop: true,
+        spaceBetween: 10,
+        touchRatio: 0.2,
     });
 
-    tabNav.width(total + padding + 4);*/
-
-//});
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
+}

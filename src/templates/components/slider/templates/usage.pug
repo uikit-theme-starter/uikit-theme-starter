@@ -1,0 +1,24 @@
+// Section Content Slider Left
+
+mixin section-content-slider-left(date, title, explanation)
+    section.uk-section.uk-section-muted.section-content-slider-left(uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-left-medium; delay: 300;")
+        .uk-container
+            .uk-grid.uk-flex-center
+                div(class="uk-width-5-6@m")
+                    .uk-grid.uk-flex-middle(uk-grid)
+                        div(class="uk-width-1-2@m")
+                            .uk-position-relative.uk-slider(uk-slider uk-scrollspy-class uk-lightbox)
+                                ul.uk-slider-items.uk-child-width-1-1
+                                    block slider
+                                .uk-slidenav-container.uk-position-bottom-left
+                                    a.uk-slidenav.uk-flex.uk-flex-right.uk-flex-middle.uk-background-default.primary(href="#" uk-slider-item="previous")
+                                        span(uk-icon="icon: icn-arrow-left")
+                                    a.uk-slidenav.uk-flex.uk-flex-middle.uk-background-default.primary(href="#" uk-slider-item="next")
+                                        span(uk-icon="icon: icn-arrow-right")
+                        div(class="uk-width-2-5@m")
+                            div(uk-scrollspy-class)
+                                time.uk-text-secondary.uk-text-small(date-time=date)=date
+                                .title
+                                    p.uk-text-large.uk-margin-small.uk-text-secondary= title
+                                    p.uk-margin-small=explanation
+                                block text
