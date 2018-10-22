@@ -1,27 +1,45 @@
 const express = require('express');
-const path =  require('path');
-
-const server = express();
-
 const webpack = require("webpack");
-const config = require("../config/webpack.dev");
 
-const compiler = webpack(config);
+function createServer() {
+	const server = express();
 
-const webpackDevMiddleware = require("webpack-dev-middleware")(
-	compiler,
-	config.devServer
-);
+	const config = require("../config/webpack.dev");
 
-const webpackHotMiddleware = require("webpack-hot-middleware")(compiler);
+	const compiler = webpack(config);
 
-server.use(webpackDevMiddleware);
-server.use(webpackHotMiddleware);
+	const webpackDevMiddleware = require("webpack-dev-middleware")(
+		compiler,
+		config.devServer
+	);
 
-const staticMiddleware = express.static("dist");
+	const webpackHotMiddleware = require("webpack-hot-middleware")(compiler);
 
-server.use(staticMiddleware);
+	server.use(webpackDevMiddleware);
+	server.use(webpackHotMiddleware);
 
-server.listen(8080, ()=>{
-	console.log('Sunucu adresi: http://localhost:8080')
-});
+	const staticMiddleware = express.static("dist");
+
+	server.use(staticMiddleware);
+
+	function startServer() {
+		server.listen(8080, (error)=>{
+			if (error) {
+				console.error(error);
+				return;
+			}
+			console.log('Sunucu adresi: http://localhost:8080')
+		});
+	}
+
+	function reloadClient() {
+		webpackHotMiddleware.publish({action: 'reload'});
+	}
+
+	return {
+		start: startServer,
+		reloadClient: reloadClient,
+	};
+}
+
+module.exports = createServer();

@@ -1,10 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
-const htmlWebpackPlugin = require('./html-webpack-plugin');
+const htmlWebpackPlugin = require('../html-add-functions/create-plugins');
 
 // Dev
-const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const htmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+// const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 let plugins = [
@@ -17,9 +16,6 @@ let plugins = [
 	/*new bundleAnalyzerPlugin({
 		generateStatsFile: true
 	}),*/
-	new htmlWebpackHarddiskPlugin({
-		outputPath: 'dist'
-	})
 ];
 
 plugins = plugins.concat(htmlWebpackPlugin);
@@ -27,7 +23,7 @@ plugins = plugins.concat(htmlWebpackPlugin);
 module.exports = {
 	entry: {
 		"main": [
-			"webpack-hot-middleware/client?reload=true",
+			"./webpack/server/client.js",
 			"./src/main.js"
 		]
 	},
@@ -58,7 +54,7 @@ module.exports = {
 		libraryTarget: 'umd'
 	},
 	devServer: {
-		//stats: "minimal",
+		stats: "minimal",
 		progress: true,
 		contentBase: "dist",
 		overlay: true,
