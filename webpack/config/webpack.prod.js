@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const htmlWebpackPlugin = require('./html-webpack-plugin');
-const htmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 // Prod
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -10,7 +9,17 @@ const minifyPlugin = require("babel-minify-webpack-plugin");
 const compressionPlugin = require("compression-webpack-plugin");
 const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+let extraPlugin = [];
+
 module.exports = env => {
+
+	if(env.stats){
+		extraPlugin.push(
+			new bundleAnalyzerPlugin({
+				generateStatsFile: true
+			}));
+	}
+
 	return {
 		entry: {
 			"main": [
@@ -148,12 +157,11 @@ module.exports = env => {
 				}
 			}),
 			new minifyPlugin(),
-			new bundleAnalyzerPlugin({
-				generateStatsFile: true
-			}),
 			new compressionPlugin({
 				algorithm: "gzip"
 			})
-		].concat(htmlWebpackPlugin)
+		]
+			.concat(htmlWebpackPlugin)
+			.concat(extraPlugin)
 	}
 };

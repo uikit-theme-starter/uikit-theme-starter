@@ -7,7 +7,9 @@
     "install": "npm install -S webpack webpack-cli && npm install -g webpack webpack-cli nodemon yarn",
     "icon": "webpack --config=webpack/config/webpack.icon.js && cd node_modules/uikit && npm install && yarn compile && cd ../..",
     "prod": "webpack --config=webpack/config/webpack.prod.js --env.NODE_ENV=production",
-    "dev": "nodemon -e js,pug --inspect --watch webpack/config --watch webpack/server --watch src/templates/ webpack/server/main.js"
+    "stats": "npm run prod --env.stats=1",
+    "dev": "nodemon --inspect --watch webpack/config --watch webpack/server --watch src/templates/",
+    "devbeta": "nodemon -e js,pug --inspect --watch webpack/config --watch webpack/server --watch src/templates/ webpack/server/main.js"
   },
   "keywords": [],
   "author": "",
