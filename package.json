@@ -8,7 +8,7 @@
     "icon": "webpack --config=webpack/config/webpack.icon.js && cd node_modules/uikit && npm install && yarn compile && cd ../..",
     "prod": "webpack --config=webpack/config/webpack.prod.js --env.NODE_ENV=production",
     "stats": "npm run prod --env.stats=1",
-    "dev": "nodemon --inspect --watch webpack/config --watch webpack/server webpack/server/main.js",
+    "dev": "nodemon --inspect --watch webpack webpack/server/main.js",
     "devbeta": "nodemon -e js,pug --inspect --watch webpack/config --watch webpack/server --watch src/templates/ webpack/server/main.js"
   },
   "keywords": [],
