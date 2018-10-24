@@ -4,7 +4,7 @@ const glob = require('glob');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-let pugs = glob.sync('./src/templates/pages/**/*.pug');
+let pugs = glob.sync('./src/templates/pages/**/*.{pug,html}');
 const plugins = [];
 pugs.forEach((val) => {
 

@@ -21,7 +21,7 @@
 	}
 
 	function activate(server) {
-		const watcher = chokidar.watch('src/templates/**/*.pug', {ignored: '*.js'});
+		const watcher = chokidar.watch('src/templates/', {ignored: /.(css|js|less)/});
 
 		const jsonFilePath = './webpack/html-add-functions/pug-files.json';
 		let pugPaths = {files: []};
@@ -29,10 +29,16 @@
 
 		watcher.on('ready', function () {
 			fs.readFile(jsonFilePath, 'utf8', function (err, data) {
+				let dataArray = [];
 				if (err) {
-					throw err
+					if(err.code === 'ENOENT'){
+						fs.open(jsonFilePath,'wx',()=>{});
+					}else{
+						throw err;
+					}
+				}else{
+					dataArray = JSON.parse(data).files;
 				}
-				let dataArray = JSON.parse(data).files;
 				if (!arraysEqual(dataArray,pugPaths.files)) {
 					fs.writeFile(jsonFilePath, JSON.stringify(pugPaths), 'utf8', (err) => {
 						if (err) {

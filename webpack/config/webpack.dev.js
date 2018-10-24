@@ -138,6 +138,27 @@ module.exports = {
 					}
 				]
 			},
+			// Html Loader
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: "html-loader",
+						options: {
+							attrs: [
+								'img:src',
+								'section:data-src',
+								'div:data-src',
+								'img:data-src',
+								'video:src',
+								'source:src',
+								'link:href'
+							],
+							interpolate: true
+						}
+					}
+				]
+			},
 			// Image Loader
 			{
 				test: /\.(gif|png|jpe?g|svg)$/i,
