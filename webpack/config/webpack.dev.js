@@ -110,6 +110,45 @@ module.exports = {
 					}
 				]
 			},
+			// Sass Loader
+			{
+				test: /\.s[ac]ss$/,
+				use: [
+					{
+						loader: "style-loader"
+					},
+					{
+						loader: "css-loader",
+						options: {
+							sourceMap: true
+						}
+					},
+					{
+						loader: "postcss-loader"
+					},
+					{
+						loader: "sass-loader"
+					}
+				]
+			},
+			// Css Loader
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: "style-loader"
+					},
+					{
+						loader: "css-loader",
+						options: {
+							sourceMap: true
+						}
+					},
+					{
+						loader: "postcss-loader"
+					}
+				]
+			},
 			// Pug Loader
 			{
 				test: /\.pug$/,
