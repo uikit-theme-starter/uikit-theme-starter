@@ -161,6 +161,28 @@ module.exports = env => {
 						}
 					}]
 				},
+				// Media Loader (Video and Audio)
+				{
+					test: /\.(mp4|mov|webm|ogg|flac)$/i,
+					use: [{
+						loader: 'file-loader',
+						options: {
+							name: 'media/[path][name]-[hash:8].[ext]',
+							outputPath: 'src/media/'
+						}
+					}]
+				},
+				// Document Loader
+				{
+					test: /\.(pdf|doc?x|xls)$/i,
+					use: [{
+						loader: 'file-loader',
+						options: {
+							name: 'docs/[path][name].[ext]',
+							outputPath: 'src/docs'
+						}
+					}]
+				},
 			]
 		},
 		plugins: [
