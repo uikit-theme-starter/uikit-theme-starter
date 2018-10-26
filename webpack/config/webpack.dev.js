@@ -213,19 +213,3 @@ module.exports = {
 	},
 	plugins: plugins
 };
-
-
-function reloadHtml() {
-	this.plugin('compilation',
-		thing => thing.plugin('html-webpack-plugin-after-emit', trigger));
-	const cache = {};
-	function trigger(data, callback) {
-		const orig = cache[data.outputName];
-		const html = data.html.source();
-		// plugin seems to emit on any unrelated change?
-		if (orig && orig !== html)
-			devServer.sockWrite(devServer.sockets, 'content-changed');
-		cache[data.outputName] = html;
-		callback();
-	}
-}
