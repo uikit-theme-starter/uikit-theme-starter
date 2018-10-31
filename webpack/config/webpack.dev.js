@@ -94,19 +94,25 @@ module.exports = {
 				test: /\.less$/,
 				use: [
 					{
-						loader: "style-loader"
+						loader: "style-loader",
+						options: {sourceMap: true}
 					},
 					{
 						loader: "css-loader",
+						options: {sourceMap: true}
+					},
+					{
+						loader: "postcss-loader",
 						options: {
+							config: {
+								path: 'webpack/config/postcss.config.js'
+							},
 							sourceMap: true
 						}
 					},
 					{
-						loader: "postcss-loader"
-					},
-					{
-						loader: "less-loader"
+						loader: "less-loader",
+						options: {sourceMap: true}
 					}
 				]
 			},
@@ -115,19 +121,25 @@ module.exports = {
 				test: /\.s[ac]ss$/,
 				use: [
 					{
-						loader: "style-loader"
+						loader: "style-loader",
+						options: {sourceMap: true}
 					},
 					{
 						loader: "css-loader",
+						options: {sourceMap: true}
+					},
+					{
+						loader: "postcss-loader",
 						options: {
-							sourceMap: true
+							config: {
+								path: 'webpack/config/postcss.config.js'
+							},
+							options: {sourceMap: true}
 						}
 					},
 					{
-						loader: "postcss-loader"
-					},
-					{
-						loader: "sass-loader"
+						loader: "sass-loader",
+						options: {sourceMap: true}
 					}
 				]
 			},
@@ -136,16 +148,21 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					{
-						loader: "style-loader"
+						loader: "style-loader",
+						options: {sourceMap: true}
 					},
 					{
 						loader: "css-loader",
-						options: {
-							sourceMap: true
-						}
+						options: {sourceMap: true}
 					},
 					{
-						loader: "postcss-loader"
+						loader: "postcss-loader",
+						options: {
+							config: {
+								path: 'webpack/config/postcss.config.js'
+							},
+							options: {sourceMap: true}
+						}
 					}
 				]
 			},

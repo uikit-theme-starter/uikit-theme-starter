@@ -85,19 +85,64 @@ module.exports = env => {
 					test: /\.less$/,
 					use: [
 						{
-							loader: miniCssExtractPlugin.loader,
+							loader: "style-loader"
 						},
 						{
-							loader: "css-loader",
+							loader: "css-loader"
+						},
+						{
+							loader: "postcss-loader",
 							options: {
-								sourceMap: true
+								config: {
+									path: 'webpack/config/postcss.config.js'
+								}
 							}
 						},
 						{
-							loader: "postcss-loader"
+							loader: "less-loader"
+						}
+					]
+				},
+				// Sass Loader
+				{
+					test: /\.s[ac]ss$/,
+					use: [
+						{
+							loader: "style-loader"
 						},
 						{
-							loader: "less-loader"
+							loader: "css-loader"
+						},
+						{
+							loader: "postcss-loader",
+							options: {
+								config: {
+									path: 'webpack/config/postcss.config.js'
+								}
+							}
+						},
+						{
+							loader: "sass-loader"
+						}
+					]
+				},
+				// Css Loader
+				{
+					test: /\.css$/,
+					use: [
+						{
+							loader: "style-loader"
+						},
+						{
+							loader: "css-loader"
+						},
+						{
+							loader: "postcss-loader",
+							options: {
+								config: {
+									path: 'webpack/config/postcss.config.js'
+								}
+							}
 						}
 					]
 				},
