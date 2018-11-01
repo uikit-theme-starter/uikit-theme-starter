@@ -1,5 +1,6 @@
 const express = require('express');
 const webpack = require("webpack");
+const fp = require("find-free-port");
 
 function createServer() {
 	const server = express();
@@ -23,12 +24,16 @@ function createServer() {
 	server.use(staticMiddleware);
 
 	function startServer() {
-		server.listen(8080, (error)=>{
-			if (error) {
-				console.error(error);
-				return;
-			}
-			console.log('Sunucu adresi: http://localhost:8080')
+		fp(8080).then(([freePort])=>{
+			server.listen(freePort, (error)=>{
+				if (error) {
+					console.error(error);
+					return;
+				}
+				console.log(`Sunucu adresi: http://localhost:${freePort}`)
+			});
+		}).catch((err)=>{
+			console.error(err);
 		});
 	}
 
