@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const htmlWebpackPlugin = require('../html-add-functions/create-plugins');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Prod
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -55,7 +56,7 @@ module.exports = env => {
 		},
 		module: {
 			rules: [
-				//Javascript Loader
+				// Javascript Loader
 				{
 					test: /\.js$/,
 					use: [
@@ -67,14 +68,14 @@ module.exports = env => {
 										[
 											'@babel/preset-env',
 											{
-												targets: 'last 5 versions',
+												targets: "> 1%, not dead",
 												modules: 'umd'
 												//debug: true
 											}
 										]
 									],
 									comments: false,
-									"plugins": ["@babel/plugin-transform-runtime"]
+									plugins: ["@babel/plugin-transform-runtime"]
 								}
 						},
 					],
@@ -85,7 +86,7 @@ module.exports = env => {
 					test: /\.less$/,
 					use: [
 						{
-							loader: "style-loader"
+							loader: miniCssExtractPlugin.loader,
 						},
 						{
 							loader: "css-loader"
@@ -108,7 +109,7 @@ module.exports = env => {
 					test: /\.s[ac]ss$/,
 					use: [
 						{
-							loader: "style-loader"
+							loader: miniCssExtractPlugin.loader,
 						},
 						{
 							loader: "css-loader"
@@ -131,7 +132,7 @@ module.exports = env => {
 					test: /\.css$/,
 					use: [
 						{
-							loader: "style-loader"
+							loader: miniCssExtractPlugin.loader,
 						},
 						{
 							loader: "css-loader"
@@ -231,6 +232,7 @@ module.exports = env => {
 			]
 		},
 		plugins: [
+			new CleanWebpackPlugin(['dist'],{root:path.resolve('./')}),
 			new optimizeCssAssetsWebpackPlugin(),
 			new miniCssExtractPlugin({
 				filename: "css/[name]-[contenthash].bundle.css",

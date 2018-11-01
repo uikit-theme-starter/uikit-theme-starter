@@ -65,7 +65,7 @@ module.exports = {
 	devtool: "source-map",
 	module: {
 		rules: [
-			//Javascript Loader
+			// Javascript Loader
 			{
 				test: /\.js$/,
 				use: [
@@ -77,7 +77,7 @@ module.exports = {
 									[
 										'@babel/preset-env',
 										{
-											targets: 'last 5 versions',
+											targets: "> 1%, not dead",
 											modules: 'umd'
 											//debug: true
 										}

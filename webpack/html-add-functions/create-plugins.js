@@ -5,20 +5,25 @@ const path = require('path');
 const pugFiles = require('./pug-files.json').files.filter(a => a.indexOf('pages') > 0);
 
 const plugins = [];
-pugFiles.forEach((val) => {
+pugFiles.forEach((filePath) => {
 
-	let pugfile = path.parse(val);
-	let pugfileDirArray = pugfile.dir.split('/');
-	let dir = pugfileDirArray[pugfileDirArray.length - 1];
+	let fileInfo = path.parse(filePath);
+	let dir = fileInfo.dir.split(path.sep).pop();
 	let dirstring = dir === 'pages' ? '' : `${dir}/`;
-	let filename = `${dirstring}${pugfile.name}.html`;
+	let filename = `${dirstring}${fileInfo.name}.html`;
 
 	plugins.push(new htmlWebpackPlugin({
 		filename: filename,
 		hash: false,
-		template: val,
+		template: `.${path.sep}${filePath}`,
 		cache: false,
-		alwaysWriteToDisk: true/*,
+		minify: {
+			preserveLineBreaks: true,
+			collapseWhitespace: false,
+			removeComments: true,
+			collapseBooleanAttributes: true,
+			removeAttributeQuotes: false
+		}/*,
 		inject: dir === 'web.group'*/
 	}));
 });

@@ -30,7 +30,7 @@ function createServer() {
 					console.error(error);
 					return;
 				}
-				console.log(`Sunucu adresi: http://localhost:${freePort}`)
+				console.log(`Sunucu adresi: http://localhost:${freePort}`);
 			});
 		}).catch((err)=>{
 			console.error(err);
