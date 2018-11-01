@@ -1,12 +1,11 @@
 // Pug Dosyaları Tanımlayıcısı
 
-const glob = require('glob');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const pugFiles = require('./pug-files.json').files.filter(a => a.indexOf('pages') > 0);
 
-let pugs = glob.sync('./src/templates/pages/**/*.{pug,html}');
 const plugins = [];
-pugs.forEach((val) => {
+pugFiles.forEach((val) => {
 
 	let pugfile = path.parse(val);
 	let pugfileDirArray = pugfile.dir.split('/');
