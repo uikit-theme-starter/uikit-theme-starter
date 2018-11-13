@@ -8,4 +8,4 @@ gen
 # Front-end Files
 node_modules
 dist
-/webpack/html-add-functions/pug-files.json
+#/webpack/html-add-functions/pug-files.json
