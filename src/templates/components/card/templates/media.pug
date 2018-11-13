@@ -1,14 +1,17 @@
 // Card Media
 
-mixin card-media-list(title, button)
-    section.uk-section.card-media-list&attributes(attributes)(uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-top-medium; delay: 300;")
-        .uk-container.uk-margin(uk-scrollspy-class)
-            .uk-grid.uk-flex-between(class="uk-child-width-1-2@m")
-                div
-                    p.uk-text-medium.uk-text-bold.uk-text-secondary.uk-margin-small= title
-                .uk-text-left.button(class="uk-text-right@m")
-                    a.uk-button.uk-link-reset.uk-padding-remove(href="etkinlikler.html" uk-icon="icon: icn-arrow-right")
-                        span.uk-margin-small-right=button
-        .uk-container
-            .uk-grid.uk-grid-medium(class="uk-child-width-1-3@m" uk-grid)
-                block 
+.uk-grid(class="uk-child-width-1-2@m" uk-grid)
+    div
+        .uk-card.uk-card-default
+            .uk-card-media-top
+                img(src="../images/uikit.jpg" alt="")
+            .uk-card-body
+                h3.uk-card-title Media Top
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+    div
+        .uk-card.uk-card-default
+            .uk-card-body
+                h3.uk-card-title Media Bottom</h3>
+                pLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            .uk-card-media-bottom
+                img(src="../images/uikit.jpg" alt="")

@@ -7,7 +7,7 @@
 // Variables
 // ========================================================================
 
-@nav-item-padding-vertical:                     4px;
+@nav-item-padding-vertical:                     5px;
 @nav-item-padding-horizontal:                   0;
 
 @nav-sublist-padding-vertical:                  5px;
@@ -19,19 +19,19 @@
 @nav-parent-icon-height:                        @nav-parent-icon-width;
 @nav-parent-icon-color:                         @global-color;
 
-@nav-header-padding-vertical:                   11px;
+@nav-header-padding-vertical:                   @nav-item-padding-vertical;
 @nav-header-padding-horizontal:                 @nav-item-padding-horizontal;
-@nav-header-font-size:                          14px;
-@nav-header-text-transform:                     none;
+@nav-header-font-size:                          @global-small-font-size;
+@nav-header-text-transform:                     uppercase;
 @nav-header-margin-top:                         @global-margin;
 
 @nav-divider-margin-vertical:                   5px;
 @nav-divider-margin-horizontal:                 0;
 
-@nav-default-item-color:                        #8d8d8d;
+@nav-default-item-color:                        @global-muted-color;
 @nav-default-item-hover-color:                  @global-color;
 @nav-default-item-active-color:                 @global-emphasis-color;
-@nav-default-header-color:                      #e2e2e2;
+@nav-default-header-color:                      @global-emphasis-color;
 @nav-default-divider-border-width:              @global-border-width;
 @nav-default-divider-border:                    @global-border;
 @nav-default-sublist-item-color:                @global-muted-color;
@@ -85,10 +85,7 @@
 // Default style modifier
 // ========================================================================
 
-.hook-nav-default() {
-    font-size: @nav-default-font-size;
-    letter-spacing: 0.5px;
-}
+.hook-nav-default() { font-size: @nav-default-font-size; }
 
 .hook-nav-default-item() {}
 

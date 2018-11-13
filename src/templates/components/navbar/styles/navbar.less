@@ -10,14 +10,14 @@
 @navbar-background:                             @global-muted-background;
 @navbar-color-mode:                             none;
 
-@navbar-nav-item-height:                        40px;
+@navbar-nav-item-height:                        80px;
 @navbar-nav-item-padding-horizontal:            15px;
-@navbar-nav-item-color:                         #fff;
-@navbar-nav-item-font-size:                     11px;
+@navbar-nav-item-color:                         @global-muted-color;
+@navbar-nav-item-font-size:                     @global-small-font-size;
 @navbar-nav-item-font-family:                   @global-font-family;
-@navbar-nav-item-hover-color:                   #ccc;
-@navbar-nav-item-onclick-color:                 @navbar-nav-item-hover-color;
-@navbar-nav-item-active-color:                  @navbar-nav-item-hover-color;
+@navbar-nav-item-hover-color:                   @global-color;
+@navbar-nav-item-onclick-color:                 @global-emphasis-color;
+@navbar-nav-item-active-color:                  @global-emphasis-color;
 
 @navbar-item-color:                             @global-color;
 
@@ -29,21 +29,21 @@
 @navbar-dropdown-z-index:                       @global-z-index + 20;
 @navbar-dropdown-width:                         200px;
 @navbar-dropdown-margin:                        15px;
-@navbar-dropdown-padding:                       30px;
+@navbar-dropdown-padding:                       25px;
 @navbar-dropdown-background:                    @global-background;
 @navbar-dropdown-color:                         @global-color;
-@navbar-dropdown-grid-gutter-horizontal:        140px;
+@navbar-dropdown-grid-gutter-horizontal:        (@navbar-dropdown-padding * 2);
 @navbar-dropdown-grid-gutter-vertical:          @navbar-dropdown-grid-gutter-horizontal;
 
 @navbar-dropdown-dropbar-margin-top:            0;
 @navbar-dropdown-dropbar-margin-bottom:         @navbar-dropdown-dropbar-margin-top;
 
-@navbar-dropdown-nav-item-color:                #414141;
+@navbar-dropdown-nav-item-color:                @global-muted-color;
 @navbar-dropdown-nav-item-hover-color:          @global-color;
 @navbar-dropdown-nav-item-active-color:         @global-emphasis-color;
-@navbar-dropdown-nav-header-color:              #a97457;
+@navbar-dropdown-nav-header-color:              @global-emphasis-color;
 @navbar-dropdown-nav-divider-border-width:      @global-border-width;
-@navbar-dropdown-nav-divider-border:            #d8d8d8;
+@navbar-dropdown-nav-divider-border:            @global-border;
 @navbar-dropdown-nav-sublist-item-color:        @global-muted-color;
 @navbar-dropdown-nav-sublist-item-hover-color:  @global-color;
 
@@ -56,7 +56,7 @@
 
 @navbar-nav-item-text-transform:                uppercase;
 
-@navbar-dropdown-nav-font-size:                 10px;
+@navbar-dropdown-nav-font-size:                 @global-small-font-size;
 
 @navbar-dropdown-box-shadow:                    0 5px 12px rgba(0,0,0,0.15);
 
@@ -82,7 +82,7 @@
 // ========================================================================
 
 .hook-navbar-nav-item() {
-    letter-spacing: 0.5px;
+    text-transform: @navbar-nav-item-text-transform;
     transition: 0.1s ease-in-out;
     transition-property: color, background-color;
 }
@@ -129,18 +129,7 @@
 // Dropdown
 // ========================================================================
 
-.hook-navbar-dropdown() {
-    box-shadow: @navbar-dropdown-box-shadow;
-    span:not(.uk-nav-header) {
-        font-size: 10px;
-        font-weight: 600;
-    }
-    .uk-nav-header {
-        font-weight: 600;
-        color: @navbar-dropdown-nav-header-color;
-        padding: 7px 0;
-    }
-}
+.hook-navbar-dropdown() { box-shadow: @navbar-dropdown-box-shadow; }
 
 .hook-navbar-dropdown-dropbar() { box-shadow: none; }
 
@@ -150,18 +139,11 @@
 
 .hook-navbar-dropdown-nav() { font-size: @navbar-dropdown-nav-font-size; }
 
-.hook-navbar-dropdown-nav-item() {
-    font-weight: 600;
-    line-height: 2;
-    padding: 0;
-}
+.hook-navbar-dropdown-nav-item() {}
 
 .hook-navbar-dropdown-nav-item-hover() {}
 
-.hook-navbar-dropdown-nav-header() {
-    font-weight: 600;
-    padding: 0 0 7px;
-}
+.hook-navbar-dropdown-nav-header() {}
 
 .hook-navbar-dropdown-nav-divider() {}
 

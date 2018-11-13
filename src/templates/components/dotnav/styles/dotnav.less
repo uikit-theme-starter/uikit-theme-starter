@@ -8,28 +8,28 @@
 // ========================================================================
 
 
-@dotnav-margin-horizontal:                           20px;
+@dotnav-margin-horizontal:                           12px;
 @dotnav-margin-vertical:                             @dotnav-margin-horizontal;
 
-@dotnav-item-width:                                  6px;
+@dotnav-item-width:                                  10px;
 @dotnav-item-height:                                 @dotnav-item-width;
 @dotnav-item-border-radius:                          50%;
 
-@dotnav-item-background:                             #fff;
-@dotnav-item-hover-background:                       #fff;
-@dotnav-item-onclick-background:                     #fff;
-@dotnav-item-active-background:                      transparent;
+@dotnav-item-background:                             transparent;
+@dotnav-item-hover-background:                       fade(@global-color, 60%);
+@dotnav-item-onclick-background:                     fade(@global-color, 20%);
+@dotnav-item-active-background:                      fade(@global-color, 60%);
 
 //
 // New
 //
 
-@dotnav-item-border-width:                           2px;
+@dotnav-item-border-width:                           1px;
 
-@dotnav-item-border:                                 transparent;
+@dotnav-item-border:                                 fade(@global-color, 40%);
 @dotnav-item-hover-border:                           transparent;
 @dotnav-item-onclick-border:                         transparent;
-@dotnav-item-active-border:                          #fff;
+@dotnav-item-active-border:                          transparent;
 
 
 // Component
@@ -47,11 +47,7 @@
 
 .hook-dotnav-item-onclick() { border-color: @dotnav-item-onclick-border; }
 
-.hook-dotnav-item-active() {
-    border-color: @dotnav-item-active-border;
-    width: 10px;
-    height: 10px;
-}
+.hook-dotnav-item-active() { border-color: @dotnav-item-active-border; }
 
 
 // Miscellaneous

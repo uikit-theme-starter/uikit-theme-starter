@@ -33,24 +33,24 @@
 
 @base-margin-vertical:                          @global-margin;
 
-@base-heading-font-family:                      'Tinos', serif;
+@base-heading-font-family:                      @global-font-family;
 @base-heading-font-weight:                      normal;
-@base-heading-color:                            #414141;
+@base-heading-color:                            @global-emphasis-color;
 @base-heading-text-transform:                   none;
 @base-heading-margin-top:                       @global-medium-margin;
-@base-h1-font-size-m:                           42px;
-@base-h1-font-size:                             22px;
+@base-h1-font-size-m:                           @global-xxlarge-font-size;
+@base-h1-font-size:                             @base-h1-font-size-m * 0.85;
 @base-h1-line-height:                           1.2;
-@base-h2-font-size-m:                           38px;
-@base-h2-font-size:                             26px;
+@base-h2-font-size-m:                           @global-xlarge-font-size;
+@base-h2-font-size:                             @base-h2-font-size-m * 0.85;
 @base-h2-line-height:                           1.3;
-@base-h3-font-size:                             34px;
+@base-h3-font-size:                             @global-large-font-size;
 @base-h3-line-height:                           1.4;
-@base-h4-font-size:                             28px;
+@base-h4-font-size:                             @global-medium-font-size;
 @base-h4-line-height:                           1.4;
-@base-h5-font-size:                             18px;
+@base-h5-font-size:                             @global-font-size;
 @base-h5-line-height:                           1.4;
-@base-h6-font-size:                             14px;
+@base-h6-font-size:                             @global-small-font-size;
 @base-h6-line-height:                           1.4;
 
 @base-list-padding-left:                        30px;
@@ -72,7 +72,7 @@
 @base-pre-font-family:                          @base-code-font-family;
 @base-pre-color:                                @global-color;
 
-@base-selection-background:                     #a97457;
+@base-selection-background:                     #39f;
 @base-selection-color:                          @global-inverse-color;
 
 //
@@ -207,16 +207,3 @@
 .hook-inverse-base-blockquote-footer() { color: @inverse-base-blockquote-footer-color; }
 
 .hook-inverse-base-hr() {}
-
-
-// Responsive
-// ========================================================================
-
-@media (max-width: 959px) {
-    h3, .uk-h3 {
-        font-size: 28px;
-    }
-    /*h5, .uk-h5 {
-        font-size: 12px;
-    }*/
-}

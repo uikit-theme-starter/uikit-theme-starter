@@ -11,9 +11,9 @@
 
 @list-nested-padding-left:                      @global-gutter;
 
-@list-divider-margin-top:                       5px;
+@list-divider-margin-top:                       @global-small-margin;
 @list-divider-border-width:                     @global-border-width;
-@list-divider-border:                           #f3f3f3;
+@list-divider-border:                           @global-border;
 
 @list-striped-padding-vertical:                 @global-small-margin;
 @list-striped-padding-horizontal:               @global-small-margin;
@@ -22,14 +22,14 @@
 @list-bullet-width:                             (@global-line-height * 1em);
 @list-bullet-height:                            @list-bullet-width;
 @list-bullet-margin-right:                      @global-small-margin;
-@list-bullet-icon-color:                        #a97457;
+@list-bullet-icon-color:                        @global-color;
 
 @list-large-margin-top:                         @global-margin;
 @list-large-divider-margin-top:                 @global-margin;
 @list-large-striped-padding-vertical:           @global-margin;
 @list-large-striped-padding-horizontal:         @global-small-margin;
 
-@internal-list-bullet-image:                    "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%224%22%20height%3D%224%22%20viewBox%3D%220%200%204%204%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23a97457%22%20x%3D%220%22%20y%3D%220%22%20width%3D%224%22%20height%3D%224%22%3E%3C%2Frect%3E%0A%3C%2Fsvg%3E";
+@internal-list-bullet-image:                    "../../images/backgrounds/list-bullet.svg";
 
 //
 // New
@@ -53,9 +53,7 @@
 
 }
 
-.hook-list-bullet() {
-    top: auto;
-}
+.hook-list-bullet() {}
 
 
 // Miscellaneous

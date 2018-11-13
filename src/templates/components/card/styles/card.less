@@ -10,8 +10,8 @@
 @card-body-padding-horizontal:                 @global-gutter;
 @card-body-padding-vertical:                   @global-gutter;
 
-@card-body-padding-horizontal-l:               0;
-@card-body-padding-vertical-l:                 17px;
+@card-body-padding-horizontal-l:               @global-medium-gutter;
+@card-body-padding-vertical-l:                 @global-medium-gutter;
 
 @card-header-padding-horizontal:               @global-gutter;
 @card-header-padding-vertical:                 round(@global-gutter / 2);
@@ -33,7 +33,7 @@
 
 @card-hover-background:                        @global-muted-background;
 
-@card-default-background:                      transparent;
+@card-default-background:                      @global-muted-background;
 @card-default-color:                           @global-color;
 @card-default-title-color:                     @global-emphasis-color;
 @card-default-hover-background:                darken(@card-default-background, 5%);
@@ -70,8 +70,8 @@
 
 @card-hover-box-shadow:                        @global-large-box-shadow;
 
-@card-default-box-shadow:                      0;
-@card-default-hover-box-shadow:                0;
+@card-default-box-shadow:                      @global-medium-box-shadow;
+@card-default-hover-box-shadow:                @global-large-box-shadow;
 
 @card-default-header-border-width:             @global-border-width;
 @card-default-header-border:                   @global-border;
@@ -95,13 +95,7 @@
 // Sections
 // ========================================================================
 
-.hook-card-body() {
-    .uk-icon {
-        span {
-            margin-right: 6px;
-        }
-    }
-}
+.hook-card-body() {}
 
 .hook-card-header() {}
 
@@ -268,19 +262,4 @@
 
     }
 
-}
-
-
-// Style
-// ========================================================================
-
-.card-media-list {
-    .uk-text-medium {
-        font-size: 18px;
-    }
-    &:not(.list-button) {
-        .button {
-            display: none;
-        }
-    }
 }

@@ -14,7 +14,7 @@
 
 @table-header-cell-font-size:                   @global-small-font-size;
 @table-header-cell-font-weight:                 normal;
-@table-header-cell-color:                       #a97457;
+@table-header-cell-color:                       @global-muted-color;
 
 @table-footer-font-size:                        @global-small-font-size;
 
@@ -26,7 +26,7 @@
 @table-divider-border-width:                    @global-border-width;
 @table-divider-border:                          @global-border;
 
-@table-striped-row-background:                  #fafafa;
+@table-striped-row-background:                  @global-muted-background;
 
 @table-hover-row-background:                    @table-row-active-background;
 
@@ -43,24 +43,15 @@
 //
 
 @table-striped-border-width:                    @global-border-width;
-@table-striped-border:                          #efefef;
+@table-striped-border:                          @global-border;
 
 
 // Component
 // ========================================================================
 
-.hook-table-header-cell() {
-    .uk-text-center;
-    .uk-h5;
-    border: 1px solid #efefef;
-}
+.hook-table-header-cell() { text-transform: uppercase; }
 
-.hook-table-cell() {
-    .uk-h5;
-    &.uk-text-bold {
-        font-weight: 600;
-    }
-}
+.hook-table-cell() {}
 
 .hook-table-footer() {  }
 
