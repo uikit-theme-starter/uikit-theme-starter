@@ -37,6 +37,7 @@
 						throw err;
 					}
 				}else{
+					data = data === undefined || data === '' ? '{"files":[]}' : data;
 					dataArray = JSON.parse(data).files;
 				}
 				if (!arraysEqual(dataArray,pugPaths.files)) {
