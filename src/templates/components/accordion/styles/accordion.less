@@ -20,6 +20,7 @@
 // New
 //
 
+@accordion-icon-margin-left:                   10px;
 @accordion-icon-color:                         @global-color;
 @internal-accordion-open-image:                "../../images/backgrounds/accordion-open.svg";
 @internal-accordion-close-image:               "../../images/backgrounds/accordion-close.svg";
@@ -48,6 +49,7 @@
         content: "";
         width: (@accordion-title-line-height * 1em);
         height: (@accordion-title-line-height * 1em);
+        margin-left: @accordion-icon-margin-left;
         float: right;
         .svg-fill(@internal-accordion-close-image, "#000", @accordion-icon-color);
         background-repeat: no-repeat;
