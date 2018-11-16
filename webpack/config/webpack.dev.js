@@ -226,6 +226,17 @@ module.exports = {
 					}
 				}]
 			},
+			// Font Loader
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				use: [{
+					loader: "file-loader",
+					options: {
+						name: 'fonts/[path][name].[ext]',
+						context: 'src/fonts'
+					}
+				}]
+			},
 			// Media Loader (Video and Audio)
 			{
 				test: /\.(mp4|mov|webm|ogg|flac)$/i,
