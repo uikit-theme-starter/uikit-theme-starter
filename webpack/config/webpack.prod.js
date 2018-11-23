@@ -225,7 +225,7 @@ module.exports = env => {
 						loader: 'file-loader',
 						options: {
 							name: 'media/[path][name]-[hash:8].[ext]',
-							outputPath: 'src/media/'
+							outputPath: 'src/files/media/'
 						}
 					}]
 				},
@@ -236,7 +236,7 @@ module.exports = env => {
 						loader: 'file-loader',
 						options: {
 							name: 'docs/[path][name].[ext]',
-							outputPath: 'src/docs'
+							outputPath: 'src/files/docs'
 						}
 					}]
 				},
