@@ -1,0 +1,69 @@
+//
+// Component: Slider
+//
+// ========================================================================
+
+
+// Slider Content Transitions
+// ========================================================================
+
+.slider-content-transitions {
+    .uk-slidenav {
+        box-sizing: border-box;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+// Section Content Slider Left
+// ========================================================================
+
+.section-content-slider-left {
+    .swiper-activity-gallery {
+        overflow: visible;
+    }
+    .uk-text-large {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .uk-icon {
+        span {
+            margin-right: 6px;
+        }
+    }
+
+    .swiper-slide {
+        &.swiper-slide-active {
+            z-index: 1;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #fff;
+        opacity: 1;
+        width: 6px;
+        height: 6px;
+        &.swiper-pagination-bullet-active {
+            border-radius: 4px;
+            width: 16px;
+        }
+    }
+}
+
+
+// Responsive
+// ========================================================================
+
+@media (max-width: 639px) {
+    .slider-content-transitions {
+        .uk-slider-items {
+            margin-left: -15px;
+            > * {
+                padding-left: 15px;
+                width: calc(100% - 45px);
+            }
+        }
+    }
+}

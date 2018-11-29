@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+# IntelliJ project files
+.idea
+out
+gen
+
+# Front-end Files
+node_modules
+dist
+#/webpack/html-add-functions/pug-files.json
