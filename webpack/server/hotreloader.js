@@ -54,7 +54,7 @@
 			server.reloadClient();
 		});
 		watcher.on('add', function (path) {
-			pugPaths.files.push(path);
+			pugPaths.files.push(path.replace(/[\\]/g,'/'));
 			if (ready) {
 				fs.writeFile(jsonFilePath, JSON.stringify(pugPaths), 'utf8', (err) => {
 					if (err) {
@@ -64,7 +64,7 @@
 			}
 		});
 		watcher.on('unlink', function (path) {
-			let index = pugPaths.files.indexOf(path);
+			let index = pugPaths.files.indexOf(path.replace(/[\\]/g,'/'));
 			if (index > -1) {
 				pugPaths.files.splice(index, 1);
 			}
