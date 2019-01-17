@@ -245,6 +245,7 @@ module.exports = env => {
 		plugins: [
 			new CleanWebpackPlugin(['dist'],{root:path.resolve('./')}),
 			new optimizeCssAssetsWebpackPlugin(),
+			new webpack.HashedModuleIdsPlugin(),
 			new miniCssExtractPlugin({
 				filename: "css/[name]-[contenthash].bundle.css",
 			}),
