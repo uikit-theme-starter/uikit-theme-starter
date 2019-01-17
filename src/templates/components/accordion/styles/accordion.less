@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @accordion-item-margin-top:                    @global-margin;
 
 @accordion-title-font-size:                    @global-medium-font-size;
@@ -16,26 +17,26 @@
 
 @accordion-content-margin-top:                 @global-margin;
 
-//
-// New
-//
-
 @accordion-icon-margin-left:                   10px;
 @accordion-icon-color:                         @global-color;
+
 @internal-accordion-open-image:                "../../images/backgrounds/accordion-open.svg";
 @internal-accordion-close-image:               "../../images/backgrounds/accordion-close.svg";
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-accordion() {}
+.hook-accordion() {
+}
 
 
 // Item
 // ========================================================================
 
-.hook-accordion-item() {}
+.hook-accordion-item() {
+}
 
 
 // Title
@@ -43,52 +44,67 @@
 
 .hook-accordion-title() {
 
-    overflow: hidden;
+	overflow: hidden;
 
-    &::after {
-        content: "";
-        width: (@accordion-title-line-height * 1em);
-        height: (@accordion-title-line-height * 1em);
-        margin-left: @accordion-icon-margin-left;
-        float: right;
-        .svg-fill(@internal-accordion-close-image, "#000", @accordion-icon-color);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-    }
+	&::after {
+		content: "";
+		width: (@accordion-title-line-height * 1em);
+		height: (@accordion-title-line-height * 1em);
+		margin-left: @accordion-icon-margin-left;
+		float: right;
+		.svg-fill(@internal-accordion-close-image, "#000", @accordion-icon-color);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
 
-    .uk-open > &::after { .svg-fill(@internal-accordion-open-image, "#000", @accordion-icon-color); }
+	.uk-open > &::after {
+		.svg-fill(@internal-accordion-open-image, "#000", @accordion-icon-color);
+	}
 
 }
 
-.hook-accordion-title-hover() {}
+.hook-accordion-title-hover() {
+}
 
 
 // Content
 // ========================================================================
 
-.hook-accordion-content() {}
+.hook-accordion-content() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-accordion-misc() {}
+.hook-accordion-misc() {
+}
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-accordion-title-color:             @inverse-global-emphasis-color;
 @inverse-accordion-title-hover-color:       @inverse-global-inverse-color;
+//@formatter:on
 
-.hook-inverse-accordion-item() {}
+.hook-inverse-accordion-item() {
+}
 
-.hook-inverse-accordion-title() {}
-.hook-inverse-accordion-title-hover() {}
+.hook-inverse-accordion-title() {
+}
+
+.hook-inverse-accordion-title-hover() {
+}
 
 .hook-inverse() {
 
-    .uk-accordion-title::after { .svg-fill(@internal-accordion-close-image, "#000", @inverse-global-color); }
+	.uk-accordion-title::after {
+		.svg-fill(@internal-accordion-close-image, "#000", @inverse-global-color);
+	}
 
-    .uk-open > .uk-accordion-title::after { .svg-fill(@internal-accordion-open-image, "#000", @inverse-global-color); }
+	.uk-open > .uk-accordion-title::after {
+		.svg-fill(@internal-accordion-open-image, "#000", @inverse-global-color);
+	}
 
 }

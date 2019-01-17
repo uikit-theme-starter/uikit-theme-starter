@@ -7,26 +7,27 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @placeholder-margin-vertical:                   @global-margin;
 @placeholder-padding-vertical:                  @global-gutter;
 @placeholder-padding-horizontal:                @global-gutter;
 @placeholder-background:                        transparent;
 
-//
-// New
-//
-
 @placeholder-border-width:                      @global-border-width;
 @placeholder-border:                            @global-border;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-placeholder() { border: @placeholder-border-width dashed @placeholder-border; }
+.hook-placeholder() {
+	border: @placeholder-border-width dashed @placeholder-border;
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-placeholder-misc() {}
+.hook-placeholder-misc() {
+}

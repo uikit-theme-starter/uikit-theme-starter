@@ -7,13 +7,13 @@
 		if (a === b) return true;
 		if (a == null || b == null) return false;
 		if (a.length !== b.length) return false;
-		a.forEach((el)=>{
-			if(b.indexOf(el) < 0){
+		a.forEach((el) => {
+			if (b.indexOf(el) < 0) {
 				return false;
 			}
 		});
-		b.forEach((el)=>{
-			if(a.indexOf(el) < 0){
+		b.forEach((el) => {
+			if (a.indexOf(el) < 0) {
 				return false;
 			}
 		});
@@ -31,16 +31,17 @@
 			fs.readFile(jsonFilePath, 'utf8', function (err, data) {
 				let dataArray = [];
 				if (err) {
-					if(err.code === 'ENOENT'){
-						fs.open(jsonFilePath,'wx',()=>{});
-					}else{
+					if (err.code === 'ENOENT') {
+						fs.open(jsonFilePath, 'wx', () => {
+						});
+					} else {
 						throw err;
 					}
-				}else{
+				} else {
 					data = data === undefined || data === '' ? '{"files":[]}' : data;
 					dataArray = JSON.parse(data).files;
 				}
-				if (!arraysEqual(dataArray,pugPaths.files)) {
+				if (!arraysEqual(dataArray, pugPaths.files)) {
 					fs.writeFile(jsonFilePath, JSON.stringify(pugPaths), 'utf8', (err) => {
 						if (err) {
 							console.log(err);
@@ -54,7 +55,7 @@
 			server.reloadClient();
 		});
 		watcher.on('add', function (path) {
-			pugPaths.files.push(path.replace(/[\\]/g,'/'));
+			pugPaths.files.push(path.replace(/[\\]/g, '/'));
 			if (ready) {
 				fs.writeFile(jsonFilePath, JSON.stringify(pugPaths), 'utf8', (err) => {
 					if (err) {
@@ -64,7 +65,7 @@
 			}
 		});
 		watcher.on('unlink', function (path) {
-			let index = pugPaths.files.indexOf(path.replace(/[\\]/g,'/'));
+			let index = pugPaths.files.indexOf(path.replace(/[\\]/g, '/'));
 			if (index > -1) {
 				pugPaths.files.splice(index, 1);
 			}

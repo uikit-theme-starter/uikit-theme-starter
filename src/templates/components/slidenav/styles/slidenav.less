@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @slidenav-padding-vertical:                     5px;
 @slidenav-padding-horizontal:                   10px;
 
@@ -16,51 +17,67 @@
 
 @slidenav-large-padding-vertical:               10px;
 @slidenav-large-padding-horizontal:             @slidenav-large-padding-vertical;
-
+//@formatter:on
 
 // Component
 // ========================================================================
 
-.hook-slidenav() { transition: color 0.1s ease-in-out; }
+.hook-slidenav() {
+	transition: color 0.1s ease-in-out;
+}
 
-.hook-slidenav-hover() {}
+.hook-slidenav-hover() {
+}
 
-.hook-slidenav-active() {}
+.hook-slidenav-active() {
+}
 
 
 // Icon modifier
 // ========================================================================
 
-.hook-slidenav-previous() {}
+.hook-slidenav-previous() {
+}
 
-.hook-slidenav-next() {}
+.hook-slidenav-next() {
+}
 
 
 // Size modifier
 // ========================================================================
 
-.hook-slidenav-large() {}
+.hook-slidenav-large() {
+}
 
 
 // Container
 // ========================================================================
 
-.hook-slidenav-container() {}
+.hook-slidenav-container() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-icon-misc() {}
+.hook-icon-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-slidenav-color:                       fade(@inverse-global-color, 70%);
 @inverse-slidenav-hover-color:                 fade(@inverse-global-color, 95%);
 @inverse-slidenav-active-color:                fade(@inverse-global-color, 70%);
+//@formatter:on
 
-.hook-inverse-slidenav() {}
-.hook-inverse-slidenav-hover() {}
-.hook-inverse-slidenav-active() {}
+.hook-inverse-slidenav() {
+}
+
+.hook-inverse-slidenav-hover() {
+}
+
+.hook-inverse-slidenav-active() {
+}

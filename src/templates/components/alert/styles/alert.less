@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @alert-margin-vertical:                         @global-margin;
 @alert-padding:                                 @global-small-gutter;
 @alert-padding-right:                           @alert-padding + 14px;
@@ -28,44 +29,47 @@
 @alert-danger-background:                       lighten(tint(@global-danger-background, 40%), 20%);
 @alert-danger-color:                            @global-danger-background;
 
-//
-// New
-//
 
 @alert-close-opacity:                           0.4;
 @alert-close-hover-opacity:                     0.8;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-alert() {}
+.hook-alert() {
+}
 
 
 // Close
 // ========================================================================
 
 .hook-alert-close() {
-    color: inherit;
-    opacity: @alert-close-opacity;
+	color: inherit;
+	opacity: @alert-close-opacity;
 }
 
 .hook-alert-close-hover() {
-    color: inherit;
-    opacity: @alert-close-hover-opacity;
+	color: inherit;
+	opacity: @alert-close-hover-opacity;
 }
 
 
 // Style modifiers
 // ========================================================================
 
-.hook-alert-primary() {}
+.hook-alert-primary() {
+}
 
-.hook-alert-success() {}
+.hook-alert-success() {
+}
 
-.hook-alert-warning() {}
+.hook-alert-warning() {
+}
 
-.hook-alert-danger() {}
+.hook-alert-danger() {
+}
 
 
 // Miscellaneous
@@ -73,25 +77,27 @@
 
 .hook-alert-misc() {
 
-    /*
-     * Content
-     */
+	/*
+	 * Content
+	 */
 
-    .uk-alert h1,
-    .uk-alert h2,
-    .uk-alert h3,
-    .uk-alert h4,
-    .uk-alert h5,
-    .uk-alert h6 { color: inherit; }
+	.uk-alert h1,
+	.uk-alert h2,
+	.uk-alert h3,
+	.uk-alert h4,
+	.uk-alert h5,
+	.uk-alert h6 {
+		color: inherit;
+	}
 
-    .uk-alert a:not([class]) {
-        color: inherit;
-        text-decoration: underline;
-    }
+	.uk-alert a:not([class]) {
+		color: inherit;
+		text-decoration: underline;
+	}
 
-    .uk-alert a:not([class]):hover {
-        color: inherit;
-        text-decoration: underline;
-    }
+	.uk-alert a:not([class]):hover {
+		color: inherit;
+		text-decoration: underline;
+	}
 
 }

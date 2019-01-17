@@ -24,15 +24,15 @@ function createServer() {
 	server.use(staticMiddleware);
 
 	function startServer() {
-		fp(8080).then(([freePort])=>{
-			server.listen(freePort, (error)=>{
+		fp(8080).then(([freePort]) => {
+			server.listen(freePort, (error) => {
 				if (error) {
 					console.error(error);
 					return;
 				}
 				console.log(`Sunucu adresi: http://localhost:${freePort}`);
 			});
-		}).catch((err)=>{
+		}).catch((err) => {
 			console.error(err);
 		});
 	}

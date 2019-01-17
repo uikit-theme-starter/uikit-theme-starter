@@ -10,8 +10,9 @@ try {
 	pugFiles.forEach((filePath) => {
 
 		let fileInfo = path.parse(filePath);
-		let dir = fileInfo.dir.split(path.sep).pop();
-		let dirstring = dir === 'pages' ? '' : `${dir}/`;
+		//let dir = fileInfo.dir.split(path.sep).pop();
+		let dirstring = fileInfo.dir.replace(/src[\/\\]templates[\/\\]pages/, '');
+		dirstring = dirstring ? dirstring.substr(1) + '/' : '';
 		let filename = `${dirstring}${fileInfo.name}.html`;
 
 		plugins.push(new htmlWebpackPlugin({
@@ -25,11 +26,11 @@ try {
 				removeComments: true,
 				collapseBooleanAttributes: true,
 				removeAttributeQuotes: false
-			}/*,
-		inject: dir === 'web.group'*/
+			},
+			inject: true
 		}));
 	});
-}catch (e) {
+} catch (e) {
 	const hotreloader = require('../server/hotreloader');
 	hotreloader.activate();
 	//console.error(e);

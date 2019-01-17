@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @panel-scrollable-height:                       170px;
 @panel-scrollable-padding:                      10px;
 @panel-scrollable-border-width:                 @global-border-width;
@@ -30,50 +31,62 @@
 @logo-hover-color:                              @global-color;
 
 @dragover-box-shadow:                           0 0 20px rgba(100,100,100,0.3);
+//@formatter:on
 
 
 // Panel
 // ========================================================================
 
-.hook-panel-scrollable() {}
+.hook-panel-scrollable() {
+}
 
 
 // Box-shadow bottom
 // ========================================================================
 
-.hook-box-shadow-bottom() {}
+.hook-box-shadow-bottom() {
+}
 
 
 // Drop cap
 // ========================================================================
 
 .hook-dropcap() {
-    // Prevent line wrap
-    margin-bottom: -2px;
+	// Prevent line wrap
+	margin-bottom: -2px;
 }
 
 
 // Logo
 // ========================================================================
 
-.hook-logo() {}
+.hook-logo() {
+}
 
-.hook-logo-hover() {}
+.hook-logo-hover() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-utility-misc() {}
+.hook-utility-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-logo-color:                           @inverse-global-color;
 @inverse-logo-hover-color:                     @inverse-global-color;
+//@formatter:on
 
-.hook-inverse-dropcap() {}
+.hook-inverse-dropcap() {
+}
 
-.hook-inverse-logo() {}
-.hook-inverse-logo-hover() {}
+.hook-inverse-logo() {
+}
+
+.hook-inverse-logo-hover() {
+}
