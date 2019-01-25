@@ -156,12 +156,8 @@ module.exports = env => {
 							loader: "html-loader",
 							options: {
 								attrs: [
-									'img:src',
-									'section:data-src',
-									'div:data-src',
-									'img:data-src',
-									'video:src',
-									'source:src',
+									':src',
+									':data-src',
 									'link:href'
 								],
 								interpolate: true
