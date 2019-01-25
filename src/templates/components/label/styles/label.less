@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @label-padding-vertical:                        0;
 @label-padding-horizontal:                      @global-small-margin;
 @label-background:                              @global-primary-background;
@@ -21,43 +22,47 @@
 @label-danger-background:                       @global-danger-background;
 @label-danger-color:                            @global-inverse-color;
 
-//
-// New
-//
-
 @label-border-radius:                           2px;
 @label-text-transform:                          uppercase;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
 .hook-label() {
-    border-radius: @label-border-radius;
-    text-transform: @label-text-transform;
+	border-radius: @label-border-radius;
+	text-transform: @label-text-transform;
 }
 
 
 // Color modifiers
 // ========================================================================
 
-.hook-label-success() {}
+.hook-label-success() {
+}
 
-.hook-label-warning() {}
+.hook-label-warning() {
+}
 
-.hook-label-danger() {}
+.hook-label-danger() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-label-misc() {}
+.hook-label-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-label-background:                     @inverse-global-primary-background;
 @inverse-label-color:                          @inverse-global-inverse-color;
+//@formatter:on
 
-.hook-inverse-label() {}
+.hook-inverse-label() {
+}

@@ -2,55 +2,55 @@
 
 header.header-default(uk-sticky show-on-up animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container")
 
-    .uk-container
+	.uk-container
 
-        nav(class="uk-navbar-container uk-navbar-transparent uk-navbar uk-flex-between" uk-navbar="dropbar: true") 
+		nav(class="uk-navbar-container uk-navbar-transparent uk-navbar uk-flex-between" uk-navbar="dropbar: true")
 
-            .uk-navbar-left
+			.uk-navbar-left
 
-                a(class="uk-navbar-item uk-logo uk-padding-remove-left uk-visible@m" href="/")
+				a(class="uk-navbar-item uk-logo uk-padding-remove-left uk-visible@m" href="/")
 
-                    img(src="/images/icons/icn-tuna-ofis-logo-dark.svg" alt="")
+					img(src="/images/icons/icn-tuna-ofis-logo-dark.svg" alt="")
 
-            .uk-flex.uk-flex-1.nav-overlay
+			.uk-flex.uk-flex-1.nav-overlay
 
-                a(class="uk-navbar-item uk-logo uk-padding-remove-left uk-hidden@m" href="/")
+				a(class="uk-navbar-item uk-logo uk-padding-remove-left uk-hidden@m" href="/")
 
-                    img(src="/images/icons/icn-tuna-ofis-logo-dark.svg" alt="tuna ofis")
+					img(src="/images/icons/icn-tuna-ofis-logo-dark.svg" alt="tuna ofis")
 
-                ul(class="uk-navbar-nav uk-margin-auto uk-visible@m")
+				ul(class="uk-navbar-nav uk-margin-auto uk-visible@m")
 
-                    li: a(href="#") Nav 1
+					li: a(href="#") Nav 1
 
-                    li: a(href="#") Nav 2
+					li: a(href="#") Nav 2
 
-                    li: a(href="#") Nav 3
+					li: a(href="#") Nav 3
 
-                    li: a(href="#") Nav 4
+					li: a(href="#") Nav 4
 
-            .nav-overlay.uk-navbar-right
+			.nav-overlay.uk-navbar-right
 
-                div(class="uk-navbar-item uk-padding-remove-right")
+				div(class="uk-navbar-item uk-padding-remove-right")
 
-                    a(href="#" class="uk-navbar-toggle uk-padding-remove" uk-toggle="target: .nav-overlay; animation: uk-animation-fade")
+					a(href="#" class="uk-navbar-toggle uk-padding-remove" uk-toggle="target: .nav-overlay; animation: uk-animation-fade")
 
-                        span(uk-icon="icn-search" class="icn-search") 
+						span(uk-icon="icn-search" class="icn-search")
 
-                    div(class="uk-navbar-item uk-hidden@m uk-padding-remove mobile-button")
+					div(class="uk-navbar-item uk-hidden@m uk-padding-remove mobile-button")
 
-                        a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle)
-                            span(uk-icon="icon: icn-menu-dark;")
+						a(href="#header-mobile-modal" class="uk-navbar-toggle uk-padding-remove" uk-toggle)
+							span(uk-icon="icon: icn-menu-dark;")
 
-            div(class="nav-overlay uk-navbar-left uk-width-3-4@m" hidden) 
+			div(class="nav-overlay uk-navbar-left uk-width-3-4@m" hidden)
 
-                div(class="uk-navbar-item uk-width-expand")
+				div(class="uk-navbar-item uk-width-expand")
 
-                    form(class="uk-search uk-search-navbar uk-width-1-1")
+					form(class="uk-search uk-search-navbar uk-width-1-1")
 
-                        input(class="uk-search-input" type="search" placeholder="Arama Yap…" autofocus)
+						input(class="uk-search-input" type="search" placeholder="Arama Yap…" autofocus)
 
-                a(class="uk-navbar-toggle uk-link-reset uk-padding-remove" uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#")
+				a(class="uk-navbar-toggle uk-link-reset uk-padding-remove" uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#")
 
-                    span(uk-icon="icon: close; ratio: 1.2")
+					span(uk-icon="icon: close; ratio: 1.2")
 
-    include mobile
+	include mobile

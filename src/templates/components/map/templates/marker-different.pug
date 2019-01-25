@@ -2,67 +2,67 @@
 
 section
 
-    .uk-container
+	.uk-container
 
-        #map-different(style="height: 500px;") 
+		#map-different(style="height: 500px;")
 
-        script.
+		script.
 
-            var map;
-            function initMapDifferent() {
-                map = new google.maps.Map(document.getElementById('map-different'), {
-                    zoom: 16,
-                    center: new google.maps.LatLng(-33.91722, 151.23064),
-                    mapTypeId: 'roadmap'
-                });
+			var map;
+			function initMapDifferent() {
+				map = new google.maps.Map(document.getElementById('map-different'), {
+					zoom: 16,
+					center: new google.maps.LatLng(-33.91722, 151.23064),
+					mapTypeId: 'roadmap'
+				});
 
-                var icons = {
-                    delivery: {
-                        icon: 'https://dummyimage.com/32x32/ff0000/ff0000.jpg'
-                    },
-                    charge: {
-                        icon: 'https://dummyimage.com/32x32/0f64f8/0f64f8.jpg'
-                    }
-                };
+				var icons = {
+					delivery: {
+						icon: 'https://dummyimage.com/32x32/ff0000/ff0000.jpg'
+					},
+					charge: {
+						icon: 'https://dummyimage.com/32x32/0f64f8/0f64f8.jpg'
+					}
+				};
 
-                var features = [
-                    {
-                        position: new google.maps.LatLng(-33.91666, 151.23468),
-                        type: 'delivery',
-                        content: '<div class="content"><h4>Address 1</h4><p>Explanation 1</p></div>'
-                    }, {
-                        position: new google.maps.LatLng(-33.916988, 151.233640),
-                        type: 'delivery',
-                        content: '<div class="content"><h4>Address 2</h4><p>Explanation 2</p></div>'
-                    }, {
-                        position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-                        type: 'charge',
-                        content: '<div class="content"><h4>Address 3</h4><p>Explanation 3</p></div>'
-                    }, {
-                        position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-                        type: 'charge',
-                        content: '<div class="content"><h4>Address 4</h4><p>Explanation 4</p></div>'
-                    }
-                ];
+				var features = [
+					{
+						position: new google.maps.LatLng(-33.91666, 151.23468),
+						type: 'delivery',
+						content: '<div class="content"><h4>Address 1</h4><p>Explanation 1</p></div>'
+					}, {
+						position: new google.maps.LatLng(-33.916988, 151.233640),
+						type: 'delivery',
+						content: '<div class="content"><h4>Address 2</h4><p>Explanation 2</p></div>'
+					}, {
+						position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
+						type: 'charge',
+						content: '<div class="content"><h4>Address 3</h4><p>Explanation 3</p></div>'
+					}, {
+						position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+						type: 'charge',
+						content: '<div class="content"><h4>Address 4</h4><p>Explanation 4</p></div>'
+					}
+				];
 
-                var infoWindow = new google.maps.InfoWindow(); 
-                
-                features.forEach(function(feature) {
-                    var marker = new google.maps.Marker({
-                        position: feature.position,
-                        icon: icons[feature.type].icon,
-                        map: map
-                    });
+				var infoWindow = new google.maps.InfoWindow();
 
-                    marker.addListener('click', function() {
-                        console.log(feature.content);
-                        infoWindow.setContent(feature.content);
-                        infoWindow.open(map, marker);
-                    });
-                    
-                });
+				features.forEach(function (feature) {
+					var marker = new google.maps.Marker({
+						position: feature.position,
+						icon: icons[feature.type].icon,
+						map: map
+					});
 
-            }
+					marker.addListener('click', function () {
+						console.log(feature.content);
+						infoWindow.setContent(feature.content);
+						infoWindow.open(map, marker);
+					});
 
-            initMapDifferent();
+				});
+
+			}
+
+			initMapDifferent();
 

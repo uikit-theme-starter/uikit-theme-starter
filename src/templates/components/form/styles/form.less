@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @form-height:                                   @global-control-height;
 @form-line-height:                              @form-height - (2* @form-border-width);
 @form-padding-horizontal:                       10px;
@@ -106,38 +107,51 @@
 
 @form-label-color:                              @global-emphasis-color;
 @form-label-font-size:                          @global-small-font-size;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
 .hook-form() {
-    border: @form-border-width solid @form-border;
-    transition: 0.2s ease-in-out;
-    transition-property: color, background-color, border;
+	border: @form-border-width solid @form-border;
+	transition: 0.2s ease-in-out;
+	transition-property: color, background-color, border;
 }
 
-.hook-form-single-line() {}
+.hook-form-single-line() {
+}
 
-.hook-form-multi-line() {}
+.hook-form-multi-line() {
+}
 
-.hook-form-focus() { border-color: @form-focus-border; }
+.hook-form-focus() {
+	border-color: @form-focus-border;
+}
 
-.hook-form-disabled() { border-color: @form-disabled-border; }
+.hook-form-disabled() {
+	border-color: @form-disabled-border;
+}
 
 
 // Style modifiers
 // ========================================================================
 
-.hook-form-danger() { border-color: @form-danger-border; }
+.hook-form-danger() {
+	border-color: @form-danger-border;
+}
 
-.hook-form-success() { border-color: @form-success-border; }
+.hook-form-success() {
+	border-color: @form-success-border;
+}
 
-.hook-form-blank() { border-color: transparent; }
+.hook-form-blank() {
+	border-color: transparent;
+}
 
 .hook-form-blank-focus() {
-    border-color: @form-blank-focus-border;
-    border-style: @form-blank-focus-border-style;
+	border-color: @form-blank-focus-border;
+	border-style: @form-blank-focus-border-style;
 }
 
 
@@ -145,52 +159,64 @@
 // ========================================================================
 
 .hook-form-radio() {
-    border: @form-radio-border-width solid @form-radio-border;
-    transition: 0.2s ease-in-out;
-    transition-property: background-color, border;
+	border: @form-radio-border-width solid @form-radio-border;
+	transition: 0.2s ease-in-out;
+	transition-property: background-color, border;
 }
 
-.hook-form-radio-focus() { border-color: @form-radio-focus-border; }
+.hook-form-radio-focus() {
+	border-color: @form-radio-focus-border;
+}
 
-.hook-form-radio-checked() { border-color: @form-radio-checked-border; }
+.hook-form-radio-checked() {
+	border-color: @form-radio-checked-border;
+}
 
-.hook-form-radio-checked-focus() {}
+.hook-form-radio-checked-focus() {
+}
 
-.hook-form-radio-disabled() { border-color: @form-radio-disabled-border; }
+.hook-form-radio-disabled() {
+	border-color: @form-radio-disabled-border;
+}
 
 
 // Legend
 // ========================================================================
 
-.hook-form-legend() {}
+.hook-form-legend() {
+}
 
 
 // Label
 // ========================================================================
 
 .hook-form-label() {
-    color: @form-label-color;
-    font-size: @form-label-font-size;
+	color: @form-label-color;
+	font-size: @form-label-font-size;
 }
 
 
 // Layout
 // ========================================================================
 
-.hook-form-stacked-label() {}
+.hook-form-stacked-label() {
+}
 
-.hook-form-horizontal-label() {}
+.hook-form-horizontal-label() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-form-misc() {}
+.hook-form-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-form-label-color:                      @inverse-global-emphasis-color;
 
 @inverse-form-background:                      @inverse-global-muted-background;
@@ -210,14 +236,31 @@
 
 @inverse-form-icon-color:                      @inverse-global-muted-color;
 @inverse-form-icon-hover-color:                @inverse-global-color;
+//@formatter:on
 
-.hook-inverse-form() { border-color: @inverse-global-border; }
-.hook-inverse-form-focus() { border-color: @inverse-global-color; }
+.hook-inverse-form() {
+	border-color: @inverse-global-border;
+}
 
-.hook-inverse-form-radio() { border-color: @inverse-global-border; }
-.hook-inverse-form-radio-focus() { border-color: @inverse-global-color; }
+.hook-inverse-form-focus() {
+	border-color: @inverse-global-color;
+}
 
-.hook-inverse-form-radio-checked() { border-color: @inverse-global-color; }
-.hook-inverse-form-radio-checked-focus() {}
+.hook-inverse-form-radio() {
+	border-color: @inverse-global-border;
+}
 
-.hook-inverse-form-label() { color: @inverse-form-label-color; }
+.hook-inverse-form-radio-focus() {
+	border-color: @inverse-global-color;
+}
+
+.hook-inverse-form-radio-checked() {
+	border-color: @inverse-global-color;
+}
+
+.hook-inverse-form-radio-checked-focus() {
+}
+
+.hook-inverse-form-label() {
+	color: @inverse-form-label-color;
+}

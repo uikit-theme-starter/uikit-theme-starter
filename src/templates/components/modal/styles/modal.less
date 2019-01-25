@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @modal-z-index:                                 @global-z-index + 10;
 @modal-background:                              rgba(0,0,0,0.6);
 
@@ -43,10 +44,6 @@
 @modal-close-outside-color:                     lighten(@global-inverse-color, 20%);
 @modal-close-outside-hover-color:               @global-inverse-color;
 
-//
-// New
-//
-
 @modal-header-border-width:                    @global-border-width;
 @modal-header-border:                          @global-border;
 
@@ -55,68 +52,86 @@
 
 @modal-close-full-padding:                     @global-margin;
 @modal-close-full-background:                  @modal-dialog-background;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-modal() {}
+.hook-modal() {
+}
 
 
 // Dialog
 // ========================================================================
 
-.hook-modal-dialog() {}
+.hook-modal-dialog() {
+}
 
 
 // Full
 // ========================================================================
 
-.hook-modal-full() {}
+.hook-modal-full() {
+}
 
 
 // Sections
 // ========================================================================
 
-.hook-modal-header() { border-bottom: @modal-header-border-width solid @modal-header-border; }
+.hook-modal-header() {
+	border-bottom: @modal-header-border-width solid @modal-header-border;
+}
 
-.hook-modal-body() {}
+.hook-modal-body() {
+}
 
-.hook-modal-footer() { border-top: @modal-footer-border-width solid @modal-footer-border; }
+.hook-modal-footer() {
+	border-top: @modal-footer-border-width solid @modal-footer-border;
+}
 
 
 // Title
 // ========================================================================
 
-.hook-modal-title() {}
+.hook-modal-title() {
+}
 
 
 // Close
 // ========================================================================
 
-.hook-modal-close() {}
-
-.hook-modal-close-hover() {}
-
-.hook-modal-close-default() {}
-
-.hook-modal-close-default-hover() {}
-
-.hook-modal-close-outside() {}
-
-.hook-modal-close-outside-hover() {}
-
-.hook-modal-close-full() {
-    top: 0;
-    right: 0;
-    padding: @modal-close-full-padding;
-    background: @modal-close-full-background;
+.hook-modal-close() {
 }
 
-.hook-modal-close-full-hover() {}
+.hook-modal-close-hover() {
+}
+
+.hook-modal-close-default() {
+}
+
+.hook-modal-close-default-hover() {
+}
+
+.hook-modal-close-outside() {
+}
+
+.hook-modal-close-outside-hover() {
+}
+
+.hook-modal-close-full() {
+	top: 0;
+	right: 0;
+	padding: @modal-close-full-padding;
+	background: @modal-close-full-background;
+}
+
+.hook-modal-close-full-hover() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-modal-misc() {}
+.hook-modal-misc() {
+}

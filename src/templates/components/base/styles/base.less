@@ -6,7 +6,7 @@
 
 // Variables
 // ========================================================================
-
+//@formatter:off
 @base-body-background:                          @global-background;
 @base-body-font-family:                         @global-font-family;
 @base-body-font-weight:                         normal;
@@ -75,9 +75,6 @@
 @base-selection-background:                     #39f;
 @base-selection-color:                          @global-inverse-color;
 
-//
-// New
-//
 
 @base-code-padding-horizontal:                  6px;
 @base-code-padding-vertical:                    2px;
@@ -92,67 +89,81 @@
 @base-pre-border-width:                         @global-border-width;
 @base-pre-border:                               @global-border;
 @base-pre-border-radius:                        3px;
+//@formatter:on
 
 
 // Body
 // ========================================================================
 
-.hook-base-body() {}
+.hook-base-body() {
+}
 
 
 // Links
 // ========================================================================
 
-.hook-base-link() {}
+.hook-base-link() {
+}
 
-.hook-base-link-hover() {}
+.hook-base-link-hover() {
+}
 
 
 // Text-level semantics
 // ========================================================================
 
 .hook-base-code() {
-    padding: @base-code-padding-vertical @base-code-padding-horizontal;
-    background: @base-code-background;
+	padding: @base-code-padding-vertical @base-code-padding-horizontal;
+	background: @base-code-background;
 }
 
 
 // Headings
 // ========================================================================
 
-.hook-base-heading() {}
+.hook-base-heading() {
+}
 
-.hook-base-h1() {}
+.hook-base-h1() {
+}
 
-.hook-base-h2() {}
+.hook-base-h2() {
+}
 
-.hook-base-h3() {}
+.hook-base-h3() {
+}
 
-.hook-base-h4() {}
+.hook-base-h4() {
+}
 
-.hook-base-h5() {}
+.hook-base-h5() {
+}
 
-.hook-base-h6() {}
+.hook-base-h6() {
+}
 
 
 // Horizontal rules
 // ========================================================================
 
-.hook-base-hr() {}
+.hook-base-hr() {
+}
 
 
 // Blockquotes
 // ========================================================================
 
 .hook-base-blockquote() {
-    color: @base-blockquote-color;
+	color: @base-blockquote-color;
 }
 
 .hook-base-blockquote-footer() {
 
-    color: @base-blockquote-footer-color;
+	color: @base-blockquote-footer-color;
 
-    &::before { content: "— "; }
+	&::before {
+		content: "— ";
+	}
 
 }
 
@@ -161,22 +172,24 @@
 // ========================================================================
 
 .hook-base-pre() {
-    padding: @base-pre-padding;
-    border: @base-pre-border-width solid @base-pre-border;
-    border-radius: @base-pre-border-radius;
-    background: @base-pre-background;
+	padding: @base-pre-padding;
+	border: @base-pre-border-width solid @base-pre-border;
+	border-radius: @base-pre-border-radius;
+	background: @base-pre-background;
 }
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-base-misc() {}
+.hook-base-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-base-color:                           @inverse-global-color;
 @inverse-base-link-color:                      @inverse-global-emphasis-color;
 @inverse-base-link-hover-color:                @inverse-global-emphasis-color;
@@ -186,24 +199,46 @@
 @inverse-base-hr-border:                       @inverse-global-border;
 @inverse-base-blockquote-color:                @inverse-global-emphasis-color;
 @inverse-base-blockquote-footer-color:         @inverse-global-color;
+//@formatter:on
 
-.hook-inverse-base-link() {}
-.hook-inverse-base-link-hover() {}
-
-.hook-inverse-base-code() {
-    background: @inverse-global-muted-background;
+.hook-inverse-base-link() {
 }
 
-.hook-inverse-base-heading() {}
+.hook-inverse-base-link-hover() {
+}
 
-.hook-inverse-base-h1() {}
-.hook-inverse-base-h2() {}
-.hook-inverse-base-h3() {}
-.hook-inverse-base-h4() {}
-.hook-inverse-base-h5() {}
-.hook-inverse-base-h6() {}
+.hook-inverse-base-code() {
+	background: @inverse-global-muted-background;
+}
 
-.hook-inverse-base-blockquote() { color: @inverse-base-blockquote-color; }
-.hook-inverse-base-blockquote-footer() { color: @inverse-base-blockquote-footer-color; }
+.hook-inverse-base-heading() {
+}
 
-.hook-inverse-base-hr() {}
+.hook-inverse-base-h1() {
+}
+
+.hook-inverse-base-h2() {
+}
+
+.hook-inverse-base-h3() {
+}
+
+.hook-inverse-base-h4() {
+}
+
+.hook-inverse-base-h5() {
+}
+
+.hook-inverse-base-h6() {
+}
+
+.hook-inverse-base-blockquote() {
+	color: @inverse-base-blockquote-color;
+}
+
+.hook-inverse-base-blockquote-footer() {
+	color: @inverse-base-blockquote-footer-color;
+}
+
+.hook-inverse-base-hr() {
+}

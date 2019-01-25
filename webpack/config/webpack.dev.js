@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const htmlWebpackPlugin = require('../html-add-functions/create-plugins');
 
 // Dev
-// const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+//const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 let plugins = [
@@ -48,19 +48,20 @@ module.exports = {
 		}
 	},
 	output: {
-		filename: "[name].bundle.js",
-		path: path.resolve(__dirname, "../../../dist"),
+		filename: "js/[name].bundle.js",
+		//path: path.resolve("dist"),
 		publicPath: "/",
+		umdNamedDefine: true,
 		libraryTarget: 'umd'
 	},
 	devServer: {
 		stats: "minimal",
 		progress: true,
-		contentBase: "dist",
+		//contentBase: "dist",
 		overlay: true,
 		hot: true,
 		historyApiFallback: true,
-		watchContentBase: true
+		//watchContentBase: true
 	},
 	devtool: "source-map",
 	module: {

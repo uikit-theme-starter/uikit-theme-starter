@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @article-margin-top:                            @global-large-margin;
 
 @article-title-font-size-m:                     @global-xxlarge-font-size;
@@ -17,30 +18,30 @@
 @article-meta-line-height:                      1.4;
 @article-meta-color:                            @global-muted-color;
 
-//
-// New
-//
-
 @article-meta-link-color:                       @article-meta-color;
 @article-meta-link-hover-color:                 @global-color;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-article() {}
+.hook-article() {
+}
 
 
 // Adjacent sibling
 // ========================================================================
 
-.hook-article-adjacent() {}
+.hook-article-adjacent() {
+}
 
 
 // Title
 // ========================================================================
 
-.hook-article-title() {}
+.hook-article-title() {
+}
 
 
 // Meta
@@ -48,12 +49,14 @@
 
 .hook-article-meta() {
 
-    a { color: @article-meta-link-color; }
+	a {
+		color: @article-meta-link-color;
+	}
 
-    a:hover {
-        color: @article-meta-link-hover-color;
-        text-decoration: none;
-    }
+	a:hover {
+		color: @article-meta-link-hover-color;
+		text-decoration: none;
+	}
 
 }
 
@@ -61,12 +64,16 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-article-misc() {}
+.hook-article-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-article-meta-color:                   @inverse-global-muted-color;
+//@formatter:on
 
-.hook-inverse-article-meta() {}
+.hook-inverse-article-meta() {
+}

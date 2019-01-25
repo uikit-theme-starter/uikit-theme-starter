@@ -7,7 +7,7 @@
 // Variables
 // ========================================================================
 
-
+//@formatter:off
 @dotnav-margin-horizontal:                           12px;
 @dotnav-margin-vertical:                             @dotnav-margin-horizontal;
 
@@ -20,52 +20,72 @@
 @dotnav-item-onclick-background:                     fade(@global-color, 20%);
 @dotnav-item-active-background:                      fade(@global-color, 60%);
 
-//
-// New
-//
-
 @dotnav-item-border-width:                           1px;
 
 @dotnav-item-border:                                 fade(@global-color, 40%);
 @dotnav-item-hover-border:                           transparent;
 @dotnav-item-onclick-border:                         transparent;
 @dotnav-item-active-border:                          transparent;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-dotnav() {}
-
-.hook-dotnav-item() {
-    border: @dotnav-item-border-width solid @dotnav-item-border;
-    transition: 0.2s ease-in-out;
-    transition-property: background-color, border-color;
+.hook-dotnav() {
 }
 
-.hook-dotnav-item-hover() { border-color: @dotnav-item-hover-border; }
+.hook-dotnav-item() {
+	border: @dotnav-item-border-width solid @dotnav-item-border;
+	transition: 0.2s ease-in-out;
+	transition-property: background-color, border-color;
+}
 
-.hook-dotnav-item-onclick() { border-color: @dotnav-item-onclick-border; }
+.hook-dotnav-item-hover() {
+	border-color: @dotnav-item-hover-border;
+}
 
-.hook-dotnav-item-active() { border-color: @dotnav-item-active-border; }
+.hook-dotnav-item-onclick() {
+	border-color: @dotnav-item-onclick-border;
+}
+
+.hook-dotnav-item-active() {
+	border-color: @dotnav-item-active-border;
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-dotnav-misc() {}
+.hook-dotnav-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-dotnav-item-background:               transparent;
 @inverse-dotnav-item-hover-background:         fade(@inverse-global-color, 90%);
 @inverse-dotnav-item-onclick-background:       fade(@inverse-global-color, 50%);
 @inverse-dotnav-item-active-background:        fade(@inverse-global-color, 90%);
+//@formatter:on
 
-.hook-inverse-dotnav() {}
-.hook-inverse-dotnav-item() { border-color: fade(@inverse-global-color, 90%); }
-.hook-inverse-dotnav-item-hover() { border-color: transparent; }
-.hook-inverse-dotnav-item-onclick() { border-color: transparent; }
-.hook-inverse-dotnav-item-active() { border-color: transparent; }
+.hook-inverse-dotnav() {
+}
+
+.hook-inverse-dotnav-item() {
+	border-color: fade(@inverse-global-color, 90%);
+}
+
+.hook-inverse-dotnav-item-hover() {
+	border-color: transparent;
+}
+
+.hook-inverse-dotnav-item-onclick() {
+	border-color: transparent;
+}
+
+.hook-inverse-dotnav-item-active() {
+	border-color: transparent;
+}

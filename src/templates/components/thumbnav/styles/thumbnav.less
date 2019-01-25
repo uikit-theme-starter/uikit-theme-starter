@@ -7,58 +7,67 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @thumbnav-margin-horizontal:                    15px;
 @thumbnav-margin-vertical:                      @thumbnav-margin-horizontal;
-
-//
-// New
-//
 
 @thumbnav-item-background:                      fade(@global-background, 40%);
 @thumbnav-item-hover-background:                transparent;
 @thumbnav-item-active-background:               transparent;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-thumbnav() {}
+.hook-thumbnav() {
+}
 
 .hook-thumbnav-item() {
 
-    position: relative;
+	position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: @thumbnav-item-background;
-        transition: background-color 0.1s ease-in-out;
-    }
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: @thumbnav-item-background;
+		transition: background-color 0.1s ease-in-out;
+	}
 
 }
 
 .hook-thumbnav-item-hover() {
-    &::after { background-color: @thumbnav-item-hover-background; }
+	&::after {
+		background-color: @thumbnav-item-hover-background;
+	}
 }
 
 .hook-thumbnav-item-active() {
-    &::after { background-color: @thumbnav-item-active-background; }
+	&::after {
+		background-color: @thumbnav-item-active-background;
+	}
 }
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-thumbnav-misc() {}
+.hook-thumbnav-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
-.hook-inverse-thumbnav-item() {}
-.hook-inverse-thumbnav-item-hover() {}
-.hook-inverse-thumbnav-item-active() {}
+.hook-inverse-thumbnav-item() {
+}
+
+.hook-inverse-thumbnav-item-hover() {
+}
+
+.hook-inverse-thumbnav-item-active() {
+}

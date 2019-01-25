@@ -8,40 +8,46 @@
 // ========================================================================
 
 .parallax-large {
-    .uk-h2 {
-        letter-spacing: 4px;
-    }
-    .background-secondary-gradient {
-        opacity: 0.8;
-        height: 346px;
-    }
-    .writing-text {
-        margin: 50px 35px;
-        a {
-            font-size: 10px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            writing-mode: vertical-rl;
-            overflow: hidden;
-            .text {
-                position: relative;
-                transition: transform 0.5s;
-                display: inline-block;
-                &::after {
-                    content: attr(data-hover);
-                    position: absolute;
-                    top: 0;
-                    left: 100%;
-                    transform: translate3d(0,0,0);
-                }
-            }
-            &:hover {
-                .text {
-                    transform: translateX(-100%);
-                }
-            }
-        }
-    }
+	.uk-h2 {
+		letter-spacing: 4px;
+	}
+
+	.background-secondary-gradient {
+		opacity: 0.8;
+		height: 346px;
+	}
+
+	.writing-text {
+		margin: 50px 35px;
+
+		a {
+			font-size: 10px;
+			font-weight: 600;
+			letter-spacing: 1px;
+			writing-mode: vertical-rl;
+			overflow: hidden;
+
+			.text {
+				position: relative;
+				transition: transform 0.5s;
+				display: inline-block;
+
+				&::after {
+					content: attr(data-hover);
+					position: absolute;
+					top: 0;
+					left: 100%;
+					transform: translate3d(0, 0, 0);
+				}
+			}
+
+			&:hover {
+				.text {
+					transform: translateX(-100%);
+				}
+			}
+		}
+	}
 }
 
 
@@ -49,9 +55,9 @@
 // ========================================================================
 
 .parallax-medium {
-    .uk-h6 {
-        letter-spacing: 0.5px;
-    }
+	.uk-h6 {
+		letter-spacing: 0.5px;
+	}
 }
 
 
@@ -59,23 +65,27 @@
 // ========================================================================
 
 .parallax-card-custom {
-    img {
-        display: none;
-    }
-    .uk-button {
-        color: #000;
-    }
-    ul {
-        width: 100%;
-    }
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        .uk-button {
-            margin-top: auto;
-        }
-    }
+	img {
+		display: none;
+	}
+
+	.uk-button {
+		color: #000;
+	}
+
+	ul {
+		width: 100%;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		.uk-button {
+			margin-top: auto;
+		}
+	}
 }
 
 
@@ -83,42 +93,47 @@
 // ========================================================================
 
 @media (max-width: 639px) {
-    .parallax-large {
-        height: 43vh !important;
-        min-height: 1px !important;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        .writing-text {
-            text-align: center;
-            margin: 22px 0 0 0;
-            position: static !important;
-            a {
-                writing-mode: horizontal-tb;
-                flex-direction: column;
-                .text::after {
-                    display: none;
-                }
-                &:hover {
-                    .text {
-                        transform: none;
-                    }
-                }
-            }
-        }
-    }
+	.parallax-large {
+		height: 43vh !important;
+		min-height: 1px !important;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
 
-    .parallax-card {
-        .uk-grid-match {
-            .uk-first-column {
-                > div {
-                    margin-right: -20px;
-                    margin-left: -20px;
-                }
-                + div {
-                    margin-top: -20px;
-                }
-            }
-        }
-    }
+		.writing-text {
+			text-align: center;
+			margin: 22px 0 0 0;
+			position: static !important;
+
+			a {
+				writing-mode: horizontal-tb;
+				flex-direction: column;
+
+				.text::after {
+					display: none;
+				}
+
+				&:hover {
+					.text {
+						transform: none;
+					}
+				}
+			}
+		}
+	}
+
+	.parallax-card {
+		.uk-grid-match {
+			.uk-first-column {
+				> div {
+					margin-right: -20px;
+					margin-left: -20px;
+				}
+
+				+ div {
+					margin-top: -20px;
+				}
+			}
+		}
+	}
 }

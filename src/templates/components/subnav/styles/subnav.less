@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @subnav-margin-horizontal:                      20px;
 
 @subnav-item-color:                             @global-muted-color;
@@ -32,64 +33,72 @@
 
 @subnav-item-disabled-color:                    @global-muted-color;
 
-//
-// New
-//
-
 @subnav-item-font-size:                         @global-small-font-size;
 @subnav-item-text-transform:                    uppercase;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-subnav() {}
-
-.hook-subnav-item() {
-    font-size: @subnav-item-font-size;
-    text-transform: @subnav-item-text-transform;
-    transition: 0.1s ease-in-out;
-    transition-property: color, background-color;
+.hook-subnav() {
 }
 
-.hook-subnav-item-hover() {}
+.hook-subnav-item() {
+	font-size: @subnav-item-font-size;
+	text-transform: @subnav-item-text-transform;
+	transition: 0.1s ease-in-out;
+	transition-property: color, background-color;
+}
 
-.hook-subnav-item-active() {}
+.hook-subnav-item-hover() {
+}
+
+.hook-subnav-item-active() {
+}
 
 
 // Divider modifier
 // ========================================================================
 
-.hook-subnav-divider() {}
+.hook-subnav-divider() {
+}
 
 
 // Pill modifier
 // ========================================================================
 
-.hook-subnav-pill-item() {}
+.hook-subnav-pill-item() {
+}
 
-.hook-subnav-pill-item-hover() {}
+.hook-subnav-pill-item-hover() {
+}
 
-.hook-subnav-pill-item-onclick() {}
+.hook-subnav-pill-item-onclick() {
+}
 
-.hook-subnav-pill-item-active() {}
+.hook-subnav-pill-item-active() {
+}
 
 
 // Disabled
 // ========================================================================
 
-.hook-subnav-item-disabled() {}
+.hook-subnav-item-disabled() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-subnav-misc() {}
+.hook-subnav-misc() {
+}
 
 
 // Inverse
 // ========================================================================
 
+//@formatter:off
 @inverse-subnav-item-color:                    @inverse-global-muted-color;
 @inverse-subnav-item-hover-color:              @inverse-global-color;
 @inverse-subnav-item-active-color:             @inverse-global-emphasis-color;
@@ -103,16 +112,31 @@
 @inverse-subnav-pill-item-active-background:   @inverse-global-primary-background;
 @inverse-subnav-pill-item-active-color:        @inverse-global-inverse-color;
 @inverse-subnav-item-disabled-color:           @inverse-global-muted-color;
+//@formatter:on
 
-.hook-inverse-subnav-item() {}
-.hook-inverse-subnav-item-hover() {}
-.hook-inverse-subnav-item-active() {}
+.hook-inverse-subnav-item() {
+}
 
-.hook-inverse-subnav-divider() {}
+.hook-inverse-subnav-item-hover() {
+}
 
-.hook-inverse-subnav-pill-item() {}
-.hook-inverse-subnav-pill-item-hover() {}
-.hook-inverse-subnav-pill-item-onclick() {}
-.hook-inverse-subnav-pill-item-active() {}
+.hook-inverse-subnav-item-active() {
+}
 
-.hook-inverse-subnav-item-disabled() {}
+.hook-inverse-subnav-divider() {
+}
+
+.hook-inverse-subnav-pill-item() {
+}
+
+.hook-inverse-subnav-pill-item-hover() {
+}
+
+.hook-inverse-subnav-pill-item-onclick() {
+}
+
+.hook-inverse-subnav-pill-item-active() {
+}
+
+.hook-inverse-subnav-item-disabled() {
+}

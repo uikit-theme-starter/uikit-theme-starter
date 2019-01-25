@@ -7,11 +7,12 @@
 // Variables
 // ========================================================================
 
+//@formatter:off
 @notification-position:                               10px;
 @notification-z-index:                                @global-z-index + 40;
 @notification-width:                                  350px;
 
-@notification-message-margin-bottom:                  10px;
+@notification-message-margin-top:                     10px;
 @notification-message-padding:                        @global-small-gutter;
 @notification-message-background:                     @global-muted-background;
 @notification-message-color:                          @global-color;
@@ -25,39 +26,48 @@
 @notification-message-success-color:                  @global-success-background;
 @notification-message-warning-color:                  @global-warning-background;
 @notification-message-danger-color:                   @global-danger-background;
+//@formatter:on
 
 
 // Component
 // ========================================================================
 
-.hook-notification() {}
+.hook-notification() {
+}
 
 
 // Message
 // ========================================================================
 
-.hook-notification-message() {}
+.hook-notification-message() {
+}
 
 
 // Close
 // ========================================================================
 
-.hook-notification-close() {}
+.hook-notification-close() {
+}
 
 
 // Style modifiers
 // ========================================================================
 
-.hook-notification-primary() {}
+.hook-notification-message-primary() {
+}
 
-.hook-notification-success() {}
+.hook-notification-message-success() {
+}
 
-.hook-notification-warning() {}
+.hook-notification-message-warning() {
+}
 
-.hook-notification-danger() {}
+.hook-notification-message-danger() {
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-notification-misc() {}
+.hook-notification-misc() {
+}
