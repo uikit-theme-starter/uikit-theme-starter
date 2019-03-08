@@ -1,6 +1,8 @@
 import "uikit";
 import Swiper from "swiper";
 
+//window.UIkit = UIkit;
+//window.$ = $;//
 
 require("@/js/picker.js");
 require("@/js/picker.date");
@@ -79,7 +81,7 @@ if (swiperContainer) {
 		},
 	});
 
-	var galleryThumbs = new Swiper(".swiper-activity-content", {
+	const galleryThumbs = new Swiper('.swiper-activity-content', {
 		loop: true,
 		spaceBetween: 10,
 		touchRatio: 0.2,
