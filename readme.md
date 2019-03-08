@@ -20,6 +20,11 @@ yarn prod / npm run prod
 Projeyi dist klasörüne derlenmiş şekilde çıktılar
 
 ```sh
+yarn local / npm run local
+```
+Projeyi dist klasörüne derlenmiş, yerel olarak çalışabilecek şekilde çıktılar
+
+```sh
 yarn icon / npm run icon
 ```
 `/src/images/iconset` klasöründeki svg dosyalarını uikit içine ekleyip [Uikit Icon][uikit-icon-url] bileşeniyle kullanılabilecek hale 

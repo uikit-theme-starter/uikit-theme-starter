@@ -50,8 +50,8 @@ module.exports = env => {
 		},
 		output: {
 			filename: "js/[name]-[hash].bundle.js",
-			path: path.resolve(__dirname, "../../dist"),
-			publicPath: "/",
+			path: path.resolve("dist"),
+			publicPath: env.local ?  "" : "/",
 			umdNamedDefine: true,
 			libraryTarget: 'umd'
 		},
