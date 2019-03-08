@@ -1,9 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
-const htmlWebpackPlugin = require('../html-add-functions/create-plugins');
+const htmlWebpackPlugin = require("../html-add-functions/create-plugins");
 
 // Dev
-//const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+//const bundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 
 let plugins = [
@@ -29,12 +29,12 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			'@': path.resolve('src'),
-			'./@': path.resolve('src'),
-			'src/js': '.'
+			"@": path.resolve("src"),
+			"./@": path.resolve("src"),
+			"src/js": "."
 		}
 	},
-	mode: 'development',
+	mode: "development",
 	optimization: {
 		splitChunks: {
 			chunks: "all",
@@ -52,7 +52,7 @@ module.exports = {
 		//path: path.resolve("dist"),
 		publicPath: "/",
 		umdNamedDefine: true,
-		libraryTarget: 'umd'
+		libraryTarget: "umd"
 	},
 	devServer: {
 		stats: "minimal",
@@ -71,15 +71,15 @@ module.exports = {
 				test: /\.js$/,
 				use: [
 					{
-						loader: 'babel-loader',
+						loader: "babel-loader",
 						options:
 							{
 								presets: [
 									[
-										'@babel/preset-env',
+										"@babel/preset-env",
 										{
 											targets: "> 1%, not dead",
-											modules: 'umd'
+											modules: "umd"
 											//debug: true
 										}
 									]
@@ -106,7 +106,7 @@ module.exports = {
 						loader: "postcss-loader",
 						options: {
 							config: {
-								path: 'webpack/config/postcss.config.js'
+								path: "webpack/config/postcss.config.js"
 							},
 							sourceMap: true
 						}
@@ -133,7 +133,7 @@ module.exports = {
 						loader: "postcss-loader",
 						options: {
 							config: {
-								path: 'webpack/config/postcss.config.js'
+								path: "webpack/config/postcss.config.js"
 							},
 							options: {sourceMap: true}
 						}
@@ -160,7 +160,7 @@ module.exports = {
 						loader: "postcss-loader",
 						options: {
 							config: {
-								path: 'webpack/config/postcss.config.js'
+								path: "webpack/config/postcss.config.js"
 							},
 							options: {sourceMap: true}
 						}
@@ -175,9 +175,9 @@ module.exports = {
 						loader: "html-loader",
 						options: {
 							attrs: [
-								':src',
-								':data-src',
-								'link:href'
+								":src",
+								":data-src",
+								"link:href"
 							],
 							interpolate: true
 						}
@@ -199,9 +199,9 @@ module.exports = {
 						loader: "html-loader",
 						options: {
 							attrs: [
-								':src',
-								':data-src',
-								'link:href'
+								":src",
+								":data-src",
+								"link:href"
 							],
 							interpolate: true
 						}
@@ -214,8 +214,8 @@ module.exports = {
 				use: [{
 					loader: "file-loader",
 					options: {
-						name: 'images/[path][name]-[hash:8].[ext]',
-						context: 'src/images'
+						name: "images/[path][name]-[hash:8].[ext]",
+						context: "src/images"
 					}
 				}]
 			},
@@ -225,8 +225,8 @@ module.exports = {
 				use: [{
 					loader: "file-loader",
 					options: {
-						name: 'fonts/[path][name].[ext]',
-						context: 'src/fonts'
+						name: "fonts/[path][name].[ext]",
+						context: "src/fonts"
 					}
 				}]
 			},
@@ -234,10 +234,10 @@ module.exports = {
 			{
 				test: /\.(mp4|mov|webm|ogg|flac)$/i,
 				use: [{
-					loader: 'file-loader',
+					loader: "file-loader",
 					options: {
-						name: 'media/[path][name]-[hash:8].[ext]',
-						outputPath: 'src/files/media/'
+						name: "media/[path][name]-[hash:8].[ext]",
+						outputPath: "src/files/media/"
 					}
 				}]
 			},
@@ -245,10 +245,10 @@ module.exports = {
 			{
 				test: /\.(pdf|doc?x|xls)$/i,
 				use: [{
-					loader: 'file-loader',
+					loader: "file-loader",
 					options: {
-						name: 'docs/[path][name].[ext]',
-						outputPath: 'src/files/docs'
+						name: "docs/[path][name].[ext]",
+						outputPath: "src/files/docs"
 					}
 				}]
 			},

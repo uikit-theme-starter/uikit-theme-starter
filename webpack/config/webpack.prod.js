@@ -50,10 +50,10 @@ module.exports = env => {
 		},
 		output: {
 			filename: "js/[name]-[hash].bundle.js",
-			path: path.resolve(__dirname, "../../dist"),
-			publicPath: "/",
+			path: path.resolve("dist"),
+			publicPath: env.local ?  "" : "/",
 			umdNamedDefine: true,
-			libraryTarget: 'umd'
+			libraryTarget: "umd"
 		},
 		module: {
 			rules: [
@@ -236,7 +236,7 @@ module.exports = env => {
 			]
 		},
 		plugins: [
-			new CleanWebpackPlugin(['dist'],{root:path.resolve('./')}),
+			new CleanWebpackPlugin(),
 			new optimizeCssAssetsWebpackPlugin(),
 			new webpack.HashedModuleIdsPlugin(),
 			new miniCssExtractPlugin({
@@ -247,8 +247,8 @@ module.exports = env => {
 				jQuery: "jquery"
 			}),
 			new webpack.DefinePlugin({
-				'process.env': {
-					'NODE_ENV': JSON.stringify(env.NODE_ENV)
+				"process.env": {
+					"NODE_ENV": JSON.stringify(env.NODE_ENV)
 				}
 			}),
 			new minifyPlugin(),
