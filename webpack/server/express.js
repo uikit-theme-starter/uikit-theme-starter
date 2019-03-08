@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const webpack = require("webpack");
 const fp = require("find-free-port");
 
@@ -38,7 +38,7 @@ function createServer() {
 	}
 
 	function reloadClient() {
-		webpackHotMiddleware.publish({action: 'reload'});
+		webpackHotMiddleware.publish({action: "reload"});
 	}
 
 	return {

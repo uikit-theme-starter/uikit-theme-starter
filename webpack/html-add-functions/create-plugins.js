@@ -1,18 +1,18 @@
 // Pug Dosyaları Tanımlayıcısı
 
-const htmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
+const htmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 const plugins = [];
 try {
-	const pugFiles = require('./pug-files.json').files.filter(a => a.indexOf('pages') > 0);
+	const pugFiles = require("./pug-files.json").files.filter(a => a.indexOf("pages") > 0);
 
 	pugFiles.forEach((filePath) => {
 
 		let fileInfo = path.parse(filePath);
 		//let dir = fileInfo.dir.split(path.sep).pop();
-		let dirstring = fileInfo.dir.replace(/src[\/\\]templates[\/\\]pages/, '');
-		dirstring = dirstring ? dirstring.substr(1) + '/' : '';
+		let dirstring = fileInfo.dir.replace(/src[\/\\]templates[\/\\]pages/, "");
+		dirstring = dirstring ? dirstring.substr(1) + "/" : "";
 		let filename = `${dirstring}${fileInfo.name}.html`;
 
 		plugins.push(new htmlWebpackPlugin({
@@ -31,7 +31,7 @@ try {
 		}));
 	});
 } catch (e) {
-	const hotreloader = require('../server/hotreloader');
+	const hotreloader = require("../server/hotreloader");
 	hotreloader.activate();
 	//console.error(e);
 }
