@@ -236,7 +236,7 @@ module.exports = env => {
 			]
 		},
 		plugins: [
-			new CleanWebpackPlugin(['dist'],{root:path.resolve('./')}),
+			new CleanWebpackPlugin(),
 			new optimizeCssAssetsWebpackPlugin(),
 			new webpack.HashedModuleIdsPlugin(),
 			new miniCssExtractPlugin({
