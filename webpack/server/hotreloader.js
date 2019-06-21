@@ -38,7 +38,7 @@
 						throw err;
 					}
 				} else {
-					data = data === undefined || data === "" ? "{"files":[]}" : data;
+					data = data === undefined || data === "" ? '{"files":[]}' : data;
 					dataArray = JSON.parse(data).files;
 				}
 				if (!arraysEqual(dataArray, pugPaths.files)) {
@@ -51,7 +51,7 @@
 				ready = true;
 			});
 		});
-		watcher.on("change", function (path) {
+		watcher.on("change", function () {
 			server.reloadClient();
 		});
 		watcher.on("add", function (path) {
