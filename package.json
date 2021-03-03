@@ -52,7 +52,7 @@
 		"path": "^0.12.7",
 		"postcss": "^7.0.17",
 		"postcss-loader": "^3.0.0",
-		"pug": "^2.0.4",
+		"pug": "^3.0.1",
 		"pug-html-loader": "^1.1.5",
 		"pug-loader": "^2.4.0",
 		"sass-loader": "^7.1.0",
